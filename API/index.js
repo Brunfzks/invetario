@@ -11,10 +11,10 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.30\\sqlexpress',
+        server: '192.168.0.110\\sqlexpress',
         user: 'sa',
         password: 'abdr',
-        database: 'atelie',
+        database: 'Inventario',
 
     }
 });
@@ -28,19 +28,57 @@ server.listen(1780, function () {
     console.log('%s listening at %s', server.name, server.url);
 });
 
-//rotas Rest
-server.get('/', function (req, res, next) {
-    res.send({ hello: 'world' });
-    next();
-});
-
 //rota listar todos
-server.get('/clientes', (req, res, next) => {
+server.get('/locais', (req, res, next) => {
 
-    knex('CLIENTE').where('Ativo', '=', 'S').then((dados) => {
+    knex('').then((dados) => {
         res.send(dados);
     }, next)
 });
+
+server.get('/patrimonios', (req, res, next) => {
+
+    knex('Tb_Patrimonio').then((dados) => {
+        res.send(dados);
+    }, next)
+});
+
+server.get('/usuarios', (req, res, next) => {
+
+    knex('Tb_Usuario').then((dados) => {
+        res.send(dados);
+    }, next)
+});
+
+//rota inserir
+server.post('/locais', (req, res, next) => {
+    knex('Tb_Local')
+        .insert(req.body)
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
+
+server.post('/patrimonios', (req, res, next) => {
+    knex('Tb_Patrimonio')
+        .insert(req.body)
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
+
+server.post('/usuarios', (req, res, next) => {
+    knex('Tb_Usuario')
+        .insert(req.body)
+        .then((dados) => {
+            knex('Tb_Usuario').max('Id_usuario').then((dados) => {
+                res.send(dados);
+            }, next)
+        }, next)
+});
+
+
+
 
 //rota listar unico
 server.get('/clientes/:id', (req, res, next) => {
