@@ -1,3 +1,4 @@
+Use master;
 
 Drop DataBase if exists Inventario;
 Go
@@ -17,7 +18,7 @@ Ds_local Varchar(20)
 Drop Table if exists Tb_Usuario
 
 CREATE TABLE Tb_Usuario (
-Id_usuario INT PRIMARY KEY,
+Id_usuario INT PRIMARY KEY Identity(1,1),
 Nm_Usuario Varchar(30),
 Cp_origem Varchar(20),
 Sn_usuario Varchar(20),
@@ -27,7 +28,7 @@ Ds_setor Varchar(20)
 Drop Table if exists Tb_Patrimonio
 
 CREATE TABLE Tb_Patrimonio (
-Id_Bem INT PRIMARY KEY,
+Id_Bem INT PRIMARY KEY Identity(1,1),
 Nm_patrimonio INT,
 Ds_ed INT,
 Ds_patrimonio Varchar(200),
