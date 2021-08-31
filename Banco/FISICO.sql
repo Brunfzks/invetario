@@ -49,3 +49,4 @@ Id_usuario INT,
 FOREIGN KEY(Id_usuario) REFERENCES Tb_Usuario (Id_usuario),
 FOREIGN KEY(Id_local) REFERENCES Tb_Local (Id_local)
 )
+
