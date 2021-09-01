@@ -80,7 +80,11 @@ server.post('/locais', (req, res, next) => {
     knex('Tb_Local')
         .insert(req.body)
         .then((dados) => {
-            res.send(dados);
+            knex('Tb_Local').max('Id_local').then((dados) => {
+                knex('Tb_Local').max('Id_local').then((dados) => {
+                    res.send(dados);
+                }, next)
+            }, next)
         }, next)
 });
 

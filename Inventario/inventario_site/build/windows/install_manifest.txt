@@ -1,9 +1,11 @@
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/icudtl.dat
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/flutter_windows.dll
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
+C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/assets/fundo_login.svg
+C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/assets/logoif.png
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
-C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/NOTICES
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/packages/shared/assets/logoif.png
