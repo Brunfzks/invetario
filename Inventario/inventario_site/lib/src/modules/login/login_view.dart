@@ -24,7 +24,15 @@ class LoginScreen extends StatelessWidget {
           ),
         ),
         Row(
-          children: [Expanded(child: LoginForm())],
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Expanded(
+              child: Container(),
+            ),
+            Expanded(
+              child: LoginForm(),
+            ),
+          ],
         )
       ],
     ));

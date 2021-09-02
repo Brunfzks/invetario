@@ -3,6 +3,7 @@ C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/window
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/AssetManifest.json
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/assets/fundo_login.svg
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/assets/logoif.png
+C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/assets/logoIf_60.svg
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/FontManifest.json
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin
