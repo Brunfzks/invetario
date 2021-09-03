@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
@@ -12,22 +13,22 @@ class Editor extends StatelessWidget {
     required this.controller,
     this.enabled,
     this.isNumber,
-    this.onSubmitted,
     this.isMultiline,
     this.prefix,
     this.width,
     this.isPassword,
     this.sufix,
+    required this.validator,
   }) : super(key: key);
 
   final String label;
   final String? hint;
   final TextEditingController controller;
-  final Function(String)? onSubmitted;
   bool? enabled = true,
       isNumber = false,
       isMultiline = false,
       isPassword = false;
+  final RequiredValidator validator;
   final Icon? prefix;
   final Widget? sufix;
   final double? width;
@@ -38,13 +39,13 @@ class Editor extends StatelessWidget {
       width: width ?? double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: TextField(
+        child: TextFormField(
+          validator: validator,
           style: AppText.editorText,
           keyboardType: isMultiline == true
               ? TextInputType.multiline
               : TextInputType.text,
           maxLines: isMultiline == true ? 10 : 1,
-          onSubmitted: onSubmitted,
           inputFormatters: isNumber == true
               ? <TextInputFormatter>[
                   FilteringTextInputFormatter.allow(RegExp('[0-9.]')),

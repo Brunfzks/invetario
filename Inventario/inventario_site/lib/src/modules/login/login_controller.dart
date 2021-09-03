@@ -1,10 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:shared/shared.dart';
 
 class LoginController extends GetxController {
   TextEditingController userLoginTextController = TextEditingController();
   TextEditingController userSenhaTextController = TextEditingController();
   var showPassword = true.obs;
+  var wrongPassword = false.obs;
+
+  Future<ModelUsuario> login() async {
+    try {
+      ModelUsuario usuario = await ModelUsuario.getUsuario(
+          userLoginTextController.text, userSenhaTextController.text);
+      return usuario;
+    } catch (e) {
+      rethrow;
+    }
+  }
 
   showPasswords() {
     showPassword.value = !showPassword.value;

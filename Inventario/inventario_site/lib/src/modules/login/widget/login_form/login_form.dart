@@ -1,78 +1,107 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:inventario_site/shared/widgets/editor/editor.dart';
+import 'package:inventario_site/src/modules/home/home_controller.dart';
+import 'package:inventario_site/src/modules/home/home_view.dart';
 import 'package:inventario_site/src/modules/login/login_controller.dart';
 import 'package:inventario_site/src/modules/login/widget/login_form/button_login_form.dart';
 import 'package:shared/constantes/app_color.dart';
-import 'package:shared/constantes/app_images.dart';
+import 'package:shared/constantes/app_theme.dart';
 import 'package:shared/constantes/app_text.dart';
+import 'package:form_field_validator/form_field_validator.dart';
 
 class LoginForm extends StatelessWidget {
   LoginForm({Key? key}) : super(key: key);
-  LoginController controller = Get.find();
+  final LoginController controller = Get.find();
+  final _formKey = GlobalKey<FormState>();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 300,
       height: 500,
       child: Center(
-        child: Column(
-          children: [
-            Container(
-              width: 60,
-              height: 60,
-              child: SvgPicture.asset('assets/logoif_60.svg'),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Text(
-              'Bem Vindo',
-              style: AppText.title,
-            ),
-            Editor(
-              width: 400,
-              label: 'Usuário',
-              controller: controller.userLoginTextController,
-              prefix: Icon(
-                Icons.person,
-                color: AppColors.primary,
+        child: Form(
+          key: _formKey,
+          child: Column(
+            children: [
+              SizedBox(
+                width: 60,
+                height: 60,
+                child: SvgPicture.asset('assets/logoif_60.svg'),
               ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Obx(
-              () => Editor(
+              const SizedBox(
+                height: 30,
+              ),
+              const Text(
+                'Bem Vindo',
+                style: AppTheme.display1,
+              ),
+              Editor(
+                validator: RequiredValidator(
+                    errorText: "Por favor, informe o usuário!"),
                 width: 400,
-                label: 'Senha',
-                controller: controller.userSenhaTextController,
+                label: 'Usuário',
+                controller: controller.userLoginTextController,
                 prefix: Icon(
-                  Icons.lock,
+                  Icons.person,
                   color: AppColors.primary,
                 ),
-                sufix: InkWell(
-                  onTap: () {
-                    controller.showPasswords();
-                  },
-                  child: Icon(
-                    controller.showPassword.value
-                        ? Icons.visibility
-                        : Icons.visibility_off,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Obx(
+                () => Editor(
+                  validator: RequiredValidator(
+                      errorText: "Por favor, informe a senha!"),
+                  width: 400,
+                  label: 'Senha',
+                  controller: controller.userSenhaTextController,
+                  prefix: Icon(
+                    Icons.lock,
                     color: AppColors.primary,
                   ),
+                  sufix: InkWell(
+                    onTap: () {
+                      controller.showPasswords();
+                    },
+                    child: Icon(
+                      controller.showPassword.value
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: AppColors.primary,
+                    ),
+                  ),
+                  isPassword: controller.showPassword.value,
                 ),
-                isPassword: controller.showPassword.value,
               ),
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            ButtonForm(),
-          ],
+              Obx(
+                () => controller.wrongPassword.value
+                    ? Text('Usuário ou senha incorretos',
+                        style: AppText.errorText)
+                    : Container(),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              ButtonForm(
+                onTap: () async {
+                  controller.wrongPassword.value = false;
+                  if (_formKey.currentState!.validate()) {
+                    try {
+                      final homeContoller = Get.put(
+                          HomeController(usuario: await controller.login()));
+                      Get.to(() => Home());
+                    } catch (e) {
+                      controller.wrongPassword.value = true;
+                    }
+                  }
+                },
+              ),
+            ],
+          ),
         ),
       ),
     );

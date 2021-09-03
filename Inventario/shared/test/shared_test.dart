@@ -38,6 +38,11 @@ void main() {
       final patrimonio = await NorificacaoRepository().getNotificacoes();
       expect(patrimonio, isA<List<NotificacaoModel>>());
     });
+    test('Get Usuario', () async {
+      final patrimonio =
+          await UsuarioRepository().getUsuario(usuario: 'Alan', senha: '12345');
+      expect(patrimonio, isA<ModelUsuario>());
+    });
   });
 
   group('Insert', () {

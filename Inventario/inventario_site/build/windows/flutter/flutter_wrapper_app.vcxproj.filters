@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
+    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\core_implementations.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
+    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\standard_codec.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
+    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\flutter_engine.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
+    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\flutter_view_controller.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <CustomBuild Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{6A020F78-51B2-315B-B77D-AE025AC37B7C}</UniqueIdentifier>
+      <UniqueIdentifier>{E9D365D9-D8E0-379C-B4FA-3BE3D1608B9B}</UniqueIdentifier>
     </Filter>
     <Filter Include="Source Files">
-      <UniqueIdentifier>{EC8D1311-5932-391D-AAEF-AAD0CBF89FC0}</UniqueIdentifier>
+      <UniqueIdentifier>{2AC02A9F-9F49-3763-B3B2-681C8BC814BD}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

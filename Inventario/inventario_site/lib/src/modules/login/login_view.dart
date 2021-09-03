@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/login/login_controller.dart';
 import 'package:inventario_site/src/modules/login/widget/login_form/login_form.dart';
+import 'package:inventario_site/src/modules/login/widget/slogan/slogan_view.dart';
 import 'package:shared/constantes/app_color.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -23,16 +24,19 @@ class LoginScreen extends StatelessWidget {
             color: AppColors.primary,
           ),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Expanded(
-              child: Container(),
-            ),
-            Expanded(
-              child: LoginForm(),
-            ),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(top: 50.0),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Expanded(
+                child: Container(),
+              ),
+              Expanded(
+                child: LoginForm(),
+              ),
+            ],
+          ),
         )
       ],
     ));

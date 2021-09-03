@@ -116,7 +116,21 @@ server.post('/usuarios', (req, res, next) => {
         }, next)
 });
 
-
+//rota listar unico
+server.post('/usuario', (req, res, next) => {
+   const { usuario } = req.body;
+   const { senha } = req.body;
+  knex('Tb_Usuario')
+      .where({
+        'Nm_usuario': usuario,
+        'Sn_usuario': senha
+    })
+      .first()
+      .then((dados) => {
+           if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
+          res.send(dados);
+       }, next)
+});
 
 
 //rota listar unico

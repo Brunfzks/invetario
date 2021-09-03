@@ -26,7 +26,7 @@ class ModelUsuario {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, String>{};
-    idUsuario != null ? data['Id_usuario'] = idUsuario:null;
+    idUsuario != null ? data['Id_usuario'] = idUsuario : null;
     data['Sn_usuario'] = snUsuario;
     data['Cp_origem'] = cpOrigem;
     data['Ds_setor'] = dsSetor;
@@ -41,6 +41,15 @@ class ModelUsuario {
   static Future<int> cadastraUsuario(ModelUsuario novoUsuario) async {
     try {
       return await UsuarioRepository().cadastraUsuario(novoUsuario);
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
+  static Future<ModelUsuario> getUsuario(String usuario, String senha) async {
+    try {
+      return await UsuarioRepository()
+          .getUsuario(usuario: usuario, senha: senha);
     } catch (e) {
       throw Exception(e);
     }

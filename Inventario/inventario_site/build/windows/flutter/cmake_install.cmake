@@ -1,4 +1,4 @@
-# Install script for directory: D:/GitHub/invetario/Inventario/inventario_site/windows/flutter
+# Install script for directory: C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows/flutter
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,4 +1,4 @@
-The system is: Windows - 10.0.19041 - AMD64
+The system is: Windows - 10.0.19042 - AMD64
 Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
 Compiler:  
 Build flags: 
@@ -9,8 +9,8 @@ The output was:
 Microsoft(R) Build Engine versão 16.10.2+857e5a733 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
-Compilação de 02/09/2021 19:04:12 iniciada.
-Projeto "D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
+Compilação de 03/09/2021 08:47:11 iniciada.
+Projeto "C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" no nó 1 (destinos padrão).
 PrepareForBuild:
   Criando o diretório "Debug\".
   Criando o diretório "Debug\CompilerIdCXX.tlog\".
@@ -21,7 +21,7 @@ ClCompile:
   CMakeCXXCompilerId.cpp
 Link:
   C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30037\bin\HostX64\x64\link.exe /ERRORREPORT:QUEUE /OUT:".\CompilerIdCXX.exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /PDB:".\CompilerIdCXX.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:".\CompilerIdCXX.lib" /MACHINE:X64 Debug\CMakeCXXCompilerId.obj
-  CompilerIdCXX.vcxproj -> D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe
+  CompilerIdCXX.vcxproj -> C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.exe
 PostBuildEvent:
   for %%i in (cl.exe) do @echo CMAKE_CXX_COMPILER=%%~$PATH:i
   :VCEnd
@@ -29,32 +29,32 @@ PostBuildEvent:
 FinalizeBuildStatus:
   Excluindo o arquivo "Debug\CompilerIdCXX.tlog\unsuccessfulbuild".
   Tocando "Debug\CompilerIdCXX.tlog\CompilerIdCXX.lastbuildstate".
-Projeto de compilação pronto "D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos padrão).
+Projeto de compilação pronto "C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\3.20.21032501-MSVC_2\CompilerIdCXX\CompilerIdCXX.vcxproj" (destinos padrão).
 
 Compilação com êxito.
     0 Aviso(s)
     0 Erro(s)
 
-Tempo Decorrido 00:00:01.75
+Tempo Decorrido 00:00:06.96
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.vcxproj"
 
-The CXX compiler identification is MSVC, found in "D:/GitHub/invetario/Inventario/inventario_site/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
+The CXX compiler identification is MSVC, found in "C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/GitHub/invetario/Inventario/inventario_site/build/windows/CMakeFiles/CMakeTmp
+Change Dir: C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/CMakeFiles/CMakeTmp
 
-Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_942e1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.10.2+857e5a733 para .NET Framework 
+Run Build Command(s):C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/MSBuild/Current/Bin/MSBuild.exe cmTC_af526.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=16.0 /v:m && Microsoft(R) Build Engine versão 16.10.2+857e5a733 para .NET Framework 
 Copyright (C) Microsoft Corporation. Todos os direitos reservados.
 
   Microsoft (R) C/C++ Optimizing Compiler Versão 19.29.30038.1 para x64
   Copyright (C) Microsoft Corporation. Todos os direitos reservados.
   CMakeCXXCompilerABI.cpp
-  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_942e1.dir\Debug\\" /Fd"cmTC_942e1.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W1 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_942e1.vcxproj -> D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_942e1.exe
+  cl /c /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /D _MBCS /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_af526.dir\Debug\\" /Fd"cmTC_af526.dir\Debug\vc142.pdb" /external:env:EXTERNAL_INCLUDE /external:W1 /Gd /TP /errorReport:queue "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.20\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_af526.vcxproj -> C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\CMakeTmp\Debug\cmTC_af526.exe
 
 
 

@@ -3,7 +3,8 @@ import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 
 class ButtonForm extends StatelessWidget {
-  const ButtonForm({Key? key}) : super(key: key);
+  const ButtonForm({Key? key, required this.onTap}) : super(key: key);
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -17,7 +18,7 @@ class ButtonForm extends StatelessWidget {
         ),
       ),
       child: InkWell(
-        onTap: () {},
+        onTap: onTap,
         child: Center(
           child: Text(
             'Login',

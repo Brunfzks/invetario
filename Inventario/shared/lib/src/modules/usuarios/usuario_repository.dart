@@ -48,4 +48,28 @@ class UsuarioRepository {
       throw Exception("Failed to load");
     }
   }
+
+  Future<ModelUsuario> getUsuario({required String usuario, senha}) async {
+    String urlApi = Api.url('usuario');
+
+    Map<String, dynamic> data = <String, dynamic>{};
+
+    List<Map<String, dynamic>> listData = [];
+    data['usuario'] = usuario;
+    data['senha'] = senha;
+    listData.add(data);
+
+    var body = json.encode(data);
+
+    http.Response response = await http.post(Uri.parse(urlApi),
+        headers: {'Content-Type': 'application/json'}, body: body);
+
+    if (response.statusCode == 200) {
+      Map<String, dynamic> map = json.decode(response.body);
+      ModelUsuario.fromJson(map);
+      return ModelUsuario.fromJson(map);
+    } else {
+      throw Exception("Failed to load");
+    }
+  }
 }
