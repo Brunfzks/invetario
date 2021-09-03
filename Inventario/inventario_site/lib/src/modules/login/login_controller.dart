@@ -1,6 +1,15 @@
+import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
+  TextEditingController userLoginTextController = TextEditingController();
+  TextEditingController userSenhaTextController = TextEditingController();
+  var showPassword = true.obs;
+
+  showPasswords() {
+    showPassword.value = !showPassword.value;
+  }
+
   @override
   void onInit() {
     // chamado imediatamente após o widget ser alocado em memória

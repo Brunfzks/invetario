@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:shared/constantes/app_color.dart';
+import 'package:shared/constantes/app_text.dart';
 
 class Editor extends StatelessWidget {
   Editor({
@@ -11,20 +14,32 @@ class Editor extends StatelessWidget {
     this.isNumber,
     this.onSubmitted,
     this.isMultiline,
+    this.prefix,
+    this.width,
+    this.isPassword,
+    this.sufix,
   }) : super(key: key);
 
   final String label;
   final String? hint;
   final TextEditingController controller;
   final Function(String)? onSubmitted;
-  bool? enabled = true, isNumber = false, isMultiline = false;
+  bool? enabled = true,
+      isNumber = false,
+      isMultiline = false,
+      isPassword = false;
+  final Icon? prefix;
+  final Widget? sufix;
+  final double? width;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: width ?? double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextField(
+          style: AppText.editorText,
           keyboardType: isMultiline == true
               ? TextInputType.multiline
               : TextInputType.text,
@@ -37,12 +52,13 @@ class Editor extends StatelessWidget {
               : null,
           enabled: enabled,
           controller: controller,
+          obscureText: isPassword ?? false,
           decoration: InputDecoration(
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.all(
-                Radius.circular(5),
-              ),
-            ),
+            labelStyle: TextStyle(color: AppColors.textColor),
+            prefix: prefix,
+            suffix: sufix,
+            fillColor: AppColors.primary,
+            border: UnderlineInputBorder(),
             labelText: label,
             hintText: hint ?? '',
           ),

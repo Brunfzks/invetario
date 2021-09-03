@@ -1,20 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\bbf121f31abc0cd54e8c261a37aeb324\flutter_windows.dll.rule">
+    <CustomBuild Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\660196ad23b45f7fc3befc4c66ff9b8c\flutter_windows.dll.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\00ba5441630072fb6d882bb145b64aaa\flutter_assemble.rule">
+    <CustomBuild Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\CMakeFiles\bd7c6d519ab5a46b7a8afe66fb27ced9\flutter_assemble.rule">
       <Filter>CMake Rules</Filter>
     </CustomBuild>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\CMakeLists.txt" />
+    <CustomBuild Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\CMakeLists.txt" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\CMakeFiles\flutter_assemble" />
+    <None Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\CMakeFiles\flutter_assemble" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="CMake Rules">
-      <UniqueIdentifier>{E9D365D9-D8E0-379C-B4FA-3BE3D1608B9B}</UniqueIdentifier>
+      <UniqueIdentifier>{6A020F78-51B2-315B-B77D-AE025AC37B7C}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

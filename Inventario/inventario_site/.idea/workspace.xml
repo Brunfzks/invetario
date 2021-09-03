@@ -1,17 +1,226 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="NONE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2aa2110b-317c-4099-a094-0d11112a533b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/.filecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/app.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/debug_bundle_windows_assets.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/flutter_assets.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/gen_dart_plugin_registrant.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/gen_localizations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/kernel_snapshot.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/kernel_snapshot.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/outputs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/unpack_windows.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/af258baaa3e58f1d00505dd758fe4e64/windows_engine_sources.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/flutter_build/generated_main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/flutter_build/generated_main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/.last_build_id" beforeDir="false" afterPath="$PROJECT_DIR$/build/.last_build_id" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/d9f05270b37480ba92eb8550dd9b4dbb/_composite.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/d9f05270b37480ba92eb8550dd9b4dbb/gen_dart_plugin_registrant.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/d9f05270b37480ba92eb8550dd9b4dbb/gen_localizations.stamp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/AssetManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/FontManifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/NOTICES.Z" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/fundo_login.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/logoIf_60.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/assets/logoif.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/fonts/MaterialIcons-Regular.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/kernel_blob.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/flutter_assets/packages/shared/assets/logoif.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ALL_BUILD.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/00ba5441630072fb6d882bb145b64aaa/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/00ba5441630072fb6d882bb145b64aaa/flutter_assemble.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/CompilerIdCXX.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CMakeCXXCompilerId.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CMakeCXXCompilerId.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/CompilerIdCXX.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/CompilerIdCXX/Debug/CompilerIdCXX.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/x64/Debug/VCTargetsPath.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/x64/Debug/VCTargetsPath.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/x64/Debug/VCTargetsPath.tlog/VCTargetsPath.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/3.20.21032501-MSVC_2/x64/Debug/VCTargetsPath.tlog/VCTargetsPath.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/bbf121f31abc0cd54e8c261a37aeb324/flutter_windows.dll.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/d3344381a74127f6e22d62bcd0d41a63/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/d3344381a74127f6e22d62bcd0d41a63/generate.stamp.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/e63ef335dd8ffe10e2ea7798172839eb/INSTALL_force.rule" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.depend" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.depend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.list" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/CMakeFiles/generate.stamp.list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/INSTALL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/INSTALL.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/INSTALL.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/INSTALL.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/ZERO_CHECK.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/CMakeFiles/generate.stamp.depend" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/CMakeFiles/generate.stamp.depend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_app.lib" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_app.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_app.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_app.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_plugin.lib" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_plugin.lib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_plugin.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/Debug/flutter_wrapper_plugin.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/INSTALL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/INSTALL.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/INSTALL.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/INSTALL.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_assemble.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_assemble.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_assemble.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_assemble.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/core_implementations.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/core_implementations.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/Lib-link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/Lib-link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/Lib.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_.58705425.tlog/flutter_wrapper_app.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_engine.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_engine.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_view_controller.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_view_controller.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_wrapper_app.lib.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/flutter_wrapper_app.lib.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/standard_codec.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.dir/Debug/standard_codec.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_app.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/core_implementations.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/core_implementations.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CL.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CL.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CL.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CustomBuild.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CustomBuild.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/CustomBuild.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/Lib-link.read.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/Lib-link.write.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/Lib.command.1.tlog" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_.78A30B4A.tlog/flutter_wrapper_plugin.lastbuildstate" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_wrapper_plugin.lib.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/flutter_wrapper_plugin.lib.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/plugin_registrar.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/plugin_registrar.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/standard_codec.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.dir/Debug/standard_codec.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/flutter_wrapper_plugin.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/CustomBuild.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/flutter_assemble.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/flutter/x64/Debug/flutter_assemble/flutter_assemble.tlog/flutter_assemble.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/install_manifest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/install_manifest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/inventario_site.sln" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/inventario_site.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/ALL_BUILD.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/ALL_BUILD.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/ALL_BUILD.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/ALL_BUILD.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/CMakeFiles/generate.stamp.depend" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/CMakeFiles/generate.stamp.depend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/data/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/flutter_windows.dll" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/flutter_windows.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/inventario_site.exe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/inventario_site.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/Debug/inventario_site.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/Debug/inventario_site.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/INSTALL.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/INSTALL.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/INSTALL.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/INSTALL.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/flutter_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/flutter_window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/generated_plugin_registrant.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/generated_plugin_registrant.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.exe.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.exe.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.ilk" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.ilk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CL.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/CustomBuild.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/inventario_site.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/inventario_site.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/link.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/inventario_site.tlog/rc.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/main.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/main.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/utils.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/utils.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/vc142.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/vc142.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/win32_window.obj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.dir/Debug/win32_window.obj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.vcxproj" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.vcxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/inventario_site.vcxproj.filters" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/inventario_site.vcxproj.filters" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/runner/runner.sln" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/runner/runner.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/ALL_BUILD.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/ALL_BUILD.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ALL_BUILD/ALL_BUILD.tlog/CustomBuild.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/CustomBuild.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/INSTALL.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/INSTALL/INSTALL.tlog/INSTALL.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.recipe" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.recipe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.command.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.command.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.read.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/CustomBuild.write.1.tlog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate" beforeDir="false" afterPath="$PROJECT_DIR$/build/windows/x64/Debug/ZERO_CHECK/ZERO_CHECK.tlog/ZERO_CHECK.lastbuildstate" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site.iml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/modules/login/login_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/modules/login/login_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/src/modules/login/widget/login_form/login_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/src/modules/login/widget/login_form/login_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shared/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/../shared/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shared/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/../shared/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shared/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/../shared/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shared/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../shared/pubspec.lock" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\alanb\.android\avd\Pixel_3a_API_30_x86.avd]" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="1xbVI4Yi9WKIL4C5qgl7lCTCyDB" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <option name="show-excluded-files" value="false" />
+      </pane>
+    </panes>
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="dart.analysis.tool.window.force.activate" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2aa2110b-317c-4099-a094-0d11112a533b" name="Default Changelist" comment="" />
+      <created>1630623692267</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1630623692267</updated>
+    </task>
+    <servers />
   </component>
   <component name="ToolWindowManager">
     <editor active="true" />
@@ -19,18 +228,15 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
     </layout>
   </component>
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-    </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
-      </pane>
-    </panes>
-  </component>
-  <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="dart.analysis.tool.window.force.activate" value="true" />
-    <property name="show.migrate.to.gradle.popup" value="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
