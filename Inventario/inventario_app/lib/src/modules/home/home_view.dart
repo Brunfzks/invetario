@@ -1,0 +1,62 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:inventario_app/src/modules/home/home_controller.dart';
+import 'package:shared/constantes/app_color.dart';
+import 'package:shared/constantes/app_theme.dart';
+
+class HomePage extends StatelessWidget {
+  HomePage({Key? key}) : super(key: key);
+
+  final HomeController homeController = Get.put(HomeController());
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Container(
+          padding: EdgeInsets.all(20),
+          color: AppColors.backgroundColor,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: const [
+              Text(
+                'Rasp',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 14,
+                  letterSpacing: 0.2,
+                  color: AppTheme.grey,
+                ),
+              ),
+              Text(
+                'Bem vindo, Alan',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                  letterSpacing: 0.27,
+                  color: AppTheme.darkerText,
+                ),
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              Text(
+                'Notificações',
+                textAlign: TextAlign.left,
+                style: TextStyle(
+                  fontWeight: FontWeight.w600,
+                  fontSize: 22,
+                  letterSpacing: 0.27,
+                  color: AppTheme.darkerText,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

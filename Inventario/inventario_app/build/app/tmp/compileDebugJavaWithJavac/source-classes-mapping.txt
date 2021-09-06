@@ -1,0 +1,6 @@
+io/flutter/plugins/GeneratedPluginRegistrant.java
+ io.flutter.plugins.GeneratedPluginRegistrant
+com/glp/inventario_app/BuildConfig.java
+ com.glp.inventario_app.BuildConfig
+com/glp/inventario_app/MainActivity.java
+ com.glp.inventario_app.MainActivity
