@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/login/login_controller.dart';
+import 'package:inventario_site/src/modules/login/widget/clipper/clipper_login.dart';
 import 'package:inventario_site/src/modules/login/widget/login_form/login_form.dart';
 import 'package:inventario_site/src/modules/login/widget/slogan/slogan_view.dart';
 import 'package:shared/constantes/app_color.dart';
@@ -13,15 +14,17 @@ class LoginScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    MediaQueryData deviceInfo = MediaQuery.of(context);
     return Scaffold(
         body: Stack(
       children: [
         Container(
-          width: double.infinity,
-          child: SvgPicture.asset(
-            'assets/fundo_login.svg',
-            alignment: Alignment.topLeft,
-            color: AppColors.primary,
+          width: deviceInfo.size.width * 0.4,
+          child: ClipPath(
+            clipper: CustomClipperLogin(),
+            child: Container(
+              color: AppColors.primary,
+            ),
           ),
         ),
         Padding(

@@ -18,7 +18,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{22419D1F-9993-30DD-84C9-36F311F4C1AB}</ProjectGuid>
+    <ProjectGuid>{AF2171DC-78FC-37F3-B352-BF92058B40CD}</ProjectGuid>
     <WindowsTargetPlatformVersion>10.0.19041.0</WindowsTargetPlatformVersion>
     <Keyword>Win32Proj</Keyword>
     <Platform>x64</Platform>
@@ -50,19 +50,19 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
     <_ProjectFileVersion>10.0.20506.1</_ProjectFileVersion>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Debug\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Debug\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inventario_site.dir\Debug\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inventario_site</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Profile\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Profile\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">inventario_site.dir\Profile\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">inventario_site</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">.exe</TargetExt>
     <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkIncremental>
     <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">true</GenerateManifest>
-    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Release\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\Release\</OutDir>
     <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inventario_site.dir\Release\</IntDir>
     <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inventario_site</TargetName>
     <TargetExt Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.exe</TargetExt>
@@ -71,7 +71,7 @@
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
@@ -91,10 +91,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Debug\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -102,25 +102,25 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Debug\flutter_wrapper_app.lib;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/inventario_site.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/inventario_site.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/inventario_site.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/inventario_site.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>D:\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -140,10 +140,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Profile\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -151,25 +151,25 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Profile\flutter_wrapper_app.lib;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Profile/inventario_site.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Profile/inventario_site.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Profile/inventario_site.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Profile/inventario_site.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>D:\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AssemblerListingLocation>$(IntDir)</AssemblerListingLocation>
       <DisableSpecificWarnings>"4100"</DisableSpecificWarnings>
       <ExceptionHandling>Sync</ExceptionHandling>
@@ -189,10 +189,10 @@
     </ClCompile>
     <ResourceCompile>
       <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;_HAS_EXCEPTIONS=0;NOMINMAX;UNICODE;_UNICODE;CMAKE_INTDIR=\"Release\";%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ResourceCompile>
     <Midl>
-      <AdditionalIncludeDirectories>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\GitHub\invetario\Inventario\inventario_site\windows;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\cpp_client_wrapper\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <OutputDirectory>$(ProjectDir)/$(IntDir)</OutputDirectory>
       <HeaderFileName>%(Filename).h</HeaderFileName>
       <TypeLibraryName>%(Filename).tlb</TypeLibraryName>
@@ -200,28 +200,28 @@
       <ProxyFileName>%(Filename)_p.c</ProxyFileName>
     </Midl>
     <Link>
-      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
+      <AdditionalDependencies>..\flutter\Release\flutter_wrapper_app.lib;D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\ephemeral\flutter_windows.dll.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalOptions>%(AdditionalOptions) /machine:x64</AdditionalOptions>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
-      <ImportLibrary>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Release/inventario_site.lib</ImportLibrary>
-      <ProgramDataBaseFile>C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Release/inventario_site.pdb</ProgramDataBaseFile>
+      <ImportLibrary>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Release/inventario_site.lib</ImportLibrary>
+      <ProgramDataBaseFile>D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Release/inventario_site.pdb</ProgramDataBaseFile>
       <SubSystem>Windows</SubSystem>
     </Link>
     <ProjectReference>
       <LinkLibraryDependencies>false</LinkLibraryDependencies>
     </ProjectReference>
     <Manifest>
-      <AdditionalManifestFiles>C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
+      <AdditionalManifestFiles>D:\GitHub\invetario\Inventario\inventario_site\windows\runner\runner.exe.manifest;</AdditionalManifestFiles>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <CustomBuild Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\CMakeLists.txt">
+    <CustomBuild Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\CMakeLists.txt">
       <StdOutEncoding>UTF-8</StdOutEncoding>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Building Custom Rule D:/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows -BC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/GitHub/invetario/Inventario/inventario_site/windows -BD:/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -230,11 +230,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">Building Custom Rule D:/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows -BC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/GitHub/invetario/Inventario/inventario_site/windows -BD:/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -243,11 +243,11 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Profile|x64'">false</LinkObjects>
-      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Building Custom Rule D:/GitHub/invetario/Inventario/inventario_site/windows/runner/CMakeLists.txt</Message>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">setlocal
-"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows -BC:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
+"C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SD:/GitHub/invetario/Inventario/inventario_site/windows -BD:/GitHub/invetario/Inventario/inventario_site/build/windows --check-stamp-file D:/GitHub/invetario/Inventario/inventario_site/build/windows/runner/CMakeFiles/generate.stamp
 if %errorlevel% neq 0 goto :cmEnd
 :cmEnd
 endlocal &amp; call :cmErrorLevel %errorlevel% &amp; goto :cmDone
@@ -256,33 +256,33 @@ exit /b %1
 :cmDone
 if %errorlevel% neq 0 goto :VCEnd</Command>
       <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(AdditionalInputs)</AdditionalInputs>
-      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">D:\GitHub\invetario\Inventario\inventario_site\build\windows\runner\CMakeFiles\generate.stamp</Outputs>
       <LinkObjects Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkObjects>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\flutter_window.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\main.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\utils.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\win32_window.cpp" />
-    <ClCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\flutter\generated_plugin_registrant.cc" />
-    <ResourceCompile Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\windows\runner\Runner.rc" />
+    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\flutter_window.cpp" />
+    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\main.cpp" />
+    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\utils.cpp" />
+    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\win32_window.cpp" />
+    <ClCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\flutter\generated_plugin_registrant.cc" />
+    <ResourceCompile Include="D:\GitHub\invetario\Inventario\inventario_site\windows\runner\Runner.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\ZERO_CHECK.vcxproj">
-      <Project>{F6063F58-9F81-3B47-94CF-1FC577E70405}</Project>
+    <ProjectReference Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\ZERO_CHECK.vcxproj">
+      <Project>{4DB5FDAC-0580-33B1-80B9-D97FB7BA1455}</Project>
       <Name>ZERO_CHECK</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\flutter_assemble.vcxproj">
-      <Project>{481CDB4A-088C-39B0-909E-D3620A7A1DE6}</Project>
+    <ProjectReference Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\flutter_assemble.vcxproj">
+      <Project>{83413E92-4842-3C06-92F4-7A7B5A9CB799}</Project>
       <Name>flutter_assemble</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="C:\Users\user\Documents\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\flutter_wrapper_app.vcxproj">
-      <Project>{58705425-00DF-3E12-9715-D3A0D642E71E}</Project>
+    <ProjectReference Include="D:\GitHub\invetario\Inventario\inventario_site\build\windows\flutter\flutter_wrapper_app.vcxproj">
+      <Project>{C6D754EA-F5C5-3C8C-9B7F-24C79B2FE8D3}</Project>
       <Name>flutter_wrapper_app</Name>
     </ProjectReference>
   </ItemGroup>

@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/windows/runner
+# Install script for directory: D:/GitHub/invetario/Inventario/inventario_site/windows/runner
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

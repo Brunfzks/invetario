@@ -7,3 +7,5 @@ class AppColors {
   static final textColor = Colors.grey[700];
   static final errorColor = Colors.red[600];
 }
+
+
