@@ -29,10 +29,12 @@ class CardSideMenu extends StatelessWidget {
                 color: homeController.currentPage.value == indexMenu
                     ? Colors.white
                     : Colors.transparent,
-                child: Text(
-                  'TESTE',
-                  style: TextStyle(color: Colors.black),
-                ),
+                child: Row(children: [
+                  Text(
+                    'TESTE',
+                    style: AppText.title,
+                  ),
+                ]),
               ),
             ),
           )),
