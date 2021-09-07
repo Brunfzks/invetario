@@ -1,3 +1,4 @@
+const Knex = require('knex');
 const restify = require('restify');
 const errs = require('restify-errors');
 
@@ -11,7 +12,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.35\\sqlexpress',
+        server: '192.168.1.109\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -43,11 +44,12 @@ server.get('/locais', (req, res, next) => {
     }, next)
 });
 
-server.get('/notificacoes', (req, res, next) => {
-
-    knex('Tb_notificacao').then((dados) => {
-        res.send(dados);
-    }, next)
+server.get('/notificacoes/:id', (req, res, next) => {
+    const { id } = req.params;
+    knex.raw('execute sp_BuscaNotificacoes '+id).
+        then((dados) => {
+            res.send(dados);
+        }, next)
 });
 
 
@@ -118,18 +120,18 @@ server.post('/usuarios', (req, res, next) => {
 
 //rota listar unico
 server.post('/usuario', (req, res, next) => {
-   const { usuario } = req.body;
-   const { senha } = req.body;
-  knex('Tb_Usuario')
-      .where({
-        'Nm_usuario': usuario,
-        'Sn_usuario': senha
-    })
-      .first()
-      .then((dados) => {
-           if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
-          res.send(dados);
-       }, next)
+    const { usuario } = req.body;
+    const { senha } = req.body;
+    knex('Tb_Usuario')
+        .where({
+            'Nm_usuario': usuario,
+            'Sn_usuario': senha
+        })
+        .first()
+        .then((dados) => {
+            if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
+            res.send(dados);
+        }, next)
 });
 
 

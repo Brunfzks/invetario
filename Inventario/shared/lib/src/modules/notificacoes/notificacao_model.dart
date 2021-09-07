@@ -1,8 +1,11 @@
 import 'notificacao_repository.dart';
 
-class NotificacaoModel {
+class ModelNotificacao {
   int idNotificacao;
   String dtNotificacao;
+  String dsLocalOrigem;
+  String dsLocalAtual;
+  String dsItem;
   int idBem;
   int idUsuario;
 

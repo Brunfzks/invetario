@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:shared/constantes/app_theme.dart';
+import 'package:shared/shared.dart';
 
 class CardNotificacao extends StatelessWidget {
-  const CardNotificacao({Key? key}) : super(key: key);
+  ModelNotificacao modelNotificacao;
+
+  CardNotificacao({required this.modelNotificacao, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +17,7 @@ class CardNotificacao extends StatelessWidget {
             top: 16,
           ),
           child: Text(
-            descricao,
+            modelNotificacao.dsPatrimonio,
             textAlign: TextAlign.left,
             style: const TextStyle(
               fontWeight: FontWeight.w600,
@@ -27,7 +30,7 @@ class CardNotificacao extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 16, bottom: 8, top: 8),
           child: Text(
-            'Localização:',
+            modelPatrimonio.dsLocal,
             textAlign: TextAlign.left,
             style: const TextStyle(
               fontWeight: FontWeight.w500,

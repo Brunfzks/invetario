@@ -5,6 +5,8 @@ class ModelUsuario {
   String snUsuario;
   String cpOrigem;
   String dsSetor;
+  String ptUsuario;
+
   String nmUsuario;
 
   ModelUsuario(
@@ -12,6 +14,7 @@ class ModelUsuario {
       required this.snUsuario,
       required this.cpOrigem,
       required this.dsSetor,
+      required this.ptUsuario,
       required this.nmUsuario});
 
   factory ModelUsuario.fromJson(Map<String, dynamic> json) {
@@ -20,6 +23,7 @@ class ModelUsuario {
       snUsuario: json['Sn_usuario'],
       cpOrigem: json['Cp_origem'],
       dsSetor: json['Ds_setor'],
+      ptUsuario: json['Pt_usuario'],
       nmUsuario: json['Nm_usuario'],
     );
   }
@@ -30,6 +34,7 @@ class ModelUsuario {
     data['Sn_usuario'] = snUsuario;
     data['Cp_origem'] = cpOrigem;
     data['Ds_setor'] = dsSetor;
+    data['Pt_usuario'] = ptUsuario;
     data['Nm_usuario'] = nmUsuario;
     return data;
   }

@@ -1,6 +1,6 @@
 import 'package:shared/src/modules/patrimonios/patrimonio_repository.dart';
 
-class PatrimonioModel {
+class ModelPatrimonio {
   int idBem;
   String dsRotulo;
   int? dsEd;
@@ -39,6 +39,8 @@ class PatrimonioModel {
       required this.idLocal});
 
   factory PatrimonioModel.fromJson(Map<String, dynamic> json) {
+    
+    
     return PatrimonioModel(
       idBem: json['Id_Bem'],
       dsRotulo: json['Ds_rotulo'],
