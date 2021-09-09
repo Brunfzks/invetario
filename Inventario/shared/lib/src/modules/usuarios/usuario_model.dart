@@ -6,7 +6,6 @@ class ModelUsuario {
   String cpOrigem;
   String dsSetor;
   String ptUsuario;
-
   String nmUsuario;
 
   ModelUsuario(
@@ -23,7 +22,7 @@ class ModelUsuario {
       snUsuario: json['Sn_usuario'],
       cpOrigem: json['Cp_origem'],
       dsSetor: json['Ds_setor'],
-      ptUsuario: json['Pt_usuario'],
+      ptUsuario: json['Pt_Usuario'],
       nmUsuario: json['Nm_usuario'],
     );
   }
@@ -34,7 +33,7 @@ class ModelUsuario {
     data['Sn_usuario'] = snUsuario;
     data['Cp_origem'] = cpOrigem;
     data['Ds_setor'] = dsSetor;
-    data['Pt_usuario'] = ptUsuario;
+    data['Pt_Usuario'] = ptUsuario;
     data['Nm_usuario'] = nmUsuario;
     return data;
   }

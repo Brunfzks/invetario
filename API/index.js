@@ -12,7 +12,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.109\\sqlexpress',
+        server: '192.168.1.35\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -120,11 +120,11 @@ server.post('/usuarios', (req, res, next) => {
 
 //rota listar unico
 server.post('/usuario', (req, res, next) => {
-    const { usuario } = req.body;
+    const { prontuario } = req.body;
     const { senha } = req.body;
     knex('Tb_Usuario')
         .where({
-            'Nm_usuario': usuario,
+            'Pt_Usuario': prontuario,
             'Sn_usuario': senha
         })
         .first()

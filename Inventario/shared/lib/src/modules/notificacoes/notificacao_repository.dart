@@ -5,10 +5,10 @@ import 'package:shared/src/modules/notificacoes/notificacao_model.dart';
 import 'package:http/http.dart' as http;
 
 class NorificacaoRepository {
-  Future<List<NotificacaoModel>> getNotificacoes() async {
+  Future<List<ModelNotificacao>> getNotificacoes() async {
     String urlApi = Api.url('notificacoes');
 
-    List<NotificacaoModel> lista = [];
+    List<ModelNotificacao> lista = [];
 
     try {
       http.Response response = await http.get(Uri.parse(urlApi),
@@ -18,7 +18,7 @@ class NorificacaoRepository {
         final List parsedList = json.decode(response.body);
 
         parsedList.map((val) {
-          lista.add(NotificacaoModel.fromJson(val));
+          lista.add(ModelNotificacao.fromJson(val));
         }).toList();
         return lista;
       } else {

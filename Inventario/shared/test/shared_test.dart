@@ -13,6 +13,7 @@ import 'package:shared/src/modules/usuarios/usuario_repository.dart';
 
 void main() {
   ModelUsuario usuarioTeste = ModelUsuario(
+      ptUsuario: '3002021',
       snUsuario: '123456',
       cpOrigem: 'São Paulo',
       dsSetor: 'Professor',
@@ -28,7 +29,7 @@ void main() {
     });
     test('Get Patrimonio', () async {
       final patrimonio = await PatrimonioRepository().getPatrimonios();
-      expect(patrimonio, isA<List<PatrimonioModel>>());
+      expect(patrimonio, isA<List<ModelPatrimonio>>());
     });
     test('Get Levantamentos', () async {
       final patrimonio = await LevantamentoRepository().getLevantamentos();
@@ -36,7 +37,7 @@ void main() {
     });
     test('Get Notificacoes', () async {
       final patrimonio = await NorificacaoRepository().getNotificacoes();
-      expect(patrimonio, isA<List<NotificacaoModel>>());
+      expect(patrimonio, isA<List<ModelNotificacao>>());
     });
     test('Get Usuario', () async {
       final patrimonio =

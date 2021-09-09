@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:inventario_site/src/modules/home/home_controller.dart';
+import 'package:inventario_site/src/modules/home/widget/side_menu/widget/card_side_menu/card_side_menu.dart';
+import 'package:inventario_site/src/modules/home/widget/side_menu/widget/card_usuario_side/card_usuario_side.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_theme.dart';
 
 class SideMenu extends StatelessWidget {
-  const SideMenu({
+  SideMenu({
     Key? key,
     this.onTap1,
     this.onTap2,
@@ -13,84 +17,63 @@ class SideMenu extends StatelessWidget {
   final VoidCallback? onTap1;
   final VoidCallback? onTap2;
   final VoidCallback? onTap3;
+  final HomeController homeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 260,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topRight: Radius.circular(40),
-          bottomRight: Radius.circular(40),
+    return Stack(children: [
+      Container(
+        decoration: BoxDecoration(
+          borderRadius: const BorderRadius.only(
+            topRight: Radius.circular(40),
+            bottomRight: Radius.circular(40),
+          ),
+          color: AppColors.primary,
         ),
-        color: AppColors.primary,
-      ),
-      child: Column(
-        children: [
-          Expanded(
+        child: Column(
+          children: [
+            Expanded(
               flex: 2,
+              child: CardUsuarioSide(),
+            ),
+            Expanded(
+              flex: 4,
               child: Container(
-                height: 30,
-              )),
-          Expanded(
-            flex: 4,
-            child: Container(
-              decoration: BoxDecoration(
                 color: AppColors.primaryLight,
-                borderRadius: const BorderRadius.only(
-                  bottomRight: Radius.circular(40),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 5.0,
+                        left: 20.0,
+                      ),
+                      child: CardSideMenu(
+                        textLabel: 'Dashboard',
+                        icon: Icons.window,
+                        onTap: onTap1,
+                        indexMenu: 0,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 5.0,
+                        left: 20.0,
+                      ),
+                      child: CardSideMenu(
+                        icon: Icons.app_registration,
+                        textLabel: 'Cadastros',
+                        onTap: onTap2,
+                        indexMenu: 1,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-              child: ListView(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 8.0,
-                      bottom: 8.0,
-                      left: 20.0,
-                    ),
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: Colors.white,
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20),
-                          bottomLeft: Radius.circular(20),
-                        ),
-                      ),
-                      child: ListTile(
-                        leading: Icon(
-                          Icons.upload_rounded,
-                          color: AppColors.secondary,
-                        ),
-                        title: Text(
-                          'TESTE',
-                          style: AppTheme.captionLight,
-                        ),
-                        onTap: onTap1,
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      top: 8.0,
-                      bottom: 8.0,
-                      left: 20.0,
-                    ),
-                    child: ListTile(
-                      leading: Icon(
-                        Icons.upload_rounded,
-                        color: AppColors.secondary,
-                      ),
-                      title: Text('TESTE', style: AppTheme.captionLight),
-                      onTap: onTap2,
-                    ),
-                  ),
-                ],
-              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
-    );
+    ]);
   }
 }

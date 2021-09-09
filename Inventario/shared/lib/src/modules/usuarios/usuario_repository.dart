@@ -55,7 +55,7 @@ class UsuarioRepository {
     Map<String, dynamic> data = <String, dynamic>{};
 
     List<Map<String, dynamic>> listData = [];
-    data['usuario'] = usuario;
+    data['prontuario'] = usuario;
     data['senha'] = senha;
     listData.add(data);
 

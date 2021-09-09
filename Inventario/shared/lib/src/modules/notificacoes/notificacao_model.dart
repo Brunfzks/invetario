@@ -9,15 +9,20 @@ class ModelNotificacao {
   int idBem;
   int idUsuario;
 
-  NotificacaoModel({
-    required this.idNotificacao,
-    required this.dtNotificacao,
-    required this.idBem,
-    required this.idUsuario,
-  });
+  ModelNotificacao(
+      {required this.idNotificacao,
+      required this.dtNotificacao,
+      required this.idBem,
+      required this.idUsuario,
+      required this.dsItem,
+      required this.dsLocalAtual,
+      required this.dsLocalOrigem});
 
-  factory NotificacaoModel.fromJson(Map<String, dynamic> json) {
-    return NotificacaoModel(
+  factory ModelNotificacao.fromJson(Map<String, dynamic> json) {
+    return ModelNotificacao(
+      dsItem: json['Ds_item'],
+      dsLocalAtual: json['Ds_LocalAtual'],
+      dsLocalOrigem: json['Ds_LocalOrigem'],
       idNotificacao: json['Id_notificacao'],
       dtNotificacao: json['Dt_notificacao'],
       idBem: json['Id_Bem'],
@@ -34,7 +39,7 @@ class ModelNotificacao {
     return data;
   }
 
-  static Future<List<NotificacaoModel>> getNotificacoes() async {
+  static Future<List<ModelNotificacao>> getNotificacoes() async {
     return await NorificacaoRepository().getNotificacoes();
   }
 }
