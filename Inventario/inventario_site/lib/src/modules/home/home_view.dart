@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:inventario_site/src/modules/home/widget/side_menu_test/side_menu_test.dart';
-
+import 'package:inventario_site/src/modules/home/widget/side_menu/side_menu.dart';
 import 'home_controller.dart';
 
 class Home extends StatelessWidget {
@@ -27,7 +26,7 @@ class Home extends StatelessWidget {
           children: [
             Container(
               width: deviceInfo.size.width * 0.2,
-              child: SideMenuTeste(
+              child: SideMenu(
                 onTap1: () {
                   homeController.currentPage.value = 0;
                   homeController.oofSetBottomMenu.value = 395;

@@ -92,6 +92,16 @@ class AppTheme {
     letterSpacing: 0.2,
     color: lightText, // was lightText
   );
+
+  static const TextStyle captionLightBig = TextStyle(
+    // Caption -> caption
+    fontFamily: fontName,
+    fontWeight: FontWeight.w400,
+    fontSize: 20,
+    letterSpacing: 0.2,
+    color: white, // was lightText
+  );
+
   static const TextStyle captionLight = TextStyle(
     // Caption -> caption
     fontFamily: fontName,
