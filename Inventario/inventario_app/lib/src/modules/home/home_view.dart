@@ -7,7 +7,7 @@ import 'package:shared/constantes/app_theme.dart';
 class HomePage extends StatelessWidget {
   HomePage({Key? key}) : super(key: key);
 
-  final HomeController homeController = Get.put(HomeController());
+  final HomeController homeController = Get.find();
 
   @override
   Widget build(BuildContext context) {

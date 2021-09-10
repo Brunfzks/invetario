@@ -19,7 +19,7 @@ class ModelPatrimonio {
   String tpIngresso;
   int idLocal;
 
-  PatrimonioModel(
+  ModelPatrimonio(
       {required this.idBem,
       required this.dsRotulo,
       this.dsEd,
@@ -38,10 +38,8 @@ class ModelPatrimonio {
       required this.tpIngresso,
       required this.idLocal});
 
-  factory PatrimonioModel.fromJson(Map<String, dynamic> json) {
-    
-    
-    return PatrimonioModel(
+  factory ModelPatrimonio.fromJson(Map<String, dynamic> json) {
+    return ModelPatrimonio(
       idBem: json['Id_Bem'],
       dsRotulo: json['Ds_rotulo'],
       dsEd: json['Ds_ed'],
@@ -84,7 +82,7 @@ class ModelPatrimonio {
     return data;
   }
 
-  static Future<List<PatrimonioModel>> getPatrimonios() async {
+  static Future<List<ModelPatrimonio>> getPatrimonios() async {
     return await PatrimonioRepository().getPatrimonios();
   }
 }

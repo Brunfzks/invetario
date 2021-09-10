@@ -4,7 +4,86 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9382ff59-9b14-4aaa-b7c1-7a6ad4656379" name="Default Changelist" comment="" />
+    <list default="true" id="9382ff59-9b14-4aaa-b7c1-7a6ad4656379" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/inventario_app/assets/logoIf_60.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/shared/widgets/editor/editor.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/login_controller.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/login_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/widget/clipper/clipper_login.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/widget/login_form/button_login_form.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/widget/login_form/login_form.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/login/widget/slogan/slogan_view.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/shared/assets/logoIf_60.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/.filecache" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/.filecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/app.dill" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/app.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/debug_android_application.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/debug_android_application.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/flutter_assets.d" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/flutter_assets.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/kernel_snapshot.d" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/kernel_snapshot.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/kernel_snapshot.stamp" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/kernel_snapshot.stamp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/outputs.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/flutter_build/61cee1f87851523e9e3310fea6dc862e/outputs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/4f2a58af27abc49ecf55570043bbf938.cache.dill.track.dill" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/AssetManifest.json.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/NOTICES.Z.jar" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/NOTICES.Z.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/compressed_assets/debug/out/assets/flutter_assets/kernel_blob.bin.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/NOTICES.Z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_build.d" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/flutter_build.d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/libs.jar" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/flutter/debug/libs.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeJavaRes/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/265Sont6ejMH2E1dmUb0WI8BtUg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/WGzD8aWe8hedf0cJtCQ1h5DnohY=" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeJavaRes/zip-cache/WGzD8aWe8hedf0cJtCQ1h5DnohY=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeNativeLibs/merge-state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeNativeLibs/zip-cache/265Sont6ejMH2E1dmUb0WI8BtUg=" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WGzD8aWe8hedf0cJtCQ1h5DnohY=" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/debug-mergeNativeLibs/zip-cache/WGzD8aWe8hedf0cJtCQ1h5DnohY=" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/incremental/packageDebug/tmp/debug/dex-renamer-state.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/AssetManifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES.Z" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/NOTICES.Z" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/intermediates/merged_assets/debug/out/flutter_assets/kernel_blob.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/outputs/apk/debug/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/outputs/apk/debug/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app-debug.apk" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app-debug.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app.apk" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app.apk" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app.apk.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/app/outputs/flutter-apk/app.apk.sha1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/build/path_provider/intermediates/incremental/packageDebugResources/compile-file-map.properties" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/build/path_provider/intermediates/incremental/packageDebugResources/compile-file-map.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/home_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/home_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/home_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/home_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/widgets/card_notificacao.dart" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/lib/src/modules/home/widgets/card_notificacao.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/lib/src/modules/login/widget/login_form/login_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/lib/src/modules/login/widget/login_form/login_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugin_registrant.h" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugin_registrant.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/inventario_site/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/.dart_tool/package_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/shared/.dart_tool/package_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/.dart_tool/package_config_subset" beforeDir="false" afterPath="$PROJECT_DIR$/shared/.dart_tool/package_config_subset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/.dart_tool/version" beforeDir="false" afterPath="$PROJECT_DIR$/shared/.dart_tool/version" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shared/.idea/libraries/Dart_SDK.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/shared/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/lib/constantes/app_text.dart" beforeDir="false" afterPath="$PROJECT_DIR$/shared/lib/constantes/app_text.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/lib/src/modules/notificacoes/notificacao_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/shared/lib/src/modules/notificacoes/notificacao_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/lib/src/modules/notificacoes/notificacao_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/shared/lib/src/modules/notificacoes/notificacao_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/lib/src/modules/patrimonios/patrimonio_model.dart" beforeDir="false" afterPath="$PROJECT_DIR$/shared/lib/src/modules/patrimonios/patrimonio_model.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/lib/src/modules/patrimonios/patrimonio_repository.dart" beforeDir="false" afterPath="$PROJECT_DIR$/shared/lib/src/modules/patrimonios/patrimonio_repository.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/shared/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shared/shared.iml" beforeDir="false" afterPath="$PROJECT_DIR$/shared/shared.iml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,7 +102,8 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/AppData/Local/Android/Sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/shared" />
+    <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -36,5 +116,23 @@
       <updated>1630954792886</updated>
     </task>
     <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1631042561489">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="223" y="63" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1631042561489" />
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeFileChooserDialog" timestamp="1631042560452">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="498" y="198" key="#com.intellij.ide.util.TreeFileChooserDialog/0.0.1536.816@0.0.1536.816" timestamp="1631042560452" />
+    <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1631044044813">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="549" y="163" key="FileChooserDialogImpl/0.0.1536.816@0.0.1536.816" timestamp="1631044044813" />
+    <state x="277" y="53" key="SettingsEditor" timestamp="1631042525925">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="277" y="53" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1631042525925" />
   </component>
 </project>

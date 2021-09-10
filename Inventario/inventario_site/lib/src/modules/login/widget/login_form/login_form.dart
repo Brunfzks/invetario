@@ -28,8 +28,7 @@ class LoginForm extends StatelessWidget {
             children: [
               SizedBox(
                 width: 60,
-                height: 60,
-                child: SvgPicture.asset('assets/logoif_60.svg'),
+                height: 60,child: SvgPicture.asset('assets/logoif_60.svg'),
               ),
               const SizedBox(
                 height: 30,

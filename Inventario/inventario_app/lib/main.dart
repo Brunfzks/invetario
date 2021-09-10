@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:inventario_app/src/modules/home/home_view.dart';
+import 'package:inventario_app/src/modules/login/login_view.dart';
 import 'package:shared/constantes/app_theme.dart';
 
 void main() {
@@ -11,13 +11,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Inventario app',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         textTheme: AppTheme.textTheme,
         platform: TargetPlatform.iOS,
       ),
-      home: HomePage(),
+      home: LoginScreen(),
     );
   }
 }

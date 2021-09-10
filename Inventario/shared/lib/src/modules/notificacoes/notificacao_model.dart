@@ -3,25 +3,32 @@ import 'notificacao_repository.dart';
 class ModelNotificacao {
   int idNotificacao;
   String dtNotificacao;
-  String dsLocalOrigem;
-  String dsLocalAtual;
-  String dsItem;
   int idBem;
-  int idUsuario;
+  late int idUsuario;
+  String dsPatrimonio;
+  String usEcontrou;
+  String lcEncontrado;
+  String lcOrigem;
 
-  NotificacaoModel({
+  ModelNotificacao({
     required this.idNotificacao,
     required this.dtNotificacao,
     required this.idBem,
-    required this.idUsuario,
+    required this.dsPatrimonio,
+    required this.usEcontrou,
+    required this.lcEncontrado,
+    required this.lcOrigem,
   });
 
-  factory NotificacaoModel.fromJson(Map<String, dynamic> json) {
-    return NotificacaoModel(
+  factory ModelNotificacao.fromJson(Map<String, dynamic> json) {
+    return ModelNotificacao(
       idNotificacao: json['Id_notificacao'],
       dtNotificacao: json['Dt_notificacao'],
       idBem: json['Id_Bem'],
-      idUsuario: json['Id_usuario'],
+      dsPatrimonio: json['dsPatrimonio'],
+      usEcontrou: json['usEcontrou'],
+      lcEncontrado: json['lcEncontrado'],
+      lcOrigem: json['lcOrigem'],
     );
   }
 
@@ -34,7 +41,9 @@ class ModelNotificacao {
     return data;
   }
 
-  static Future<List<NotificacaoModel>> getNotificacoes() async {
-    return await NorificacaoRepository().getNotificacoes();
+  static Future<List<ModelNotificacao>> getNotificacoes(
+      {required int Id_Usuario}) async {
+    return await NorificacaoRepository()
+        .getNotificacoes(Id_Usuario: Id_Usuario);
   }
 }

@@ -7,19 +7,25 @@ class AppText {
     fontSize: 50,
     letterSpacing: 0.41,
     fontWeight: FontWeight.w600,
-    color: Colors.grey[700],
+    color: AppColors.textColor,
   );
   static var editorText = GoogleFonts.workSans(
     fontSize: 12,
     letterSpacing: 0.41,
     fontWeight: FontWeight.normal,
-    color: Colors.grey[700],
+    color: AppColors.textColor,
   );
   static var buttonText = GoogleFonts.workSans(
     fontSize: 20,
     letterSpacing: 0.41,
     fontWeight: FontWeight.normal,
     color: AppColors.secondary,
+  );
+  static var buttonTextMobile = GoogleFonts.workSans(
+    fontSize: 18,
+    letterSpacing: 0.41,
+    fontWeight: FontWeight.w600,
+    color: AppColors.textColor,
   );
   static var errorText = GoogleFonts.workSans(
     fontSize: 12,

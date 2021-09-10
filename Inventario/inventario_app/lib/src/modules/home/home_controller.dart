@@ -1,6 +1,11 @@
 import 'package:get/get.dart';
+import 'package:shared/shared.dart';
 
 class HomeController extends GetxController {
+  HomeController({required this.usuario});
+
+  final ModelUsuario usuario;
+
   @override
   void onInit() {
     // chamado imediatamente após o widget ser alocado em memória

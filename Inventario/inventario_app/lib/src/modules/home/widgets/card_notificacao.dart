@@ -30,7 +30,7 @@ class CardNotificacao extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 16, bottom: 8, top: 8),
           child: Text(
-            modelPatrimonio.dsLocal,
+            modelNotificacao.lcEncontrado,
             textAlign: TextAlign.left,
             style: const TextStyle(
               fontWeight: FontWeight.w500,
