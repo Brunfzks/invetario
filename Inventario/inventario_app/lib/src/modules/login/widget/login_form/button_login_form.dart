@@ -9,20 +9,29 @@ class ButtonForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 300,
-      height: 50,
+      width: MediaQuery.of(context).size.width - 80,
+      height: 60,
       decoration: BoxDecoration(
         color: AppColors.secondary,
         borderRadius: const BorderRadius.all(
-          Radius.circular(10),
+          Radius.circular(25),
         ),
+        gradient: LinearGradient(
+            colors: [
+              AppColors.primary,
+              Color(0xFF4EB87A),
+            ],
+            begin: FractionalOffset(0.0, 0.0),
+            end: FractionalOffset(1.0, 0.0),
+            stops: [0.0, 1.0],
+            tileMode: TileMode.clamp),
       ),
       child: InkWell(
         onTap: onTap,
         child: Center(
           child: Text(
             'Login',
-            style: AppText.editorTextMobile,
+            style: AppText.buttonTextMobile,
           ),
         ),
       ),

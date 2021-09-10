@@ -9,6 +9,8 @@ class NorificacaoRepository {
       {required int Id_Usuario}) async {
     String urlApi = Api.url('notificacoes/${Id_Usuario}');
 
+    print("GET NOTIFICAÇÕES " + urlApi);
+
     List<ModelNotificacao> lista = [];
 
     try {

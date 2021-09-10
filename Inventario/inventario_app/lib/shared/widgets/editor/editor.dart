@@ -56,13 +56,14 @@ class Editor extends StatelessWidget {
           obscureText: isPassword ?? false,
           decoration: InputDecoration(
             labelStyle: TextStyle(
-              color: AppColors.textColorWhite,
+              color: AppColors.textColor,
+              fontSize: 14,
             ),
-            prefixIcon: prefix,
-            isCollapsed: true,
+            enabledBorder: const UnderlineInputBorder(
+              borderSide: BorderSide(color: Color(0xFF4EB87A), width: 2),
+            ),
             suffix: sufix,
             fillColor: AppColors.primary,
-            border: InputBorder.none,
             labelText: label,
             hintText: hint ?? '',
           ),
