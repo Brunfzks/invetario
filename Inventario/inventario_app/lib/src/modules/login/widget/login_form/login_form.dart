@@ -7,6 +7,7 @@ import 'package:inventario_app/src/modules/home/home_controller.dart';
 import 'package:inventario_app/src/modules/home/home_view.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
+import 'package:shared/shared.dart';
 
 import '../../login_controller.dart';
 import 'button_login_form.dart';
@@ -143,10 +144,10 @@ class _LoginFormState extends State<LoginForm> {
                 onTap: () async {
                   widget.controller.wrongPassword.value = false;
                   if (_formKey.currentState!.validate()) {
-                    print("aqui");
                     try {
-                      final homeContoller = Get.put(HomeController(
-                          usuario: await widget.controller.login()));
+                      ModelUsuario usuario = await widget.controller.login();
+                      final HomeController homeContoller =
+                          Get.put(HomeController(usuario: usuario));
                       Get.to(() => HomePage());
                     } catch (e) {
                       widget.controller.wrongPassword.value = true;

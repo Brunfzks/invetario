@@ -36,7 +36,8 @@ void main() {
       expect(patrimonio, isA<List<LevantamentoModel>>());
     });
     test('Get Notificacoes', () async {
-      final patrimonio = await NorificacaoRepository().getNotificacoes();
+      final patrimonio =
+          await NorificacaoRepository().getNotificacoes(Id_Usuario: 0);
       expect(patrimonio, isA<List<ModelNotificacao>>());
     });
     test('Get Usuario', () async {
