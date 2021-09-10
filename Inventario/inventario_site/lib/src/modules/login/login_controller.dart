@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:inventario_site/src/modules/home/home_controller.dart';
 import 'package:shared/shared.dart';
 
 class LoginController extends GetxController {

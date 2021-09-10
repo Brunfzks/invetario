@@ -10,3 +10,4 @@ C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/window
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/NOTICES.Z
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
 C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/packages/shared/assets/logoif.png
+C:/Users/user/Documents/GitHub/invetario/Inventario/inventario_site/build/windows/runner/Debug/data/flutter_assets/packages/shared/assets/logoIf_60.svg
