@@ -45,101 +45,116 @@ class _LoginFormState extends State<LoginForm> {
     );
   }
 
+  _head() {
+    return Container(
+      padding: const EdgeInsets.all(20),
+      height: MediaQuery.of(context).size.height / 4,
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+            colors: [
+              AppColors.primary,
+              const Color(0xFF4EB87A),
+            ],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
+            tileMode: TileMode.clamp),
+      ),
+      child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            const SizedBox(
+              height: 50,
+            ),
+            Center(
+              child: SvgPicture.asset(
+                'assets/logoIf_60.svg',
+                height: 70,
+                color: Colors.white,
+              ),
+            ),
+            const SizedBox(
+              width: 20,
+            ),
+            _title(),
+            const SizedBox(
+              height: 50,
+            ),
+          ]),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40),
-      child: SingleChildScrollView(
-        child: Center(
-          child: Form(
-            key: _formKey,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const SizedBox(
-                  height: 100,
-                ),
-                Center(
-                  child: SvgPicture.asset(
-                    'assets/logoIf_60.svg',
-                    height: 100,
-                    color: Colors.white,
-                  ),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                _title(),
-                const SizedBox(
-                  height: 50,
-                ),
-                Editor(
+    var display = MediaQuery.of(context);
+    return SingleChildScrollView(
+      child: Form(
+        key: _formKey,
+        child: SizedBox(
+          height: display.size.height - 50,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _head(),
+              const Spacer(),
+              Editor(
+                validator: RequiredValidator(
+                    errorText: "Por favor, informe o usuário!"),
+                width: display.size.width - 80,
+                label: 'Prontuário',
+                controller: widget.controller.userLoginTextController,
+              ),
+              const SizedBox(
+                height: 15,
+              ),
+              Obx(
+                () => Editor(
                   validator: RequiredValidator(
-                      errorText: "Por favor, informe o usuário!"),
-                  width: 400,
-                  label: 'Usuário',
-                  controller: widget.controller.userLoginTextController,
-                  prefix: Icon(
-                    Icons.person,
-                    size: 25,
-                    color: AppColors.darkerText,
-                  ),
-                ),
-                const SizedBox(
-                  height: 15,
-                ),
-                Obx(
-                  () => Editor(
-                    validator: RequiredValidator(
-                        errorText: "Por favor, informe a senha!"),
-                    width: 400,
-                    label: 'Senha',
-                    controller: widget.controller.userSenhaTextController,
-                    prefix: Icon(
-                      Icons.lock,
-                      size: 25,
-                      color: AppColors.darkerText,
+                      errorText: "Por favor, informe a senha!"),
+                  width: display.size.width - 80,
+                  label: 'Senha',
+                  controller: widget.controller.userSenhaTextController,
+                  sufix: InkWell(
+                    onTap: () {
+                      widget.controller.showPasswords();
+                    },
+                    child: Icon(
+                      widget.controller.showPassword.value
+                          ? Icons.visibility
+                          : Icons.visibility_off,
+                      color: AppColors.primary,
                     ),
-                    sufix: InkWell(
-                      onTap: () {
-                        widget.controller.showPasswords();
-                      },
-                      child: Icon(
-                        widget.controller.showPassword.value
-                            ? Icons.visibility
-                            : Icons.visibility_off,
-                        color: AppColors.primary,
-                      ),
-                    ),
-                    isPassword: widget.controller.showPassword.value,
                   ),
+                  isPassword: widget.controller.showPassword.value,
                 ),
-                Obx(
-                  () => widget.controller.wrongPassword.value
-                      ? Text('Usuário ou senha incorretos',
-                          style: AppText.errorTextMobile)
-                      : Container(),
-                ),
-                const SizedBox(
-                  height: 50,
-                ),
-                ButtonForm(
-                  onTap: () async {
-                    widget.controller.wrongPassword.value = false;
-                    if (_formKey.currentState!.validate()) {
-                      try {
-                        final homeContoller = Get.put(HomeController(
-                            usuario: await widget.controller.login()));
-                        Get.to(() => HomePage());
-                      } catch (e) {
-                        widget.controller.wrongPassword.value = true;
-                      }
+              ),
+              Obx(
+                () => widget.controller.wrongPassword.value
+                    ? Text('Usuário ou senha incorretos',
+                        style: AppText.errorTextMobile)
+                    : Container(),
+              ),
+              const SizedBox(
+                height: 50,
+              ),
+              const Spacer(),
+              ButtonForm(
+                onTap: () async {
+                  widget.controller.wrongPassword.value = false;
+                  if (_formKey.currentState!.validate()) {
+                    print("aqui");
+                    try {
+                      final homeContoller = Get.put(HomeController(
+                          usuario: await widget.controller.login()));
+                      Get.to(() => HomePage());
+                    } catch (e) {
+                      widget.controller.wrongPassword.value = true;
                     }
-                  },
-                ),
-              ],
-            ),
+                  }
+                },
+              )
+            ],
           ),
         ),
       ),

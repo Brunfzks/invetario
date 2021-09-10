@@ -2,8 +2,6 @@ const Knex = require('knex');
 const restify = require('restify');
 const errs = require('restify-errors');
 
-
-
 const server = restify.createServer({
     name: 'myapp',
     version: '1.0.0'
@@ -12,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.35\\sqlexpress',
+        server: '192.168.1.109\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',

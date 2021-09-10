@@ -52,18 +52,18 @@ class AppText {
     color: AppColors.errorColor,
   );
 
-  static var buttonTextMobile = GoogleFonts.workSans(
-    fontSize: 18,
-    letterSpacing: 0.41,
-    fontWeight: FontWeight.w600,
-    color: AppColors.textColor,
-  );
-
   static var editorTextMobile = GoogleFonts.workSans(
     fontSize: 16,
     letterSpacing: 0.41,
     fontWeight: FontWeight.w500,
     color: AppColors.darkerText,
+  );
+
+  static var buttonTextMobile = GoogleFonts.workSans(
+    fontSize: 16,
+    letterSpacing: 0.41,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textColorWhite,
   );
 
   static var  textSecondTitleHome = GoogleFonts.workSans(
