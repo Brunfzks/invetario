@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:form_field_validator/form_field_validator.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 
@@ -35,13 +34,14 @@ class Editor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width ?? double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: TextFormField(
           validator: validator,
-          style: AppText.editorText,
+          textAlignVertical: TextAlignVertical.center,
+          style: AppText.editorTextMobile,
           keyboardType: isMultiline == true
               ? TextInputType.multiline
               : TextInputType.text,
@@ -55,11 +55,14 @@ class Editor extends StatelessWidget {
           controller: controller,
           obscureText: isPassword ?? false,
           decoration: InputDecoration(
-            labelStyle: TextStyle(color: AppColors.textColor),
-            prefix: prefix,
+            labelStyle: TextStyle(
+              color: AppColors.textColorWhite,
+            ),
+            prefixIcon: prefix,
+            isCollapsed: true,
             suffix: sufix,
             fillColor: AppColors.primary,
-            border: UnderlineInputBorder(),
+            border: InputBorder.none,
             labelText: label,
             hintText: hint ?? '',
           ),

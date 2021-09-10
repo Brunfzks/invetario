@@ -9,12 +9,12 @@ class ButtonForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 380,
-      height: 60,
+      width: 300,
+      height: 50,
       decoration: BoxDecoration(
         color: AppColors.secondary,
         borderRadius: const BorderRadius.all(
-          Radius.circular(25),
+          Radius.circular(10),
         ),
       ),
       child: InkWell(
@@ -22,7 +22,7 @@ class ButtonForm extends StatelessWidget {
         child: Center(
           child: Text(
             'Login',
-            style: AppText.buttonTextMobile,
+            style: AppText.editorTextMobile,
           ),
         ),
       ),

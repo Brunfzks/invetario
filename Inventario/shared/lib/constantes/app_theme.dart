@@ -33,7 +33,7 @@ class AppTheme {
     // h4 -> display1
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
-    fontSize: 36,
+    fontSize: 46,
     letterSpacing: 0.4,
     height: 0.9,
     color: darkerText,
