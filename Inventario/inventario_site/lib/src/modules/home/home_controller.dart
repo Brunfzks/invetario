@@ -7,8 +7,6 @@ class HomeController extends GetxController {
   final ModelUsuario usuario;
 
   var currentPage = 0.obs;
-  var oofSetTopMenu = 240.0.obs;
-  var oofSetBottomMenu = 395.0.obs;
 
   void setPage(int index) {
     currentPage.value = index;

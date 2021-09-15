@@ -33,7 +33,7 @@ class CardUsuarioSide extends StatelessWidget {
           height: 20,
         ),
         Text(
-          'Bem Vindo, ${homeController.usuario.nmUsuario}',
+          'Bem Vindo, ${homeController.usuario.nmUsuario.split(' ').first}',
           style: AppTheme.captionLightBig,
         ),
         const SizedBox(
