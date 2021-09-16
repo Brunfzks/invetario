@@ -24,11 +24,11 @@ class ModelNotificacao {
     return ModelNotificacao(
       idNotificacao: json['Id_notificacao'],
       dtNotificacao: json['Dt_notificacao'],
-      idBem: json['Id_Bem'],
-      dsPatrimonio: json['dsPatrimonio'],
-      usEcontrou: json['usEcontrou'],
-      lcEncontrado: json['lcEncontrado'],
-      lcOrigem: json['lcOrigem'],
+      idBem: json['Id_bem'],
+      dsPatrimonio: json['Ds_patrimonio'],
+      usEcontrou: json['Us_econtrou'],
+      lcEncontrado: json['Lc_encontrado'],
+      lcOrigem: json['Lc_origem'],
     );
   }
 

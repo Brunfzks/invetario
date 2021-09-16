@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.0.124\\sqlexpress',
+        server: '192.168.1.35\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
