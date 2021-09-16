@@ -7,13 +7,13 @@ class HomeController extends GetxController {
   });
 
   final ModelUsuario usuario;
-  List<ModelNotificacao> notificacao = <ModelNotificacao>[].obs;
+  var notificacao = <ModelNotificacao>[].obs;
 
   @override
   Future<void> onInit() async {
     // chamado imediatamente após o widget ser alocado em memória
     super.onInit();
-    notificacao =
+    notificacao.value =
         await ModelNotificacao.getNotificacoes(Id_Usuario: usuario.idUsuario!);
   }
 

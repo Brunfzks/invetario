@@ -25,12 +25,18 @@ class Notificacoes extends StatelessWidget {
             color: AppTheme.darkerText,
           ),
         ),
-        Obx(() => ListView(
-              shrinkWrap: true,
-              children: homeController.notificacao
-                  .map((model) => Container(child: _cardNotificacao(model)))
-                  .toList(),
-            )),
+        Obx(
+          () => ListView(
+            shrinkWrap: true,
+            children: homeController.notificacao
+                .map(
+                  (model) => Container(
+                    child: _cardNotificacao(model),
+                  ),
+                )
+                .toList(),
+          ),
+        ),
       ],
     );
   }
