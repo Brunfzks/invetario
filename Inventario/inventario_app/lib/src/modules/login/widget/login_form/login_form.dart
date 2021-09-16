@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:inventario_app/shared/widgets/editor/editor.dart';
 import 'package:inventario_app/src/modules/home/home_controller.dart';
 import 'package:inventario_app/src/modules/home/home_view.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 
@@ -45,6 +46,21 @@ class _LoginFormState extends State<LoginForm> {
     );
   }
 
+  _logo() {
+    return Stack(
+      children: [
+        LottieBuilder.asset('assets/lupa.json'),
+        Padding(
+          padding: const EdgeInsets.only(top: 30, left: 50),
+          child: const Text(
+            'ASP!',
+            style: TextStyle(fontSize: 90, color: Colors.grey),
+          ),
+        )
+      ],
+    );
+  }
+
   _head() {
     return Container(
       padding: const EdgeInsets.all(20),
@@ -77,7 +93,7 @@ class _LoginFormState extends State<LoginForm> {
             const SizedBox(
               width: 20,
             ),
-            _title(),
+            _logo(),
             const SizedBox(
               height: 50,
             ),
