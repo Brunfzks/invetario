@@ -2,14 +2,19 @@ import 'package:get/get.dart';
 import 'package:shared/shared.dart';
 
 class HomeController extends GetxController {
-  HomeController({required this.usuario});
+  HomeController({
+    required this.usuario,
+  });
 
   final ModelUsuario usuario;
+  List<ModelNotificacao> notificacao = <ModelNotificacao>[].obs;
 
   @override
-  void onInit() {
+  Future<void> onInit() async {
     // chamado imediatamente após o widget ser alocado em memória
     super.onInit();
+    notificacao =
+        await ModelNotificacao.getNotificacoes(Id_Usuario: usuario.idUsuario!);
   }
 
   @override

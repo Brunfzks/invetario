@@ -12,6 +12,8 @@
          to allow setting breakpoints, to provide hot reload, etc.
     -->
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
 
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -19,7 +21,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="inventario_app" >
         <activity
-            android:name="com.glp.inventario_app.MainActivity"
+            android:name="io.flutter.embedding.android.FlutterFragmentActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
             android:hardwareAccelerated="true"
             android:launchMode="singleTop"

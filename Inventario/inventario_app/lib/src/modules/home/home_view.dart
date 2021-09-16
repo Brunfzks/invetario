@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_app/src/modules/home/home_controller.dart';
+import 'package:inventario_app/src/modules/home/notificacoes/notificacoes_view.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_theme.dart';
 
@@ -19,8 +20,8 @@ class HomePage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
+            children: [
+              const Text(
                 'Rasp',
                 textAlign: TextAlign.left,
                 style: TextStyle(
@@ -31,28 +32,19 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               Text(
-                'Bem vindo, Alan',
+                'Bem vindo, ${homeController.usuario.nmUsuario}',
                 textAlign: TextAlign.left,
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 22,
                   letterSpacing: 0.27,
                   color: AppTheme.darkerText,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 30,
               ),
-              Text(
-                'Notificações',
-                textAlign: TextAlign.left,
-                style: TextStyle(
-                  fontWeight: FontWeight.w600,
-                  fontSize: 22,
-                  letterSpacing: 0.27,
-                  color: AppTheme.darkerText,
-                ),
-              ),
+              Notificacoes()
             ],
           ),
         ),
