@@ -18,6 +18,9 @@ class ButtonForm extends StatelessWidget {
         ),
       ),
       child: InkWell(
+        borderRadius: const BorderRadius.all(
+          Radius.circular(25),
+        ),
         onTap: onTap,
         child: Center(
           child: Text(

@@ -10,6 +10,7 @@ import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_theme.dart';
 import 'package:shared/constantes/app_text.dart';
 import 'package:form_field_validator/form_field_validator.dart';
+import 'package:shared/shared.dart';
 
 class LoginForm extends StatelessWidget {
   LoginForm({Key? key}) : super(key: key);
@@ -28,7 +29,8 @@ class LoginForm extends StatelessWidget {
             children: [
               SizedBox(
                 width: 60,
-                height: 60,child: SvgPicture.asset('assets/logoif_60.svg'),
+                height: 60,
+                child: SvgPicture.asset('assets/logoif_60.svg'),
               ),
               const SizedBox(
                 height: 30,
@@ -90,8 +92,9 @@ class LoginForm extends StatelessWidget {
                   controller.wrongPassword.value = false;
                   if (_formKey.currentState!.validate()) {
                     try {
-                      final homeContoller = Get.put(
-                          HomeController(usuario: await controller.login()));
+                      ModelUsuario usuario = await controller.login();
+                      final homeContoller =
+                          Get.put(HomeController(usuario: usuario));
                       Get.to(() => Home());
                     } catch (e) {
                       controller.wrongPassword.value = true;

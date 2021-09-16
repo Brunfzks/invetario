@@ -52,12 +52,13 @@ class UsuarioRepository {
   Future<ModelUsuario> getUsuario({required String usuario, senha}) async {
     String urlApi = Api.url('usuario');
 
-    print("GET USUARIO "+ urlApi);
+    print("GET USUARIO " + urlApi);
     Map<String, dynamic> data = <String, dynamic>{};
 
     List<Map<String, dynamic>> listData = [];
     data['prontuario'] = usuario;
     data['senha'] = senha;
+
     listData.add(data);
 
     var body = json.encode(data);
@@ -66,7 +67,6 @@ class UsuarioRepository {
         headers: {'Content-Type': 'application/json'}, body: body);
 
     if (response.statusCode == 200) {
-
       Map<String, dynamic> map = json.decode(response.body);
 
       return ModelUsuario.fromJson(map);

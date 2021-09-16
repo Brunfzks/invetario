@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:shared/constantes/app_color.dart';
 
 class AppTheme {
   AppTheme._();
-
+  static const primary = Color(0xFF4ea53d);
   static const Color notWhite = Color(0xFFEDF0F2);
   static const Color nearlyWhite = Color(0xFFFEFEFE);
   static const Color white = Color(0xFFFFFFFF);
@@ -46,6 +47,23 @@ class AppTheme {
     fontSize: 24,
     letterSpacing: 0.27,
     color: darkerText,
+  );
+  static const TextStyle headlinePrimary = TextStyle(
+    // h5 -> headline
+    fontFamily: fontName,
+    fontWeight: FontWeight.bold,
+    fontSize: 24,
+    letterSpacing: 0.27,
+    color: primary,
+  );
+
+  static const TextStyle headlineSecondary = TextStyle(
+    // h5 -> headline
+    fontFamily: fontName,
+    fontWeight: FontWeight.bold,
+    fontSize: 24,
+    letterSpacing: 0.27,
+    color: white,
   );
 
   static const TextStyle title = TextStyle(
