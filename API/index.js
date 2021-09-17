@@ -78,7 +78,7 @@ server.post('/levantamentos', (req, res, next) => {
 
 server.post('/locais', (req, res, next) => {
     knex('Tb_Local')
-        .insert(req.body['Ds_local'], (req.body['Id_usuario'])
+        .insert(req.body.Id_usuario, req.body.Ds_local, )
         .then((dados) => {
             knex('Tb_Local').max('Id_local').then((dados) => {
                 knex('Tb_Local').max('Id_local').then((dados) => {
