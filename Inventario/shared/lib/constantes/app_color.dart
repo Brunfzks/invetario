@@ -6,6 +6,7 @@ class AppColors {
   static final secondary = Colors.white;
   static final textColor = Colors.grey[700];
   static final errorColor = Colors.red[600];
+  static final avisorColor = Colors.orange[600];
   static final backgroundColor = Color(0xFFFFFFFF);
   static final textColorWhite = Color(0xFFFBFBFB);
   static final darkerText = Color(0xFF17262A);

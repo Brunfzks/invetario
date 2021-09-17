@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/cadastros/cadastro_controller.dart';
-import 'package:inventario_site/src/modules/cadastros/widget/cadastro_menu/widget/cadastro_card/cadastro_card.dart';
+import 'package:inventario_site/src/modules/cadastros/widget/cadastro_menu/cadastro_card.dart';
 import 'package:shared/constantes/app_theme.dart';
 
 class CadastroMenu extends StatelessWidget {

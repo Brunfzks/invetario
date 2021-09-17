@@ -6,7 +6,7 @@ class ModelLocal {
   int idUsuario;
 
   ModelLocal({
-    required this.idLocal,
+    this.idLocal,
     required this.dsLocal,
     required this.idUsuario,
   });
@@ -27,7 +27,18 @@ class ModelLocal {
     return data;
   }
 
+  Map<String, dynamic> toJsonInsert() {
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['Ds_local'] = dsLocal;
+    data['Id_usuario'] = idUsuario;
+    return data;
+  }
+
   static Future<List<ModelLocal>> getLocais(int Id_Usuario) async {
     return await LocalRepository().getLocais(Id_Usuario);
+  }
+
+  static Future<int> cadastraLocais(ModelLocal local) async {
+    return await LocalRepository().cadastraLocais(local);
   }
 }

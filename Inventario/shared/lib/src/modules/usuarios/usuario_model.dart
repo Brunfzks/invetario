@@ -50,6 +50,14 @@ class ModelUsuario {
     }
   }
 
+  static Future<bool> existeUsuario(String prontuario) async {
+    try {
+      return await UsuarioRepository().existeUsuario(prontuario);
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
   static Future<ModelUsuario> getUsuario(String usuario, String senha) async {
     try {
       return await UsuarioRepository()

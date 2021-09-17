@@ -1,9 +1,11 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/cadastros/cadastro_controller.dart';
 import 'package:inventario_site/src/modules/cadastros/widget/cadastro_menu/cadastro_menu_widget.dart';
-import 'package:inventario_site/src/modules/usuario/widget/cadastro_usuario/cadastro_usuario_form.dart';
-import 'package:shared/constantes/app_theme.dart';
+import 'package:inventario_site/src/modules/local/cadastro_local/cadastro_local_form.dart';
+import 'package:inventario_site/src/modules/usuario/cadastro_usuario/cadastro_usuario_form.dart';
 
 class CadastroPage extends StatelessWidget {
   CadastroPage({Key? key}) : super(key: key);
@@ -12,9 +14,7 @@ class CadastroPage extends StatelessWidget {
 
   final pages = [
     CadastroUsuarioForm(),
-    Container(
-      color: Colors.white,
-    ),
+    CadastroLocalForm(),
     Container(
       color: Colors.white,
     ),

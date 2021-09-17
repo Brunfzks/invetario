@@ -52,7 +52,7 @@ class AppTheme {
     // h5 -> headline
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
-    fontSize: 24,
+    fontSize: 20,
     letterSpacing: 0.27,
     color: primary,
   );
@@ -61,7 +61,7 @@ class AppTheme {
     // h5 -> headline
     fontFamily: fontName,
     fontWeight: FontWeight.bold,
-    fontSize: 24,
+    fontSize: 20,
     letterSpacing: 0.27,
     color: white,
   );

@@ -13,14 +13,16 @@ import 'package:shared/src/modules/usuarios/usuario_repository.dart';
 
 void main() {
   ModelUsuario usuarioTeste = ModelUsuario(
-      ptUsuario: '3002021',
-      snUsuario: '123456',
-      cpOrigem: 'São Paulo',
-      dsSetor: 'Professor',
-      nmUsuario: 'Lucas');
+    ptUsuario: '3002021',
+    snUsuario: '123456',
+    cpOrigem: 'São Paulo',
+    dsSetor: 'Professor',
+    nmUsuario: 'Lucas',
+  );
+  int idUsuario = 1;
   group('Get', () {
     test('Get Locais', () async {
-      final locais = await LocalRepository().getLocais();
+      final locais = await LocalRepository().getLocais(idUsuario);
       expect(locais, isA<List<ModelLocal>>());
     });
     test('Get Usuarios', () async {
@@ -44,6 +46,10 @@ void main() {
       final patrimonio =
           await UsuarioRepository().getUsuario(usuario: 'Alan', senha: '12345');
       expect(patrimonio, isA<ModelUsuario>());
+    });
+    test('Existe Usuario', () async {
+      final patrimonio = await UsuarioRepository().existeUsuario('3002021');
+      expect(patrimonio, true);
     });
   });
 

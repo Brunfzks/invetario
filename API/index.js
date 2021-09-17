@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.0.124\\sqlexpress',
+        server: '192.168.1.35\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -78,7 +78,7 @@ server.post('/levantamentos', (req, res, next) => {
 
 server.post('/locais', (req, res, next) => {
     knex('Tb_Local')
-        .insert(req.body)
+        .insert(req.body['Ds_local'], (req.body['Id_usuario'])
         .then((dados) => {
             knex('Tb_Local').max('Id_local').then((dados) => {
                 knex('Tb_Local').max('Id_local').then((dados) => {
@@ -130,7 +130,20 @@ server.post('/usuario', (req, res, next) => {
             if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
             res.send(dados);
         }, next)
-});
+},);
+
+server.get('/existeusuario/:prontuario', (req, res, next) => {
+    const { prontuario } = req.params;
+    knex('Tb_Usuario')
+        .where({
+            'Pt_Usuario': prontuario,
+        })
+        .first()
+        .then((dados) => {
+            if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
+            res.send(dados);
+        }, next)
+},);
 
 
 //rota listar unico

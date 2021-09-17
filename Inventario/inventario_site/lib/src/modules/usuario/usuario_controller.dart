@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:inventario_site/src/modules/home/home_controller.dart';
 import 'package:shared/shared.dart';
 
 class UsuarioController extends GetxController {
@@ -9,7 +10,17 @@ class UsuarioController extends GetxController {
   TextEditingController campusTextController = TextEditingController();
   TextEditingController setorTextController = TextEditingController();
 
+  HomeController homeController = Get.find();
+
+  var isLoading = false.obs;
+
+  Future<List<ModelUsuario>> getUsuarios() async {
+    homeController.listUsuario.value = await ModelUsuario.getUsuarios();
+    return homeController.listUsuario;
+  }
+
   Future<int> cadastraUsuario() async {
+    isLoading.value = true;
     ModelUsuario usuario = ModelUsuario(
       snUsuario: senhaTextController.text,
       cpOrigem: campusTextController.text,
@@ -19,7 +30,28 @@ class UsuarioController extends GetxController {
     );
     try {
       int idUsuario = await ModelUsuario.cadastraUsuario(usuario);
+      isLoading.value = false;
       return idUsuario;
+    } catch (e) {
+      isLoading.value = false;
+      rethrow;
+    }
+  }
+
+  void limpaControllers() {
+    senhaTextController.text = '';
+    campusTextController.text = '';
+    setorTextController.text = '';
+    prontuarioTextController.text = '';
+    nomeTextController.text = '';
+  }
+
+  Future<bool> existeUsuario(String prontuario) async {
+    try {
+      if (await ModelUsuario.existeUsuario(prontuario)) {
+        return true;
+      }
+      return false;
     } catch (e) {
       rethrow;
     }

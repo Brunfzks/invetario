@@ -49,6 +49,23 @@ class UsuarioRepository {
     }
   }
 
+  Future<bool> existeUsuario(
+    String prontuario,
+  ) async {
+    String urlApi = Api.url('existeusuario/$prontuario');
+
+    http.Response response = await http
+        .get(Uri.parse(urlApi), headers: {'Content-Type': 'application/json'});
+
+    if (response.statusCode == 200) {
+      return true;
+    } else if (response.statusCode == 400) {
+      return false;
+    } else {
+      throw Exception("Failed to load");
+    }
+  }
+
   Future<ModelUsuario> getUsuario({required String usuario, senha}) async {
     String urlApi = Api.url('usuario');
 
