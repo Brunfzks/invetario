@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.0.110\\sqlexpress',
+        server: '192.168.0.124\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -35,9 +35,9 @@ server.get('/levantamentos', (req, res, next) => {
     }, next)
 });
 
-server.get('/locais', (req, res, next) => {
-
-    knex('Tb_Local').then((dados) => {
+server.get('/locais/:id', (req, res, next) => {
+    const { id } = req.params;
+    knex('Tb_Local').where('Id_usuario', id).then((dados) => {
         res.send(dados);
     }, next)
 });
@@ -53,7 +53,7 @@ server.get('/notificacoes/:id', (req, res, next) => {
 
 server.get('/patrimonios', (req, res, next) => {
 
-    knex('Tb_Patrimonio').then((dados) => {
+    knex('Tb_Patrimonio').where().then((dados) => {
         res.send(dados);
     }, next)
 });

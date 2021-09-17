@@ -27,7 +27,7 @@ class ModelLocal {
     return data;
   }
 
-  static Future<List<ModelLocal>> getLocais() async {
-    return await LocalRepository().getLocais();
+  static Future<List<ModelLocal>> getLocais(int Id_Usuario) async {
+    return await LocalRepository().getLocais(Id_Usuario);
   }
 }

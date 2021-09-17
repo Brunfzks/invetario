@@ -5,8 +5,8 @@ import 'package:shared/src/modules/locais/local_model.dart';
 import 'package:http/http.dart' as http;
 
 class LocalRepository {
-  Future<List<ModelLocal>> getLocais() async {
-    String urlApi = Api.url('locais');
+  Future<List<ModelLocal>> getLocais(int Id_Usuario) async {
+    String urlApi = Api.url('locais/$Id_Usuario');
 
     List<ModelLocal> lista = [];
 

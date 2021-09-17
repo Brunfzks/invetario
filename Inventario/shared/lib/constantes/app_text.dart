@@ -45,6 +45,13 @@ class AppText {
 
   /////////////// MOBILE /////////////////
 
+  static var textTitlePage = GoogleFonts.workSans(
+    fontWeight: FontWeight.w600,
+    fontSize: 22,
+    letterSpacing: 0.27,
+    color: AppTheme.darkerText,
+  );
+  
   static var errorTextMobile = GoogleFonts.workSans(
     fontSize: 12,
     letterSpacing: 0.41,
@@ -64,6 +71,20 @@ class AppText {
     letterSpacing: 0.41,
     fontWeight: FontWeight.w500,
     color: AppColors.textColorWhite,
+  );
+
+  static var  textSecondCardNotificacaoHome = GoogleFonts.workSans(
+    fontWeight: FontWeight.w300,
+    fontSize: 12,
+    letterSpacing: 0.27,
+    color: AppColors.grey,
+  );
+
+  static var textPrimaryCardNotificacaoHome = GoogleFonts.workSans(
+    fontWeight: FontWeight.w500,
+    fontSize: 12,
+    letterSpacing: 0.27,
+    color: AppColors.grey,
   );
 
   static var  textSecondTitleHome = GoogleFonts.workSans(

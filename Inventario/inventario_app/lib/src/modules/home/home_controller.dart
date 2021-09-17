@@ -8,13 +8,16 @@ class HomeController extends GetxController {
 
   final ModelUsuario usuario;
   var notificacao = <ModelNotificacao>[].obs;
+  var locais = <ModelLocal>[].obs;
 
   @override
   Future<void> onInit() async {
-    // chamado imediatamente após o widget ser alocado em memória
     super.onInit();
+
     notificacao.value =
         await ModelNotificacao.getNotificacoes(Id_Usuario: usuario.idUsuario!);
+
+    locais.value = await ModelLocal.getLocais(usuario.idUsuario!);
   }
 
   @override
