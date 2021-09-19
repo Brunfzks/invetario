@@ -5,8 +5,8 @@ import 'package:shared/config/api.dart';
 import 'package:shared/src/modules/patrimonios/patrimonio_model.dart';
 
 class PatrimonioRepository {
-  Future<List<ModelPatrimonio>> getPatrimonios() async {
-    String urlApi = Api.url('patrimonios');
+  Future<List<ModelPatrimonio>> getPatrimonios({required int Id_local}) async {
+    String urlApi = Api.url('patrimonios/$Id_local');
 
     List<ModelPatrimonio> lista = [];
 

@@ -35,38 +35,31 @@ class _LocaisState extends State<Locais> with TickerProviderStateMixin {
       const SizedBox(
         height: 20,
       ),
-      Obx(() => SizedBox(
-            height: 400,
-            child: ListView.builder(
-              padding: const EdgeInsets.only(
-                right: 20,
-              ),
-              itemCount: homeController.locais.length,
-              scrollDirection: Axis.horizontal,
-              itemBuilder: (BuildContext context, int index) {
-                final int count = homeController.locais.length > 10
-                    ? 10
-                    : homeController.locais.length;
+      Obx(
+        () => ListView.builder(
+          shrinkWrap: true,
+          itemCount: homeController.locais.length,
+          itemBuilder: (BuildContext context, int index) {
+            final int count = homeController.locais.length > 10
+                ? 10
+                : homeController.locais.length;
 
-                final Animation<double> animation =
-                    Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
-                        parent: animationController,
-                        curve: Interval((1 / count) * index, 1.0,
-                            curve: Curves.fastOutSlowIn)));
+            final Animation<double> animation =
+                Tween<double>(begin: 0.0, end: 1.0).animate(CurvedAnimation(
+                    parent: animationController,
+                    curve: Interval((1 / count) * index, 1.0,
+                        curve: Curves.fastOutSlowIn)));
 
-                animationController.forward();
+            animationController.forward();
 
-                return Padding(
-                  padding: const EdgeInsets.only(right: 20),
-                  child: CardLocal(
-                    modelLocal: homeController.locais[index],
-                    animation: animation,
-                    animationController: animationController,
-                  ),
-                );
-              },
-            ),
-          ))
+            return CardLocal(
+              modelLocal: homeController.locais[index],
+              animation: animation,
+              animationController: animationController,
+            );
+          },
+        ),
+      )
     ]);
   }
 }

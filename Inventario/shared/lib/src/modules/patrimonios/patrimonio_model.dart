@@ -82,7 +82,7 @@ class ModelPatrimonio {
     return data;
   }
 
-  static Future<List<ModelPatrimonio>> getPatrimonios() async {
-    return await PatrimonioRepository().getPatrimonios();
+  static Future<List<ModelPatrimonio>> getPatrimonios({required int Id_local}) async {
+    return await PatrimonioRepository().getPatrimonios(Id_local: Id_local);
   }
 }
