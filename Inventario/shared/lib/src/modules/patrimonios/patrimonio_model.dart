@@ -1,4 +1,5 @@
 import 'package:shared/src/modules/patrimonios/patrimonio_repository.dart';
+import 'package:shared/src/modules/levantamentos/levantamento_repository.dart';
 
 class ModelPatrimonio {
   int idBem;
@@ -84,5 +85,18 @@ class ModelPatrimonio {
 
   static Future<List<ModelPatrimonio>> getPatrimonios({required int Id_local}) async {
     return await PatrimonioRepository().getPatrimonios(Id_local: Id_local);
+  }
+
+  static Future<String> insertLevantamento({required int  Id_Local,
+    required int Nm_Patrimonio,
+    required int Id_Levantamento,
+    required int Id_usuario}) async {
+
+    return await LevantamentoRepository().InsertLevantamento(
+        Id_Local:Id_Local,
+        Nm_Patrimonio:Nm_Patrimonio,
+        Id_Levantamento:Id_Levantamento,
+        Id_usuario:Id_usuario
+    ) ;
   }
 }

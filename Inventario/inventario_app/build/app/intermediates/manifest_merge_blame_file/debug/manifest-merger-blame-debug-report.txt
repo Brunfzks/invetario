@@ -17,81 +17,144 @@
 15    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
 15-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:4:5-73
 15-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:4:22-71
-16    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
-16-->[androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:24:5-72
-16-->[androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:24:22-69
-17
-18    <application
-18-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:5:4-42:19
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.3.2] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\f03ec885b8fabdebb4f0d3bbade5009e\core-1.3.2\AndroidManifest.xml:24:18-86
-20        android:debuggable="true"
-21        android:icon="@mipmap/ic_launcher"
-21-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:7:9-43
-22        android:label="inventario_app" >
-22-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:6:9-39
-23        <activity
-23-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:8:9-36:20
-24            android:name="io.flutter.embedding.android.FlutterFragmentActivity"
-24-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:9:13-80
-25            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
-25-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:12:13-163
-26            android:hardwareAccelerated="true"
-26-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:13:13-47
-27            android:launchMode="singleTop"
-27-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:10:13-43
-28            android:theme="@style/LaunchTheme"
-28-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:11:13-47
-29            android:windowSoftInputMode="adjustResize" >
-29-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:14:13-55
-30
-31            <!--
-32                 Specifies an Android theme to apply to this Activity as soon as
-33                 the Android process has started. This theme is visible to the user
-34                 while the Flutter UI initializes. After that, this theme continues
-35                 to determine the Window background behind the Flutter UI.
-36            -->
-37            <meta-data
-37-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:19:13-22:17
-38                android:name="io.flutter.embedding.android.NormalTheme"
-38-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:20:15-70
-39                android:resource="@style/NormalTheme" />
-39-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:21:15-52
-40            <!--
-41                 Displays an Android View that continues showing the launch screen
-42                 Drawable until Flutter paints its first frame, then this splash
-43                 screen fades out. A splash screen is useful to avoid any visual
-44                 gap between the end of Android's launch screen and the painting of
-45                 Flutter's first frame.
-46            -->
-47            <meta-data
-47-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:28:13-31:17
-48                android:name="io.flutter.embedding.android.SplashScreenDrawable"
-48-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:29:15-79
-49                android:resource="@drawable/launch_background" />
-49-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:30:15-61
-50
-51            <intent-filter>
-51-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:32:13-35:29
-52                <action android:name="android.intent.action.MAIN" />
-52-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:33:17-68
-52-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:33:25-66
-53
-54                <category android:name="android.intent.category.LAUNCHER" />
-54-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:34:17-76
-54-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:34:27-74
-55            </intent-filter>
-56        </activity>
-57        <!--
-58             Don't delete the meta-data below.
-59             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
-60        -->
-61        <meta-data
-61-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:39:9-41:33
-62            android:name="flutterEmbedding"
-62-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:40:13-44
-63            android:value="2" />
-63-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:41:13-30
-64    </application>
-65
-66</manifest>
+16    <uses-permission android:name="android.permission.CAMERA" />
+16-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:5:5-65
+16-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:5:22-62
+17    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+17-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:6:5-80
+17-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:6:22-78
+18    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+18-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:7:5-79
+18-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:7:22-77
+19    <uses-permission android:name="android.permission.VIBRATE" />
+19-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:8:5-66
+19-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:8:22-63
+20    <uses-permission android:name="android.permission.FLASHLIGHT" />
+20-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:9:5-69
+20-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:9:22-66
+21
+22    <uses-feature android:name="android.hardware.camera" />
+22-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:11:5-60
+22-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:11:19-57
+23    <uses-feature android:name="android.hardware.camera.autofocus" />
+23-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:12:5-70
+23-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:12:19-67
+24
+25    <uses-permission android:name="android.permission.WAKE_LOCK" />
+25-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:14:5-68
+25-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:14:22-65
+26    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+26-->[androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:24:5-72
+26-->[androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:24:22-69
+27
+28    <application
+28-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:9:4-46:19
+29        android:allowBackup="true"
+29-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:20:9-35
+30        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+30-->[androidx.core:core:1.3.2] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\f03ec885b8fabdebb4f0d3bbade5009e\core-1.3.2\AndroidManifest.xml:24:18-86
+31        android:configChanges="orientation|keyboardHidden"
+31-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:21:9-59
+32        android:debuggable="true"
+33        android:icon="@mipmap/ic_launcher"
+33-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:11:9-43
+34        android:label="inventario_app"
+34-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:10:9-39
+35        android:screenOrientation="portrait"
+35-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:23:9-45
+36        android:supportsRtl="true"
+36-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:24:9-35
+37        android:theme="@style/Theme.AppCompat.NoActionBar"
+37-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:25:9-59
+38        android:windowSoftInputMode="stateAlwaysHidden" >
+38-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:26:9-56
+39        <activity
+39-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:12:9-40:20
+40            android:name="io.flutter.embedding.android.FlutterFragmentActivity"
+40-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:13:13-80
+41            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+41-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:16:13-163
+42            android:hardwareAccelerated="true"
+42-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:17:13-47
+43            android:launchMode="singleTop"
+43-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:14:13-43
+44            android:theme="@style/LaunchTheme"
+44-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:15:13-47
+45            android:windowSoftInputMode="adjustResize" >
+45-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:18:13-55
+46
+47            <!--
+48                 Specifies an Android theme to apply to this Activity as soon as
+49                 the Android process has started. This theme is visible to the user
+50                 while the Flutter UI initializes. After that, this theme continues
+51                 to determine the Window background behind the Flutter UI.
+52            -->
+53            <meta-data
+53-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:23:13-26:17
+54                android:name="io.flutter.embedding.android.NormalTheme"
+54-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:24:15-70
+55                android:resource="@style/NormalTheme" />
+55-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:25:15-52
+56            <!--
+57                 Displays an Android View that continues showing the launch screen
+58                 Drawable until Flutter paints its first frame, then this splash
+59                 screen fades out. A splash screen is useful to avoid any visual
+60                 gap between the end of Android's launch screen and the painting of
+61                 Flutter's first frame.
+62            -->
+63            <meta-data
+63-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:32:13-35:17
+64                android:name="io.flutter.embedding.android.SplashScreenDrawable"
+64-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:33:15-79
+65                android:resource="@drawable/launch_background" />
+65-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:34:15-61
+66
+67            <intent-filter>
+67-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:36:13-39:29
+68                <action android:name="android.intent.action.MAIN" />
+68-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:37:17-68
+68-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:37:25-66
+69
+70                <category android:name="android.intent.category.LAUNCHER" />
+70-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:38:17-76
+70-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:38:27-74
+71            </intent-filter>
+72        </activity>
+73        <!--
+74             Don't delete the meta-data below.
+75             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+76        -->
+77        <meta-data
+77-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:43:9-45:33
+78            android:name="flutterEmbedding"
+78-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:44:13-44
+79            android:value="2" />
+79-->C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\android\app\src\main\AndroidManifest.xml:45:13-30
+80
+81        <activity android:name="com.shinow.qrscan.SecondActivity" />
+81-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:27:9-69
+81-->[:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\qrscan\intermediates\library_manifest\debug\AndroidManifest.xml:27:19-66
+82        <activity
+82-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:14:9-19:63
+83            android:name="com.uuzuche.lib_zxing.activity.CaptureActivity"
+83-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:15:13-74
+84            android:configChanges="orientation|keyboardHidden"
+84-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:16:13-63
+85            android:screenOrientation="portrait"
+85-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:17:13-49
+86            android:theme="@style/Theme.AppCompat.NoActionBar"
+86-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:18:13-63
+87            android:windowSoftInputMode="stateAlwaysHidden" />
+87-->[com.github.leyan95:android-zxingLibrary:0.1.2-PRE] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2435ed4d859e76f23ffc447325b50d32\jetified-android-zxingLibrary-0.1.2-PRE\AndroidManifest.xml:19:13-60
+88
+89        <provider
+89-->[com.squareup.picasso:picasso:2.71828] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2fad7524c28ceee8e167838a64160ebd\jetified-picasso-2.71828\AndroidManifest.xml:8:9-11:40
+90            android:name="com.squareup.picasso.PicassoProvider"
+90-->[com.squareup.picasso:picasso:2.71828] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2fad7524c28ceee8e167838a64160ebd\jetified-picasso-2.71828\AndroidManifest.xml:9:13-64
+91            android:authorities="com.glp.inventario_app.com.squareup.picasso"
+91-->[com.squareup.picasso:picasso:2.71828] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2fad7524c28ceee8e167838a64160ebd\jetified-picasso-2.71828\AndroidManifest.xml:10:13-72
+92            android:exported="false" />
+92-->[com.squareup.picasso:picasso:2.71828] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\2fad7524c28ceee8e167838a64160ebd\jetified-picasso-2.71828\AndroidManifest.xml:11:13-37
+93    </application>
+94
+95</manifest>

@@ -87,6 +87,13 @@ class AppText {
     color: AppColors.grey,
   );
 
+  static var textPrimaryCardLocalHome = GoogleFonts.workSans(
+    fontWeight: FontWeight.w600,
+    fontSize: 12,
+    letterSpacing: 0.27,
+    color: AppColors.grey,
+  );
+
   static var  textSecondTitleHome = GoogleFonts.workSans(
     fontWeight: FontWeight.bold,
     fontSize: 20,

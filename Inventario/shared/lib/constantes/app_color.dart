@@ -8,6 +8,8 @@ class AppColors {
   static final errorColor = Colors.red[600];
   static final avisorColor = Colors.orange[600];
   static final backgroundColor = Color(0xFFFFFFFF);
+  static final backgroundCardColor = Color(0xFFF8FAFB);
+
   static final textColorWhite = Color(0xFFFBFBFB);
   static final darkerText = Color(0xFF17262A);
   static const Color grey = Color(0xFF3A5160);

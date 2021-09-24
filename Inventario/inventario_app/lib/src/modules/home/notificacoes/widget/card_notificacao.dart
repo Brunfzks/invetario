@@ -28,9 +28,9 @@ class CardNotificacao extends StatelessWidget {
             child: GestureDetector(
                 onTap: () => {},
                 child: Container(
-                  decoration: const BoxDecoration(
-                    color: Color(0xFFF8FAFB),
-                    borderRadius: BorderRadius.all(Radius.circular(16.0)),
+                  decoration:  BoxDecoration(
+                    color: AppColors.backgroundCardColor,
+                    borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                   ),
                   width: 320,
                   child: Column(
@@ -40,7 +40,7 @@ class CardNotificacao extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.all(16),
                         child: Text(
-                          '${modelNotificacao.dsPatrimonio}',
+                          modelNotificacao.dsPatrimonio,
                           textAlign: TextAlign.left,
                           maxLines: 3,
                           overflow: TextOverflow.ellipsis,

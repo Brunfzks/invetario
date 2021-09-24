@@ -65,17 +65,6 @@ server.get('/usuarios', (req, res, next) => {
     }, next)
 });
 
-
-//rota inserir
-server.post('/levantamentos', (req, res, next) => {
-    knex('Tb_levantamentos')
-        .insert(req.body)
-        .then((dados) => {
-            res.send(dados);
-        }, next)
-});
-
-
 server.post('/locais', (req, res, next) => {
     knex('Tb_Local')
         .insert(req.body.Id_usuario, req.body.Ds_local, )
@@ -91,6 +80,18 @@ server.post('/locais', (req, res, next) => {
 server.post('/patrimonios', (req, res, next) => {
     knex('Tb_Patrimonio')
         .insert(req.body)
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
+
+
+//rota inserir
+server.post('/levantamentos', (req, res, next) => {  
+    knex.raw('EXECUTE sp_InsertLevantamento ' + req.body['Id_Local'] 
+    + ',' + req.body['Nm_Patrimonio'] 
+    + ',' + req.body['Id_Levantamento']
+    + ',' + req.body['Id_usuario'])
         .then((dados) => {
             res.send(dados);
         }, next)

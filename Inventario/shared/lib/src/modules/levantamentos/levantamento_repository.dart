@@ -28,4 +28,34 @@ class LevantamentoRepository {
       throw Exception(e);
     }
   }
+
+  Future<String> InsertLevantamento({required int  Id_Local,
+    required int Nm_Patrimonio,
+    required int Id_Levantamento,
+    required int Id_usuario }) async {
+    String urlApi = Api.url('levantamentos');
+
+    Map data = {
+      "Id_Local": Id_Local,
+      "Nm_Patrimonio": Nm_Patrimonio,
+      "Id_Levantamento": Id_Levantamento,
+      "Id_usuario": Id_usuario
+    };
+
+    var body = json.encode(data);
+
+    http.Response response = await http.post(Uri.parse(urlApi),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: body);
+
+    if (response.statusCode == 200) {
+      List<dynamic> map = json.decode(response.body);
+      print('RESULT LEVANTAMENTO '+map[0]['RESULT'] );
+      return map[0]['RESULT'];
+    } else {
+      throw Exception("Failed to load");
+    }
+  }
 }

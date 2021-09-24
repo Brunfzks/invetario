@@ -2,13 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_app/src/modules/home/locais/locais_controller.dart';
 import 'package:shared/constantes/app_color.dart';
+import 'package:shared/constantes/app_text.dart';
 import 'package:shared/shared.dart';
 
 class CardLocal extends StatelessWidget {
   ModelLocal modelLocal;
   final AnimationController animationController;
   final Animation<double> animation;
-
+  double length = 0;
   final LocalController localController = Get.put(LocalController());
 
   CardLocal(
@@ -35,10 +36,15 @@ class CardLocal extends StatelessWidget {
                         onExpansionChanged: (e) {
                           localController.loading.value = true;
 
-
-                          localController.getPatrimonios(
-                              Id_local: modelLocal.idLocal!);
+                          localController
+                              .getPatrimonios(Id_local: modelLocal.idLocal!)
+                              .then((value) {
+                            length = double.parse(
+                                localController.patrimonios.length.toString());
+                          });
                         },
+                        collapsedIconColor: AppColors.grey,
+                        iconColor: AppColors.primary,
                         tilePadding: EdgeInsets.zero,
                         title: ClipRRect(
                           borderRadius:
@@ -46,23 +52,25 @@ class CardLocal extends StatelessWidget {
                           child: AspectRatio(
                             aspectRatio: 8,
                             child: Container(
-                              color: AppColors.primary.withAlpha(50),
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 10),
+                              color: AppColors.backgroundCardColor,
                               child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
                                 children: [
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  const Icon(Icons.location_on_outlined),
-                                  const SizedBox(
-                                    width: 10,
-                                  ),
-                                  Text(
-                                    modelLocal.dsLocal,
-                                    style: const TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                      fontSize: 14,
-                                      letterSpacing: 0.27,
-                                      color: Colors.black,
+                                  Text(modelLocal.dsLocal.toUpperCase(),
+                                      style: AppText.textPrimaryCardLocalHome),
+                                  GestureDetector(
+                                    onTap: () {
+                                      localController.startScan(
+                                          Id_Local: modelLocal.idLocal!,
+                                          Id_Levantamento: 1,
+                                          Id_usuario: modelLocal.idUsuario);
+                                    },
+                                    child: Icon(
+                                      Icons.qr_code_scanner,
+                                      color: AppColors.primary,
                                     ),
                                   ),
                                 ],
@@ -71,45 +79,41 @@ class CardLocal extends StatelessWidget {
                           ),
                         ),
                         children: [
-                          Obx(() => localController.loading.value
+                          localController.loading.value
                               ? const SizedBox(
-                                  height: 50,
-                                  width: 50,
+                                  height: 40,
+                                  width: 40,
                                   child: Center(
                                       child: CircularProgressIndicator()))
-                              : ListView.builder(
-                                  padding: const EdgeInsets.only(
-                                    right: 20,
-                                  ),
-                                  shrinkWrap: true,
-                                  itemCount: localController.patrimonios.length,
-                                  scrollDirection: Axis.horizontal,
-                                  itemBuilder:
-                                      (BuildContext context, int index) {
-                                    final int count =
-                                        localController.patrimonios.length > 10
-                                            ? 10
-                                            : localController
-                                                .patrimonios.length;
-
-                                    final Animation<double> animation =
-                                        Tween<double>(begin: 0.0, end: 1.0)
-                                            .animate(CurvedAnimation(
-                                                parent: animationController,
-                                                curve: Interval(
-                                                    (1 / count) * index, 1.0,
-                                                    curve:
-                                                        Curves.fastOutSlowIn)));
-
-                                    animationController.forward();
-
-                                    return Padding(
-                                      padding: const EdgeInsets.only(right: 20),
-                                      child: _row(
-                                          localController.patrimonios[index]),
-                                    );
-                                  },
-                                ))
+                              : length > 0
+                                  ? SizedBox(
+                                      height: 40 * length,
+                                      width: MediaQuery.of(context).size.width,
+                                      child: ListView.builder(
+                                        padding: const EdgeInsets.only(
+                                          right: 20,
+                                        ),
+                                        shrinkWrap: true,
+                                        itemCount:
+                                            localController.patrimonios.length,
+                                        itemBuilder:
+                                            (BuildContext context, int index) {
+                                          return Padding(
+                                            padding: const EdgeInsets.only(
+                                                right: 20),
+                                            child: _row(localController
+                                                .patrimonios[index]),
+                                          );
+                                        },
+                                      ),
+                                    )
+                                  : const Padding(
+                                      padding: EdgeInsets.all(8.0),
+                                      child: Text(
+                                        'Esta sala não possui patrimonios associados',
+                                        style: TextStyle(fontSize: 10),
+                                      ),
+                                    )
                         ]),
                   )),
             ));
@@ -126,7 +130,7 @@ class CardLocal extends StatelessWidget {
             patrimonio.nmPatrimonio.toString(),
             style: TextStyle(
               fontWeight: FontWeight.w400,
-              fontSize: 14,
+              fontSize: 12,
               letterSpacing: 0.27,
               color: AppColors.darkerText,
             ),
@@ -138,7 +142,7 @@ class CardLocal extends StatelessWidget {
             patrimonio.dsPatrimonio,
             style: TextStyle(
               fontWeight: FontWeight.w400,
-              fontSize: 14,
+              fontSize: 12,
               letterSpacing: 0.27,
               color: AppColors.darkerText,
             ),
