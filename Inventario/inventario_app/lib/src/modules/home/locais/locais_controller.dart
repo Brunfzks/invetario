@@ -49,37 +49,42 @@ class LocalController extends GetxController {
 
     print('RESULTADO SCANEADO: $Nm_Patrimonio');
 
-    print('$Id_Local, $Nm_Patrimonio, $Id_Levantamento, $Id_usuario');
-    String result = await ModelPatrimonio.insertLevantamento(
-        Id_Local: Id_Local,
-        Nm_Patrimonio: int.parse(Nm_Patrimonio!),
-        Id_Levantamento: Id_Levantamento,
-        Id_usuario: Id_usuario,
-        notificacao: notificacao);
+    if (Nm_Patrimonio != null) {
+      print('$Id_Local, $Nm_Patrimonio, $Id_Levantamento, $Id_usuario');
 
-    print(result);
-    bool restart = true;
-    if (result == 'PATRIMONIO NAO CADASTRADO') {
-      restart = await _showDialogScan(context, notificacao: false);
-    } else if (result == 'NOTIFICACAO CRIADA!') {
-      restart = await _showDialogScan(context, notificacao: true);
-    } else if (result == 'INSERIDO COM SUCESSO!') {
-      _snack(
-        text: 'Verficação realizada com sucesso!',
-        color: AppColors.primary,
-        scaffoldKey: scaffoldKey,
-      );
-    }
+      String result = await ModelPatrimonio.insertLevantamento(
+          Id_Local: Id_Local,
+          Nm_Patrimonio: int.parse(Nm_Patrimonio),
+          Id_Levantamento: Id_Levantamento,
+          Id_usuario: Id_usuario,
+          notificacao: notificacao);
 
-    if (restart && !notificacao) {
-      Future.delayed(const Duration(seconds: 2)).then((value) {
-        startScan(
-            Id_Local: Id_Local,
-            Id_Levantamento: Id_Levantamento,
-            Id_usuario: Id_usuario,
-            context: context,
-            scaffoldKey: scaffoldKey);
-      });
+      print(result);
+
+      bool restart = true;
+
+      if (result == 'PATRIMONIO NAO CADASTRADO') {
+        restart = await _showDialogScan(context, notificacao: false);
+      } else if (result == 'NOTIFICACAO CRIADA!') {
+        restart = await _showDialogScan(context, notificacao: true);
+      } else if (result == 'INSERIDO COM SUCESSO!') {
+        _snack(
+          text: 'Verficação realizada com sucesso!',
+          color: AppColors.primary,
+          scaffoldKey: scaffoldKey,
+        );
+      }
+
+      if (restart && !notificacao) {
+        Future.delayed(const Duration(seconds: 2)).then((value) {
+          startScan(
+              Id_Local: Id_Local,
+              Id_Levantamento: Id_Levantamento,
+              Id_usuario: Id_usuario,
+              context: context,
+              scaffoldKey: scaffoldKey);
+        });
+      }
     }
   }
 

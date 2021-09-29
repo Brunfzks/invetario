@@ -52,36 +52,52 @@ class CardLocal extends StatelessWidget {
                         collapsedIconColor: AppColors.grey,
                         iconColor: AppColors.primary,
                         tilePadding: EdgeInsets.zero,
-                        title: ClipRRect(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(10.0)),
-                          child: AspectRatio(
-                            aspectRatio: 8,
-                            child: Container(
-                              padding:
-                                  const EdgeInsets.symmetric(horizontal: 10),
-                              color: AppColors.backgroundCardColor,
-                              child: Row(
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceBetween,
-                                children: [
-                                  Text(modelLocal.dsLocal.toUpperCase(),
-                                      style: AppText.textPrimaryCardLocalHome),
-                                  GestureDetector(
-                                    onTap: () {
-                                      localController.startScan(
-                                          Id_Local: modelLocal.idLocal!,
-                                          Id_Levantamento: 1,
-                                          Id_usuario: modelLocal.idUsuario,
-                                          scaffoldKey: scaffoldKey,
-                                          context: context);
-                                    },
-                                    child: Icon(
-                                      Icons.qr_code_scanner,
-                                      color: AppColors.primary,
-                                    ),
-                                  ),
-                                ],
+                        title: SizedBox(
+                          height: 70,
+                          child: ClipRRect(
+                            borderRadius:
+                                const BorderRadius.all(Radius.circular(10.0)),
+                            child: AspectRatio(
+                              aspectRatio: 8,
+                              child: Container(
+                                padding:
+                                    const EdgeInsets.symmetric(horizontal: 10),
+                                color: AppColors.backgroundCardColor,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceBetween,
+                                  children: [
+                                    Text(modelLocal.dsLocal.toUpperCase(),
+                                        style:
+                                            AppText.textPrimaryCardLocalHome),
+                                    GestureDetector(
+                                        onTap: () {
+                                          localController.startScan(
+                                              Id_Local: modelLocal.idLocal!,
+                                              Id_Levantamento: 1,
+                                              Id_usuario: modelLocal.idUsuario,
+                                              scaffoldKey: scaffoldKey,
+                                              context: context);
+                                        },
+                                        child: Container(
+                                            height: 50,
+                                            width: 50,
+                                            decoration: const BoxDecoration(
+                                              color: Colors.white,
+                                              borderRadius: BorderRadius.all(
+                                                  Radius.circular(8.0)),
+                                            ),
+                                            child: Padding(
+                                              padding:
+                                                  const EdgeInsets.all(4.0),
+                                              child: Icon(
+                                                Icons.qr_code_scanner,
+                                                color: AppColors.primary,
+                                                size: 30,
+                                              ),
+                                            ))),
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -134,25 +150,30 @@ class CardLocal extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
-          Text(
-            patrimonio.nmPatrimonio.toString(),
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
-              letterSpacing: 0.27,
-              color: AppColors.darkerText,
+          Expanded(
+            flex: 2,
+            child: Text(
+              patrimonio.nmPatrimonio.toString(),
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                letterSpacing: 0.27,
+                color: AppColors.darkerText,
+              ),
             ),
           ),
-          const SizedBox(
-            width: 20,
-          ),
-          Text(
-            patrimonio.dsPatrimonio,
-            style: TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 12,
-              letterSpacing: 0.27,
-              color: AppColors.darkerText,
+          Expanded(
+            flex: 9,
+            child: Text(
+              patrimonio.dsPatrimonio,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                letterSpacing: 0.27,
+                color: AppColors.darkerText,
+              ),
             ),
           ),
         ],

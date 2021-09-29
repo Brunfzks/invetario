@@ -9,7 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 class LoginController extends GetxController {
   String ptUsuario = "";
   String snUsuario = "";
-  final LocalAuthentication _localAuthentication = LocalAuthentication();
+  var userSave = false.obs;
 
   TextEditingController userLoginTextController = TextEditingController();
   TextEditingController userSenhaTextController = TextEditingController();
@@ -18,9 +18,8 @@ class LoginController extends GetxController {
   var wrongPassword = false.obs;
 
   @override
-  void onInit() {
-    userSave();
-    // chamado imediatamente após o widget ser alocado em memória
+  void onInit() async {
+    userSave.value = await checkUserSave();
     super.onInit();
   }
 
@@ -36,7 +35,10 @@ class LoginController extends GetxController {
     super.onClose();
   }
 
-  Future<void> login({user, senha}) async {
+  _autenticar({
+    user,
+    senha,
+  }) async {
     try {
       if (user == null && senha == null) {
         user = userLoginTextController.text;
@@ -58,7 +60,18 @@ class LoginController extends GetxController {
     }
   }
 
-  userSave() async {
+  Future<void> login({
+    user,
+    senha,
+  }) async {
+    if (userSave.value) {
+      authenticateWithBiometrics();
+    } else {
+      _autenticar(user: user, senha: senha);
+    }
+  }
+
+  Future<bool> checkUserSave() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     ptUsuario = (prefs.getString('ptUsuario') ?? "");
@@ -67,13 +80,13 @@ class LoginController extends GetxController {
     if (ptUsuario != "" && snUsuario != "") {
       print('User save');
       userLoginTextController.text = ptUsuario;
-
-      authenticateWithBiometrics();
+      return true;
+    } else {
+      return false;
     }
   }
 
-  authenticateWithBiometrics() async {
-    print('Entrou validação plea biometria');
+  Future<bool> authenticateWithBiometrics() async {
     final LocalAuthentication localAuthentication = LocalAuthentication();
     bool isBiometricSupported = await localAuthentication.isDeviceSupported();
     bool canCheckBiometrics = await localAuthentication.canCheckBiometrics;
@@ -92,7 +105,13 @@ class LoginController extends GetxController {
     }
 
     if (isAuthenticated) {
-      login(user: ptUsuario, senha: snUsuario);
+      _autenticar(
+        user: ptUsuario,
+        senha: snUsuario,
+      );
+      return true;
+    } else {
+      return false;
     }
   }
 

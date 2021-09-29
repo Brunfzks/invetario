@@ -29,10 +29,7 @@ class _LocaisState extends State<Locais> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-      const SizedBox(
-        height: 50,
-      ),
-      Text('Seus Locais',
+      Text('SEUS LOCAIS',
           textAlign: TextAlign.left, style: AppText.textTitlePage),
       const SizedBox(
         height: 20,

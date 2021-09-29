@@ -3,7 +3,7 @@
   "packages": [
     {
       "name": "archive",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.2",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/archive-3.1.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -165,7 +165,7 @@
     },
     {
       "name": "lottie",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/lottie-1.1.0",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/lottie-1.2.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -201,13 +201,13 @@
     },
     {
       "name": "path_provider",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.3",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider-2.0.4",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
     {
       "name": "path_provider_linux",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.0.2",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_linux-2.1.0",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -219,7 +219,7 @@
     },
     {
       "name": "path_provider_platform_interface",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.0",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/path_provider_platform_interface-2.0.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -398,7 +398,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-09-29T00:29:19.203084Z",
+  "generated": "2021-09-29T19:24:03.495259Z",
   "generator": "pub",
   "generatorVersion": "2.14.0-301.2.beta"
 }

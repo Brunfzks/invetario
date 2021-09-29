@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 import 'package:inventario_app/shared/widgets/editor/editor.dart';
+import 'package:inventario_app/shared/widgets/title.dart';
 import 'package:inventario_app/src/modules/login/login_controller.dart';
+import 'package:lottie/lottie.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 
@@ -20,132 +21,98 @@ class LoginForm extends StatefulWidget {
 class _LoginFormState extends State<LoginForm> {
   final _formKey = GlobalKey<FormState>();
 
-  _title() {
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text(
-            'BEM VINDO AO ',
-            textAlign: TextAlign.left,
-            style: AppText.textSecondTitleHome,
-          ),
-          const SizedBox(
-            height: 10,
-          ),
-          Text(
-            'RASP!',
-            textAlign: TextAlign.center,
-            style: AppText.textTitleHome,
-          )
-        ],
-      ),
-    );
-  }
-
-  _head() {
-    return Container(
-      padding: const EdgeInsets.all(20),
-      height: MediaQuery.of(context).size.height / 4,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(
-            colors: [
-              AppColors.primary,
-              const Color(0xFF4EB87A),
-            ],
-            begin: const FractionalOffset(0.0, 0.0),
-            end: const FractionalOffset(1.0, 0.0),
-            stops: const [0.0, 1.0],
-            tileMode: TileMode.clamp),
-      ),
-      child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const Spacer(),
-            Center(
-              child: SvgPicture.asset(
-                'assets/logoIf_60.svg',
-                height: 70,
-              ),
-            ),
-            const Spacer(),
-            _title(),
-            const Spacer(),
-          ]),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     var display = MediaQuery.of(context);
-    return SingleChildScrollView(
-      child: Form(
-        key: _formKey,
-        child: SizedBox(
-          height: display.size.height - 50,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              _head(),
-              const Spacer(),
-              Editor(
-                validator: RequiredValidator(
-                    errorText: "Por favor, informe o usuário!"),
-                width: display.size.width - 80,
-                label: 'Prontuário',
-                controller: widget.loginController.userLoginTextController,
-              ),
-              const SizedBox(
-                height: 15,
-              ),
-              Obx(
-                () => Editor(
-                  validator: RequiredValidator(
-                      errorText: "Por favor, informe a senha!"),
-                  width: display.size.width - 80,
-                  label: 'Senha',
-                  controller: widget.loginController.userSenhaTextController,
-                  sufix: InkWell(
-                    onTap: () {
-                      widget.loginController.showPasswords();
-                    },
-                    child: Icon(
-                      widget.loginController.showPassword.value
-                          ? Icons.visibility
-                          : Icons.visibility_off,
-                      color: AppColors.primary,
-                    ),
-                  ),
-                  isPassword: widget.loginController.showPassword.value,
+    return Container(
+      color: Colors.white,
+      child: SingleChildScrollView(
+        child: Form(
+          key: _formKey,
+          child: SizedBox(
+            width: display.size.width,
+            height: display.size.height - 50,
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+
+                TitlePage(
+                    primaryText: 'BEM VINDO AO ',
+                    secondText: 'RASP!',
+                    subTitle: 'RASTREAMENTO DE PATRIMÔNIOS'),
+                const Spacer(),
+                Lottie.asset('assets/anim_login.json', height: 250),
+                const SizedBox(
+                  height: 50,
                 ),
-              ),
-              Obx(
-                () => widget.loginController.wrongPassword.value
-                    ? Text('Usuário ou senha incorretos',
-                        style: AppText.errorTextMobile)
-                    : Container(),
-              ),
-              const SizedBox(
-                height: 50,
-              ),
-              const Spacer(),
-              ButtonForm(
-                onTap: () async {
-                  widget.loginController.wrongPassword.value = false;
-                  if (_formKey.currentState!.validate()) {
-                    try {
-                      widget.loginController.login();
-                    } catch (e) {
-                      widget.loginController.wrongPassword.value = true;
-                    }
-                  }
-                },
-              )
-            ],
+                Editor(
+                  label: 'Prontuário',
+                  controller: widget.loginController.userLoginTextController,
+                  textCapitalization: TextCapitalization.characters,
+                  validator: RequiredValidator(
+                      errorText: "Por favor, informe o usuário!"),
+                  width: display.size.width - 80,
+                  onChanged: (e) {
+                    widget.loginController.userSave.value = false;
+                  },
+                  onFieldSubmitted: (v) {},
+                ),
+                Obx(
+                  () => widget.loginController.userSave.value == false
+                      ? Editor(
+                          label: 'Senha',
+                          controller:
+                              widget.loginController.userSenhaTextController,
+                          sufix: InkWell(
+                            onTap: () {
+                              widget.loginController.showPasswords();
+                            },
+                            child: Icon(
+                              widget.loginController.showPassword.value
+                                  ? Icons.visibility
+                                  : Icons.visibility_off,
+                              color: AppColors.primary,
+                            ),
+                          ),
+                          onFieldSubmitted: (v) {
+                            _validaLogin();
+                          },
+                          validator: RequiredValidator(
+                              errorText: "Por favor, informe a senha!"),
+                          width: display.size.width - 80,
+                          isPassword: widget.loginController.showPassword.value,
+                        )
+                      : Container(),
+                ),
+                Obx(
+                  () => widget.loginController.wrongPassword.value
+                      ? Text('Usuário ou senha incorretos',
+                          style: AppText.errorTextMobile)
+                      : Container(),
+                ),
+                const Spacer(),
+                ButtonForm(
+                  onTap: () async {
+                    _validaLogin();
+                  },
+                )
+              ],
+            ),
           ),
         ),
       ),
     );
+  }
+
+  _validaLogin() {
+    widget.loginController.wrongPassword.value = false;
+    if (widget.loginController.userSave.value ||
+        _formKey.currentState!.validate()) {
+      try {
+        widget.loginController.login();
+      } catch (e) {
+        widget.loginController.wrongPassword.value = true;
+      }
+    }
   }
 }

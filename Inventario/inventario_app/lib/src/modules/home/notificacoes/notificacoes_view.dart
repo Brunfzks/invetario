@@ -33,16 +33,13 @@ class _NotificacoesState extends State<Notificacoes>
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(
-          height: 50,
-        ),
-        Text('Notificações',
+        Text('Notificações'.toUpperCase(),
             textAlign: TextAlign.left, style: AppText.textTitlePage),
         const SizedBox(
           height: 20,
         ),
         Obx(() => SizedBox(
-            height: 133,
+            height: 170,
             child: ListView.builder(
               padding: const EdgeInsets.only(
                 right: 20,

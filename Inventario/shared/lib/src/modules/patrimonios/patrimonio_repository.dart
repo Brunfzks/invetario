@@ -12,7 +12,7 @@ class PatrimonioRepository {
 
     try {
       http.Response response = await http.get(Uri.parse(urlApi),
-          headers: {'Content-Type': 'application/json'});
+          headers: {'Content-Type': 'application/json',});
 
       if (response.statusCode == 200) {
         final List parsedList = json.decode(response.body);

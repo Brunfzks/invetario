@@ -5,20 +5,23 @@ import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 
 class Editor extends StatelessWidget {
-  Editor({
-    Key? key,
-    required this.label,
-    this.hint,
-    required this.controller,
-    this.enabled,
-    this.isNumber,
-    this.isMultiline,
-    this.prefix,
-    this.width,
-    this.isPassword,
-    this.sufix,
-    required this.validator,
-  }) : super(key: key);
+  Editor(
+      {Key? key,
+      required this.label,
+      this.hint,
+      required this.controller,
+      this.enabled,
+      this.isNumber,
+      this.isMultiline,
+      this.prefix,
+      this.width,
+      this.isPassword,
+      this.sufix,
+      required this.validator,
+      this.textCapitalization = TextCapitalization.none,
+      this.onFieldSubmitted,
+      this.onChanged})
+      : super(key: key);
 
   final String label;
   final String? hint;
@@ -31,6 +34,9 @@ class Editor extends StatelessWidget {
   final Icon? prefix;
   final Widget? sufix;
   final double? width;
+  Function(String)? onChanged;
+  Function(String)? onFieldSubmitted;
+  TextCapitalization textCapitalization;
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +51,7 @@ class Editor extends StatelessWidget {
           keyboardType: isMultiline == true
               ? TextInputType.multiline
               : TextInputType.text,
+          textCapitalization: textCapitalization,
           maxLines: isMultiline == true ? 10 : 1,
           inputFormatters: isNumber == true
               ? <TextInputFormatter>[
@@ -67,6 +74,9 @@ class Editor extends StatelessWidget {
             labelText: label,
             hintText: hint ?? '',
           ),
+          onChanged: onChanged,
+          onFieldSubmitted: onFieldSubmitted,
+          textInputAction: TextInputAction.next,
         ),
       ),
     );

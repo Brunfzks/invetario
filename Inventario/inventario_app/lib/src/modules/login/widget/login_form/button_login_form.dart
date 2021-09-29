@@ -19,19 +19,31 @@ class ButtonForm extends StatelessWidget {
         gradient: LinearGradient(
             colors: [
               AppColors.primary,
-              Color(0xFF4EB87A),
+              const Color(0xFF4EB87A),
             ],
-            begin: FractionalOffset(0.0, 0.0),
-            end: FractionalOffset(1.0, 0.0),
-            stops: [0.0, 1.0],
+            begin: const FractionalOffset(0.0, 0.0),
+            end: const FractionalOffset(1.0, 0.0),
+            stops: const [0.0, 1.0],
             tileMode: TileMode.clamp),
       ),
       child: InkWell(
         onTap: onTap,
         child: Center(
-          child: Text(
-            'Login',
-            style: AppText.buttonTextMobile,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'Login',
+                style: AppText.buttonTextMobile,
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              const Icon(
+                Icons.fingerprint,
+                color: Colors.white60,
+              )
+            ],
           ),
         ),
       ),

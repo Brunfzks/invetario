@@ -46,10 +46,11 @@ class AppText {
   /////////////// MOBILE /////////////////
 
   static var textTitlePage = GoogleFonts.workSans(
-    fontWeight: FontWeight.w600,
-    fontSize: 22,
-    letterSpacing: 0.27,
-    color: AppTheme.darkerText,
+    fontWeight: FontWeight.bold,
+    fontSize: 16,
+    letterSpacing: 0.4,
+    height: 0.9,
+    color: AppTheme.grey,
   );
   
   static var errorTextMobile = GoogleFonts.workSans(
@@ -94,19 +95,27 @@ class AppText {
     color: AppColors.grey,
   );
 
-  static var  textSecondTitleHome = GoogleFonts.workSans(
-    fontWeight: FontWeight.bold,
-    fontSize: 20,
-    letterSpacing: 0.4,
-    height: 0.9,
-    color: AppColors.textColorWhite,
-  );
-
   static  var textTitleHome =GoogleFonts.workSans(
     fontWeight: FontWeight.bold,
     fontSize: 20,
     letterSpacing: 0.4,
     height: 0.9,
-    color: AppColors.redIF
+    color: AppColors.primary
+  );
+
+  static var textSubTitleHome = GoogleFonts.workSans(
+    fontWeight: FontWeight.bold,
+    fontSize: 10,
+    letterSpacing: 0.4,
+    height: 0.9,
+    color: AppColors.textColor,
+  );
+
+  static var  textSecondTitleHome = GoogleFonts.workSans(
+    fontWeight: FontWeight.bold,
+    fontSize: 20,
+    letterSpacing: 0.4,
+    height: 0.9,
+    color: AppColors.grey,
   );
 }
