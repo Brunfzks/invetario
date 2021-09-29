@@ -1,16 +1,24 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:inventario_app/src/modules/home/locais/locais_controller.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 import 'package:shared/shared.dart';
+
+import '../../home_controller.dart';
 
 class CardNotificacao extends StatelessWidget {
   ModelNotificacao modelNotificacao;
   final AnimationController animationController;
   final Animation<double> animation;
+  GlobalKey<ScaffoldState> scaffoldKey;
+  final LocalController localController = Get.put(LocalController());
+  final HomeController homeController = Get.find();
 
   CardNotificacao(
       {required this.modelNotificacao,
       required this.animationController,
+      required this.scaffoldKey,
       required this.animation,
       Key? key})
       : super(key: key);
@@ -28,7 +36,7 @@ class CardNotificacao extends StatelessWidget {
             child: GestureDetector(
                 onTap: () => {},
                 child: Container(
-                  decoration:  BoxDecoration(
+                  decoration: BoxDecoration(
                     color: AppColors.backgroundCardColor,
                     borderRadius: const BorderRadius.all(Radius.circular(16.0)),
                   ),
@@ -110,17 +118,36 @@ class CardNotificacao extends StatelessWidget {
                                               textAlign: TextAlign.left,
                                               style: AppText
                                                   .textPrimaryCardNotificacaoHome),
-                                          Container(
-                                            decoration: const BoxDecoration(
-                                              color: Colors.white,
-                                              borderRadius: BorderRadius.all(
-                                                  Radius.circular(8.0)),
-                                            ),
-                                            child: const Padding(
-                                              padding: EdgeInsets.all(4.0),
-                                              child: Icon(
-                                                Icons.qr_code,
-                                                color: Color(0xff4ea53d),
+                                          GestureDetector(
+                                            onTap: () {
+                                              localController
+                                                  .startScan(
+                                                      Id_Local: modelNotificacao
+                                                          .idLocalOrigem,
+                                                      Id_Levantamento: 1,
+                                                      Id_usuario:
+                                                          modelNotificacao
+                                                              .idUsuario,
+                                                      scaffoldKey: scaffoldKey,
+                                                      notificacao: true,
+                                                      context: context)
+                                                  .then((v) {
+                                                homeController
+                                                    .getNotificacoes();
+                                              });
+                                            },
+                                            child: Container(
+                                              decoration: const BoxDecoration(
+                                                color: Colors.white,
+                                                borderRadius: BorderRadius.all(
+                                                    Radius.circular(8.0)),
+                                              ),
+                                              child: const Padding(
+                                                padding: EdgeInsets.all(4.0),
+                                                child: Icon(
+                                                  Icons.qr_code,
+                                                  color: Color(0xff4ea53d),
+                                                ),
                                               ),
                                             ),
                                           )

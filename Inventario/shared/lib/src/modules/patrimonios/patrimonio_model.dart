@@ -90,13 +90,15 @@ class ModelPatrimonio {
   static Future<String> insertLevantamento({required int  Id_Local,
     required int Nm_Patrimonio,
     required int Id_Levantamento,
-    required int Id_usuario}) async {
+    required int Id_usuario,
+    required bool notificacao}) async {
 
     return await LevantamentoRepository().InsertLevantamento(
         Id_Local:Id_Local,
         Nm_Patrimonio:Nm_Patrimonio,
         Id_Levantamento:Id_Levantamento,
-        Id_usuario:Id_usuario
+        Id_usuario:Id_usuario,
+        notificacao: notificacao
     ) ;
   }
 }

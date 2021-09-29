@@ -10,6 +10,7 @@ MERGED from [:qrscan] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Invent
 MERGED from [:flutter_plugin_android_lifecycle] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\flutter_plugin_android_lifecycle\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:shared_preferences] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [:path_provider] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
+MERGED from [:permission_handler] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:2:1-7:12
 MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:17:1-29:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\5e5e9b140668497482a6a54ebf052fb5\material-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [pub.devrel:easypermissions:0.2.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\dbdfa0c3bb3c35db5eb9461780cfdf1e\jetified-easypermissions-0.2.0\AndroidManifest.xml:2:1-14:12
@@ -184,6 +185,8 @@ MERGED from [:shared_preferences] C:\Users\guga9\OneDrive\Documentos\GitHub\inve
 MERGED from [:shared_preferences] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\shared_preferences\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [:path_provider] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\path_provider\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
+MERGED from [:permission_handler] C:\Users\guga9\OneDrive\Documentos\GitHub\invetario\Inventario\inventario_app\build\permission_handler\intermediates\library_manifest\debug\AndroidManifest.xml:5:5-44
 MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.biometric:biometric:1.1.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\44ab6804b80638410c6c0827d4445946\biometric-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\guga9\.gradle\caches\transforms-2\files-2.1\5e5e9b140668497482a6a54ebf052fb5\material-1.0.0\AndroidManifest.xml:20:5-44

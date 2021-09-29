@@ -42,6 +42,8 @@ dependencies:
   lottie: ^1.1.0
   shared_preferences: ^2.0.7
   local_auth: ^1.1.7
+  qrscan: ^0.3.2
+  permission_handler: ^8.1.6
 
 dev_dependencies:
   flutter_test:

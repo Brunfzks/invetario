@@ -61,10 +61,12 @@ class _NotificacoesState extends State<Notificacoes>
                             curve: Curves.fastOutSlowIn)));
 
                 animationController.forward();
-
+                homeController.notificacao[index].idUsuario =
+                    homeController.usuario.idUsuario!;
                 return Padding(
                   padding: const EdgeInsets.only(right: 20),
                   child: CardNotificacao(
+                    scaffoldKey: homeController.scaffoldKey,
                     modelNotificacao: homeController.notificacao[index],
                     animation: animation,
                     animationController: animationController,

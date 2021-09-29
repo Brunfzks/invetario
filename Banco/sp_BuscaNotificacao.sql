@@ -7,6 +7,7 @@ BEGIN
         Dt_notificacao,
         Tb_notificacao.Id_bem,
         Tb_Patrimonio.Ds_patrimonio,
+		Tb_Patrimonio.Id_local,
         Nm_usuario AS Us_econtrou,
         Tb_Local.Ds_local AS Lc_encontrado,    
         (SELECT Ds_local

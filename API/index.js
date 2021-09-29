@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.109\\sqlexpress',
+        server: '192.168.0.124\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -91,7 +91,8 @@ server.post('/levantamentos', (req, res, next) => {
     knex.raw('EXECUTE sp_InsertLevantamento ' + req.body['Id_Local'] 
     + ',' + req.body['Nm_Patrimonio'] 
     + ',' + req.body['Id_Levantamento']
-    + ',' + req.body['Id_usuario'])
+    + ',' + req.body['Id_usuario']
+    + ',' + req.body['Notificacao'])
         .then((dados) => {
             res.send(dados);
         }, next)

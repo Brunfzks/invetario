@@ -4,6 +4,7 @@ class ModelNotificacao {
   int idNotificacao;
   String dtNotificacao;
   int idBem;
+  int idLocalOrigem;
   late int idUsuario;
   String dsPatrimonio;
   String usEcontrou;
@@ -17,6 +18,7 @@ class ModelNotificacao {
     required this.dsPatrimonio,
     required this.usEcontrou,
     required this.lcEncontrado,
+    required this.idLocalOrigem,
     required this.lcOrigem,
   });
 
@@ -29,6 +31,7 @@ class ModelNotificacao {
       usEcontrou: json['Us_econtrou'],
       lcEncontrado: json['Lc_encontrado'],
       lcOrigem: json['Lc_origem'],
+      idLocalOrigem: json['Id_local'],
     );
   }
 

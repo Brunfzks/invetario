@@ -6,7 +6,9 @@ import 'package:inventario_app/src/modules/home/locais/widgets/card_local.dart';
 import 'package:shared/constantes/app_text.dart';
 
 class Locais extends StatefulWidget {
-  Locais({Key? key}) : super(key: key);
+  Locais({
+    Key? key,
+  }) : super(key: key);
 
   @override
   State<Locais> createState() => _LocaisState();
@@ -53,6 +55,7 @@ class _LocaisState extends State<Locais> with TickerProviderStateMixin {
             animationController.forward();
 
             return CardLocal(
+              scaffoldKey: homeController.scaffoldKey,
               modelLocal: homeController.locais[index],
               animation: animation,
               animationController: animationController,

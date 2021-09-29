@@ -10,12 +10,14 @@ class CardLocal extends StatelessWidget {
   final AnimationController animationController;
   final Animation<double> animation;
   double length = 0;
+  GlobalKey<ScaffoldState> scaffoldKey;
   final LocalController localController = Get.put(LocalController());
 
   CardLocal(
       {required this.modelLocal,
       required this.animationController,
       required this.animation,
+      required this.scaffoldKey,
       Key? key})
       : super(key: key);
 
@@ -34,15 +36,19 @@ class CardLocal extends StatelessWidget {
                         .copyWith(dividerColor: Colors.transparent),
                     child: ExpansionTile(
                         onExpansionChanged: (e) {
-                          localController.loading.value = true;
+                          if (e) {
+                            localController.loading.value = true;
 
-                          localController
-                              .getPatrimonios(Id_local: modelLocal.idLocal!)
-                              .then((value) {
-                            length = double.parse(
-                                localController.patrimonios.length.toString());
-                          });
+                            localController
+                                .getPatrimonios(Id_local: modelLocal.idLocal!)
+                                .then((value) {
+                              length = double.parse(localController
+                                  .patrimonios.length
+                                  .toString());
+                            });
+                          }
                         },
+                        initiallyExpanded: false,
                         collapsedIconColor: AppColors.grey,
                         iconColor: AppColors.primary,
                         tilePadding: EdgeInsets.zero,
@@ -66,7 +72,9 @@ class CardLocal extends StatelessWidget {
                                       localController.startScan(
                                           Id_Local: modelLocal.idLocal!,
                                           Id_Levantamento: 1,
-                                          Id_usuario: modelLocal.idUsuario);
+                                          Id_usuario: modelLocal.idUsuario,
+                                          scaffoldKey: scaffoldKey,
+                                          context: context);
                                     },
                                     child: Icon(
                                       Icons.qr_code_scanner,

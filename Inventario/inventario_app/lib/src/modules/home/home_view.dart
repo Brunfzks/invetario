@@ -8,17 +8,20 @@ import 'package:shared/constantes/app_theme.dart';
 import 'locais/locais_view.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({Key? key}) : super(key: key);
+  HomePage({
+    Key? key,
+  }) : super(key: key);
 
   final HomeController homeController = Get.find();
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundColor,
+      key: homeController.scaffoldKey,
       body: SafeArea(
         child: Container(
           padding: const EdgeInsets.all(20),
-          color: AppColors.backgroundColor,
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
@@ -44,7 +47,11 @@ class HomePage extends StatelessWidget {
                     color: AppTheme.darkerText,
                   ),
                 ),
-                Notificacoes(),
+                Obx(
+                  () => homeController.notificacao.isNotEmpty
+                      ? Notificacoes()
+                      : Container(),
+                ),
                 Locais()
               ],
             ),
