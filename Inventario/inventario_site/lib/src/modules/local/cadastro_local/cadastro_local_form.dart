@@ -32,25 +32,26 @@ class CadastroLocalForm extends StatelessWidget {
               height: 20,
             ),
             SizedBox(
-                width: 600,
-                child: Obx(
-                  () => DropdownButton<ModelUsuario>(
-                    value: localController.homeController
-                        .listUsuario[localController.selectedUsuario.value],
-                    items: localController.homeController.listUsuario
-                        .map((ModelUsuario usuario) {
-                      return DropdownMenuItem<ModelUsuario>(
-                        value: usuario,
-                        child: Text(usuario.nmUsuario),
-                      );
-                    }).toList(),
-                    onChanged: (usuario) {
-                      localController.selectedUsuario.value = localController
-                          .homeController.listUsuario
-                          .indexOf(usuario);
-                    },
-                  ),
-                )),
+              width: 600,
+              child: Obx(
+                () => DropdownButton<ModelUsuario>(
+                  value: localController.homeController
+                      .listUsuario[localController.selectedUsuario.value],
+                  items: localController.homeController.listUsuario
+                      .map((ModelUsuario usuario) {
+                    return DropdownMenuItem<ModelUsuario>(
+                      value: usuario,
+                      child: Text(usuario.nmUsuario),
+                    );
+                  }).toList(),
+                  onChanged: (usuario) {
+                    localController.selectedUsuario.value = localController
+                        .homeController.listUsuario
+                        .indexOf(usuario);
+                  },
+                ),
+              ),
+            ),
             const SizedBox(
               height: 20,
             ),
@@ -82,13 +83,20 @@ class CadastroLocalForm extends StatelessWidget {
                   ),
                   color: AppColors.primary,
                 ),
-                child: const Center(
+                child: Center(
                   child: Padding(
-                    padding: EdgeInsets.all(8.0),
-                    child: Text(
-                      'Cadastrar',
-                      style: AppTheme.captionLightBig,
-                    ),
+                    padding: const EdgeInsets.all(8.0),
+                    child: localController.isLoading.value
+                        ? Center(
+                            child: CircularProgressIndicator(
+                              color: AppColors.secondary,
+                              strokeWidth: 2,
+                            ),
+                          )
+                        : const Text(
+                            'Cadastrar',
+                            style: AppTheme.captionLightBig,
+                          ),
                   ),
                 ),
               ),

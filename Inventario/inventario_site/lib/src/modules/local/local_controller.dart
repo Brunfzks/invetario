@@ -39,6 +39,12 @@ class LocalController extends GetxController {
     return locais;
   }
 
+  Future<List<ModelLocal>> getLocaisAll() async {
+    List<ModelLocal> locais =
+        homeController.listLocal.value = await ModelLocal.getLocaisAll();
+    return locais;
+  }
+
   Future<ModelLocal> cadastraLocal() async {
     isLoading.value = true;
     ModelLocal local = ModelLocal(

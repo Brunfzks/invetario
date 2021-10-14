@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/cadastros/cadastro_controller.dart';
 import 'package:inventario_site/src/modules/cadastros/widget/cadastro_menu/cadastro_menu_widget.dart';
 import 'package:inventario_site/src/modules/local/cadastro_local/cadastro_local_form.dart';
+import 'package:inventario_site/src/modules/patrimonio/cadastro_patrimonio/cadastro_patrimonio_form.dart';
 import 'package:inventario_site/src/modules/usuario/cadastro_usuario/cadastro_usuario_form.dart';
 
 class CadastroPage extends StatelessWidget {
@@ -15,9 +16,7 @@ class CadastroPage extends StatelessWidget {
   final pages = [
     CadastroUsuarioForm(),
     CadastroLocalForm(),
-    Container(
-      color: Colors.white,
-    ),
+    CadastroPatrimonioForm(),
   ];
 
   @override
