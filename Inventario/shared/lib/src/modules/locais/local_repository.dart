@@ -31,6 +31,32 @@ class LocalRepository {
     }
   }
 
+  Future<List<ModelLocal>> getLocaisAll() async {
+    String urlApi = Api.url('locais');
+
+    List<ModelLocal> lista = [];
+
+    try {
+      http.Response response = await http.get(Uri.parse(urlApi), headers: {
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin": "*",
+      });
+
+      if (response.statusCode == 200) {
+        final List parsedList = json.decode(response.body);
+
+        parsedList.map((val) {
+          lista.add(ModelLocal.fromJson(val));
+        }).toList();
+        return lista;
+      } else {
+        throw Exception("Failed to load");
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
   Future<int> cadastraLocais(
     ModelLocal modelLoca,
   ) async {

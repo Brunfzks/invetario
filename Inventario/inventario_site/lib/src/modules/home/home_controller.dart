@@ -18,6 +18,10 @@ class HomeController extends GetxController {
   var listLocal = <ModelLocal>[].obs;
   //local end
 
+  //patrimonio
+  var listPatrimonio = <ModelPatrimonio>[].obs;
+  //patrimonio end
+
   //alert
   var isShowAlert = false.obs;
   var textAlert = 'TESTE'.obs;
@@ -62,7 +66,9 @@ class HomeController extends GetxController {
     //controller
     UsuarioController usuarioController = Get.find();
     LocalController localController = Get.find();
+    localController.getLocaisAll();
     usuarioController.getUsuarios();
+
     //controller end
   }
 

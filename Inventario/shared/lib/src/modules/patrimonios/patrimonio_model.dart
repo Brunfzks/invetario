@@ -2,9 +2,9 @@ import 'package:shared/src/modules/patrimonios/patrimonio_repository.dart';
 import 'package:shared/src/modules/levantamentos/levantamento_repository.dart';
 
 class ModelPatrimonio {
-  int idBem;
+  int? idBem;
   String dsRotulo;
-  int? dsEd;
+  String? dsEd;
   String dsCampus;
   double vlPatrimonio;
   int nmPatrimonio;
@@ -14,14 +14,14 @@ class ModelPatrimonio {
   String stConservacao;
   String nmSerie;
   String nmFornecedor;
-  String dtCarga;
+  String? dtCarga;
   String dsMarca;
   int empenho;
   String tpIngresso;
   int idLocal;
 
   ModelPatrimonio(
-      {required this.idBem,
+      {this.idBem,
       required this.dsRotulo,
       this.dsEd,
       required this.dsCampus,
@@ -33,7 +33,7 @@ class ModelPatrimonio {
       required this.stConservacao,
       required this.nmSerie,
       required this.nmFornecedor,
-      required this.dtCarga,
+      this.dtCarga,
       required this.dsMarca,
       required this.empenho,
       required this.tpIngresso,
@@ -83,22 +83,26 @@ class ModelPatrimonio {
     return data;
   }
 
-  static Future<List<ModelPatrimonio>> getPatrimonios({required int Id_local}) async {
+  static Future<List<ModelPatrimonio>> getPatrimonios(
+      {required int Id_local}) async {
     return await PatrimonioRepository().getPatrimonios(Id_local: Id_local);
   }
 
-  static Future<String> insertLevantamento({required int  Id_Local,
-    required int Nm_Patrimonio,
-    required int Id_Levantamento,
-    required int Id_usuario,
-    required bool notificacao}) async {
+  static Future<int> cadastraPatrimonio(ModelPatrimonio patrimonio) async {
+    return await PatrimonioRepository().cadastraPatrimonios(patrimonio);
+  }
 
+  static Future<String> insertLevantamento(
+      {required int Id_Local,
+      required int Nm_Patrimonio,
+      required int Id_Levantamento,
+      required int Id_usuario,
+      required bool notificacao}) async {
     return await LevantamentoRepository().InsertLevantamento(
-        Id_Local:Id_Local,
-        Nm_Patrimonio:Nm_Patrimonio,
-        Id_Levantamento:Id_Levantamento,
-        Id_usuario:Id_usuario,
-        notificacao: notificacao
-    ) ;
+        Id_Local: Id_Local,
+        Nm_Patrimonio: Nm_Patrimonio,
+        Id_Levantamento: Id_Levantamento,
+        Id_usuario: Id_usuario,
+        notificacao: notificacao);
   }
 }

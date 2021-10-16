@@ -38,6 +38,10 @@ class ModelLocal {
     return await LocalRepository().getLocais(Id_Usuario);
   }
 
+  static Future<List<ModelLocal>> getLocaisAll() async {
+    return await LocalRepository().getLocaisAll();
+  }
+
   static Future<int> cadastraLocais(ModelLocal local) async {
     return await LocalRepository().cadastraLocais(local);
   }

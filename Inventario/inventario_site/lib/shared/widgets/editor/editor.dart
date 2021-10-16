@@ -45,7 +45,7 @@ class Editor extends StatelessWidget {
           keyboardType: isMultiline == true
               ? TextInputType.multiline
               : TextInputType.text,
-          maxLines: isMultiline == true ? 10 : 1,
+          maxLines: isMultiline == true ? 5 : 1,
           inputFormatters: isNumber == true
               ? <TextInputFormatter>[
                   FilteringTextInputFormatter.allow(RegExp('[0-9.]')),
