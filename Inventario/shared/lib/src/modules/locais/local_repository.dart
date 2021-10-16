@@ -17,7 +17,7 @@ class LocalRepository {
       });
 
       if (response.statusCode == 200) {
-        final List parsedList = json.decode(response.body);
+        final List parsedList = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
         parsedList.map((val) {
           lista.add(ModelLocal.fromJson(val));
@@ -48,7 +48,7 @@ class LocalRepository {
         body: body);
 
     if (response.statusCode == 200) {
-      List<dynamic> map = json.decode(response.body);
+      List<dynamic> map = json.decode(Utf8Decoder().convert(response.body.codeUnits));
       return map[0][''];
     } else {
       throw Exception("Failed to load");

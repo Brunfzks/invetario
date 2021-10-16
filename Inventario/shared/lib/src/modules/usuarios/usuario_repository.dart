@@ -15,7 +15,7 @@ class UsuarioRepository {
           headers: {'Content-Type': 'application/json'});
 
       if (response.statusCode == 200) {
-        final List parsedList = json.decode(response.body);
+        final List parsedList = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
         parsedList.map((val) {
           lista.add(ModelUsuario.fromJson(val));
@@ -42,7 +42,7 @@ class UsuarioRepository {
         headers: {'Content-Type': 'application/json'}, body: body);
 
     if (response.statusCode == 200) {
-      List<dynamic> map = json.decode(response.body);
+      List<dynamic> map = json.decode(Utf8Decoder().convert(response.body.codeUnits));
       return map[0][''];
     } else {
       throw Exception("Failed to load");
@@ -84,7 +84,7 @@ class UsuarioRepository {
         headers: {'Content-Type': 'application/json'}, body: body);
 
     if (response.statusCode == 200) {
-      Map<String, dynamic> map = json.decode(response.body);
+      Map<String, dynamic> map = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
       return ModelUsuario.fromJson(map);
     } else {

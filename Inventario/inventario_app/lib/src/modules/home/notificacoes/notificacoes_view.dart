@@ -29,17 +29,18 @@ class _NotificacoesState extends State<Notificacoes>
 
   @override
   Widget build(BuildContext context) {
-    print(homeController.notificacao.length);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text('Notificações'.toUpperCase(),
-            textAlign: TextAlign.left, style: AppText.textTitlePage),
+        Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text('Notificações'.toUpperCase(),
+                textAlign: TextAlign.left, style: AppText.textTitlePage)),
         const SizedBox(
           height: 20,
         ),
         Obx(() => SizedBox(
-            height: 170,
+            height: 200,
             child: ListView.builder(
               padding: const EdgeInsets.only(
                 right: 20,
@@ -61,7 +62,7 @@ class _NotificacoesState extends State<Notificacoes>
                 homeController.notificacao[index].idUsuario =
                     homeController.usuario.idUsuario!;
                 return Padding(
-                  padding: const EdgeInsets.only(right: 20),
+                  padding: const EdgeInsets.only(left: 20),
                   child: CardNotificacao(
                     scaffoldKey: homeController.scaffoldKey,
                     modelNotificacao: homeController.notificacao[index],

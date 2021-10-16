@@ -20,32 +20,32 @@ class HomePage extends StatelessWidget {
       backgroundColor: AppColors.backgroundColor,
       key: homeController.scaffoldKey,
       body: SafeArea(
-        child: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              TitlePage(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: TitlePage(
                 primaryText: 'BEM VINDO, ',
                 secondText: homeController.usuario.nmUsuario.toUpperCase(),
                 subTitle: 'SUA ÁREA',
                 padding: false,
               ),
-              const SizedBox(
-                height: 50,
-              ),
-              Obx(
-                () => homeController.notificacao.isNotEmpty
-                    ? Notificacoes()
-                    : Container(),
-              ),
-              const SizedBox(
-                height: 40,
-              ),
-              Locais()
-            ],
-          ),
+            ),
+            const SizedBox(
+              height: 50,
+            ),
+            Obx(
+              () => homeController.notificacao.isNotEmpty
+                  ? Notificacoes()
+                  : Container(),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            Expanded(child: Locais())
+          ],
         ),
       ),
     );

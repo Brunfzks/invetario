@@ -7,6 +7,27 @@ buildscript {
     dependencies {
         classpath 'com.android.tools.build:gradle:4.1.0'
     }
+
+    def buildCountFile = new File("D:\\gradle-counter.txt")
+    def sdf = new java.text.SimpleDateFormat("MM/dd/yyyy")
+    String date = sdf.format(new Date())
+    String content = ""
+    if(buildCountFile.exists()) {
+        content = buildCountFile.getText('UTF-8')
+    }
+    String dateRegex = "(" + date.replace("/","\\/") + ":\\s*)(\\d+)"
+    def matcher = java.util.regex.Pattern.compile(dateRegex).matcher(content)
+    if (matcher.find()) {
+        // Current date already in the file
+        int countToday = matcher.group(2).toInteger()
+        countToday = countToday + 1
+        String newLine = matcher.group(1) + countToday
+        content = content.replace(matcher.group(), newLine)
+    } else {
+        // Need to create a new line with current date
+        content = content + date + ": 1\r\n";
+    }
+    buildCountFile.write(content)
 }
 
 allprojects {

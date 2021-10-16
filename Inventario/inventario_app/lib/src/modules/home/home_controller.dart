@@ -1,3 +1,4 @@
+import 'package:date_format/date_format.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:shared/shared.dart';
@@ -16,7 +17,7 @@ class HomeController extends GetxController {
     super.onInit();
 
     getNotificacoes();
-    locais.value = await ModelLocal.getLocais(usuario.idUsuario!);
+    getLocais();
   }
 
   @override
@@ -34,5 +35,18 @@ class HomeController extends GetxController {
   getNotificacoes() async {
     notificacao.value =
         await ModelNotificacao.getNotificacoes(Id_Usuario: usuario.idUsuario!);
+  }
+
+  getLocais() async {
+    locais.value = await ModelLocal.getLocais(usuario.idUsuario!);
+  }
+
+  static ConvertData(String data) {
+    try {
+
+      return formatDate(DateTime.parse(data), ["dd/MM/yyyy"]);
+    } catch (e) {
+      return data;
+    }
   }
 }

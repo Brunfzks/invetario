@@ -7,12 +7,15 @@ import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_text.dart';
 import 'package:shared/shared.dart';
 
+import '../home_controller.dart';
+
 class LocalController extends GetxController {
   LocalController();
 
   RxBool loading = RxBool(true);
   late List<ModelPatrimonio> patrimonios = <ModelPatrimonio>[].obs;
-
+  RxInt selectedItem = RxInt(9999);
+  final HomeController homeController = Get.find();
   @override
   Future<void> onInit() async {
     super.onInit();
@@ -33,7 +36,8 @@ class LocalController extends GetxController {
     patrimonios = [];
 
     patrimonios = await ModelPatrimonio.getPatrimonios(Id_local: Id_local);
-    loading.value = false;
+    Future.delayed(const Duration(seconds: 2))
+        .then((value) => loading.value = false);
 
     return patrimonios;
   }
@@ -45,46 +49,52 @@ class LocalController extends GetxController {
       required context,
       required scaffoldKey,
       bool notificacao = false}) async {
-    String? Nm_Patrimonio = await _permiteScan(context);
+    bool restart = true;
 
-    print('RESULTADO SCANEADO: $Nm_Patrimonio');
+    try {
+      String? Nm_Patrimonio = await _permiteScan(context);
 
-    if (Nm_Patrimonio != null) {
-      print('$Id_Local, $Nm_Patrimonio, $Id_Levantamento, $Id_usuario');
+      print('RESULTADO SCANEADO: $Nm_Patrimonio');
 
-      String result = await ModelPatrimonio.insertLevantamento(
-          Id_Local: Id_Local,
-          Nm_Patrimonio: int.parse(Nm_Patrimonio),
-          Id_Levantamento: Id_Levantamento,
-          Id_usuario: Id_usuario,
-          notificacao: notificacao);
+      if (Nm_Patrimonio != null) {
+        print('$Id_Local, $Nm_Patrimonio, $Id_Levantamento, $Id_usuario');
 
-      print(result);
+        String result = await ModelPatrimonio.insertLevantamento(
+            Id_Local: Id_Local,
+            Nm_Patrimonio: int.parse(Nm_Patrimonio),
+            Id_Levantamento: Id_Levantamento,
+            Id_usuario: Id_usuario,
+            notificacao: notificacao);
 
-      bool restart = true;
+        print(result);
 
-      if (result == 'PATRIMONIO NAO CADASTRADO') {
-        restart = await _showDialogScan(context, notificacao: false);
-      } else if (result == 'NOTIFICACAO CRIADA!') {
-        restart = await _showDialogScan(context, notificacao: true);
-      } else if (result == 'INSERIDO COM SUCESSO!') {
-        _snack(
-          text: 'Verficação realizada com sucesso!',
-          color: AppColors.primary,
-          scaffoldKey: scaffoldKey,
-        );
+        if (result == 'PATRIMONIO NAO CADASTRADO') {
+          restart = await _showDialogScan(context, notificacao: false);
+        } else if (result == 'NOTIFICACAO CRIADA!') {
+          restart = await _showDialogScan(context, notificacao: true);
+          homeController.getNotificacoes();
+        } else if (result == 'INSERIDO COM SUCESSO!') {
+          _snack(
+            text: 'Verficação realizada com sucesso!',
+            color: AppColors.primary,
+            scaffoldKey: scaffoldKey,
+          );
+        }
       }
+    } catch (e) {
+      print("erro na leitura codigo QR");
+      restart = await _showDialogScan(context, notificacao: false);
+    }
 
-      if (restart && !notificacao) {
-        Future.delayed(const Duration(seconds: 2)).then((value) {
-          startScan(
-              Id_Local: Id_Local,
-              Id_Levantamento: Id_Levantamento,
-              Id_usuario: Id_usuario,
-              context: context,
-              scaffoldKey: scaffoldKey);
-        });
-      }
+    if (restart && !notificacao) {
+      Future.delayed(const Duration(seconds: 2)).then((value) {
+        startScan(
+            Id_Local: Id_Local,
+            Id_Levantamento: Id_Levantamento,
+            Id_usuario: Id_usuario,
+            context: context,
+            scaffoldKey: scaffoldKey);
+      });
     }
   }
 

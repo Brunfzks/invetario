@@ -15,7 +15,7 @@ class PatrimonioRepository {
           headers: {'Content-Type': 'application/json',});
 
       if (response.statusCode == 200) {
-        final List parsedList = json.decode(response.body);
+        final List parsedList = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
         parsedList.map((val) {
           lista.add(ModelPatrimonio.fromJson(val));
