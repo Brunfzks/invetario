@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.102\\sqlexpress',
+        server: '192.168.0.110\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -42,6 +42,12 @@ server.get('/locais/:id', (req, res, next) => {
     }, next)
 });
 
+server.get('/todosLocais', (req, res, next) => {
+    knex('Tb_Local').then((dados) => {
+        res.send(dados);
+    }, next)
+});
+
 server.get('/notificacoes/:id', (req, res, next) => {
     const { id } = req.params;
     knex.raw('execute sp_BuscaNotificacoes '+id).
@@ -65,23 +71,13 @@ server.get('/usuarios', (req, res, next) => {
     }, next)
 });
 
-server.post('/locais', (req, res, next) => {
-    knex('Tb_Local')
-        .insert(req.body.Id_usuario, req.body.Ds_local, )
-        .then((dados) => {
-            knex('Tb_Local').max('Id_local').then((dados) => {
-                knex('Tb_Local').max('Id_local').then((dados) => {
-                    res.send(dados);
-                }, next)
-            }, next)
-        }, next)
-});
-
 server.post('/patrimonios', (req, res, next) => {
     knex('Tb_Patrimonio')
         .insert(req.body)
         .then((dados) => {
-            res.send(dados);
+            knex('Tb_Patrimonio').max('Id_Bem').then((dados) => {
+                res.send(dados);
+            }, next)
         }, next)
 });
 
@@ -95,6 +91,16 @@ server.post('/levantamentos', (req, res, next) => {
     + ',' + req.body['Notificacao'])
         .then((dados) => {
             res.send(dados);
+        }, next)
+});
+
+server.post('/locais', (req, res, next) => {
+    knex('Tb_Local')
+        .insert(req.body)
+        .then((dados_teste) => {
+                knex('Tb_Local').max('Id_local').then((dados) => {
+                    res.send(dados);
+            }, next)
         }, next)
 });
 

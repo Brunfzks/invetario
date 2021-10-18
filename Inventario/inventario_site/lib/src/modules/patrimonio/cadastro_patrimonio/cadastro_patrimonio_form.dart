@@ -22,13 +22,26 @@ class CadastroPatrimonioForm extends StatelessWidget {
           key: _formKey,
           child: Column(
             children: [
-              Editor(
-                label: 'Ed',
-                controller: patrimonioController.dsEdTextController,
-                validator: RequiredValidator(
-                  errorText: "Por favor, informe o Ed",
+              Row(
+                children: [Expanded(
+                child: Editor(
+                  label: 'Ed',
+                  controller: patrimonioController.dsEdTextController,
+                  isNumber: true,
+                  validator: RequiredValidator(
+                    errorText: "Por favor, informe o Ed",
+                  ),
                 ),
               ),
+              Expanded(
+                child: Editor(
+                  label: 'Rótulo',
+                  controller: patrimonioController.dsRotuloTextController,
+                  validator: RequiredValidator(
+                    errorText: "Por favor, informe o Rótulo",
+                  ),
+                ),
+              ),],),             
               Row(
                 children: [
                   Expanded(
@@ -123,6 +136,7 @@ class CadastroPatrimonioForm extends StatelessWidget {
               Row(
                 children: [
                   Expanded(
+                    flex: 4,
                     child: Editor(
                       label: 'Empenho',
                       controller: patrimonioController.empenhoTextController,
@@ -133,15 +147,17 @@ class CadastroPatrimonioForm extends StatelessWidget {
                     ),
                   ),
                   Expanded(
+                    flex: 2,
                     child: Editor(
                       label: 'Tp Ingresso',
-                      controller: patrimonioController.empenhoTextController,
+                      controller: patrimonioController.tpIngressoTextController,
                       validator: RequiredValidator(
                         errorText: "Por favor, informe o Tp Ingresso",
                       ),
                     ),
                   ),
                   Expanded(
+                    flex: 4,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 17),
                       child: Obx(

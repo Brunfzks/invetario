@@ -32,18 +32,17 @@ class LocalRepository {
   }
 
   Future<List<ModelLocal>> getLocaisAll() async {
-    String urlApi = Api.url('locais');
+    String urlApi = Api.url('todosLocais');
 
     List<ModelLocal> lista = [];
 
     try {
       http.Response response = await http.get(Uri.parse(urlApi), headers: {
         'Content-Type': 'application/json',
-        "Access-Control-Allow-Origin": "*",
       });
 
       if (response.statusCode == 200) {
-        final List parsedList = json.decode(response.body);
+        final List parsedList = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
         parsedList.map((val) {
           lista.add(ModelLocal.fromJson(val));

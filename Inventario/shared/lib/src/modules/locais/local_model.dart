@@ -21,7 +21,8 @@ class ModelLocal {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['Id_local'] = idLocal;
+    if(idLocal != null)
+      data['Id_local'] = idLocal;
     data['Ds_local'] = dsLocal;
     data['Id_usuario'] = idUsuario;
     return data;

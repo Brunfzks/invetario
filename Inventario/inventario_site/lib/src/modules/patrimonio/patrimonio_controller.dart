@@ -46,7 +46,7 @@ class PatrimonioController extends GetxController {
       dsMarca: dsMarcaTextController.text,
       dsPatrimonio: dsPatrimonioTextController.text,
       dsRotulo: dsRotuloTextController.text,
-      dtEntrada: DateTime.now().toString(),
+      dtEntrada: DateTime.now().toIso8601String().substring(0, 10),
       empenho: int.parse(empenhoTextController.text),
       idLocal: homeController.listLocal[selectedLocal.value].idLocal!,
       nmFornecedor: nmFornecedorTextController.text,
@@ -56,7 +56,7 @@ class PatrimonioController extends GetxController {
       stConservacao: stConservacaoTextController.text,
       tpIngresso: tpIngressoTextController.text,
       vlPatrimonio: double.parse(vlPatrimonioTextController.text),
-      dsEd: dsEdTextController.text,
+      dsEd: int.parse(dsEdTextController.text),
     );
     try {
       patrimonio.idBem = await ModelPatrimonio.cadastraPatrimonio(patrimonio);

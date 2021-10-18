@@ -4,7 +4,7 @@ import 'package:shared/src/modules/levantamentos/levantamento_repository.dart';
 class ModelPatrimonio {
   int? idBem;
   String dsRotulo;
-  String? dsEd;
+  int? dsEd;
   String dsCampus;
   double vlPatrimonio;
   int nmPatrimonio;
@@ -63,7 +63,8 @@ class ModelPatrimonio {
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    data['Id_Bem'] = idBem;
+    if(idBem != null)
+      data['Id_Bem'] = idBem;
     data['Ds_rotulo'] = dsRotulo;
     data['Ds_ed'] = dsEd;
     data['Ds_campus'] = dsCampus;

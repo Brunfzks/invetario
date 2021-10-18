@@ -29,9 +29,10 @@ class UsuarioController extends GetxController {
       nmUsuario: nomeTextController.text,
     );
     try {
-      int idUsuario = await ModelUsuario.cadastraUsuario(usuario);
+      usuario.idUsuario = await ModelUsuario.cadastraUsuario(usuario);
+      homeController.listUsuario.add(usuario);
       isLoading.value = false;
-      return idUsuario;
+      return usuario.idUsuario!;
     } catch (e) {
       isLoading.value = false;
       rethrow;
