@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/shared/widgets/alert/alert.dart';
 import 'package:inventario_site/src/modules/cadastros/cadastro_view.dart';
+import 'package:inventario_site/src/modules/dashboard/dashboard_view.dart';
 import 'package:inventario_site/src/modules/home/widget/side_menu/side_menu.dart';
 import 'package:inventario_site/src/modules/local/local_controller.dart';
 import 'package:inventario_site/src/modules/patrimonio/patrimonio_controller.dart';
@@ -18,9 +19,7 @@ class Home extends StatelessWidget {
   PatrimonioController patrimonioController = Get.put(PatrimonioController());
 
   final pages = [
-    Container(
-      color: Colors.white,
-    ),
+    DashboardPage(),
     CadastroPage(),
   ];
 

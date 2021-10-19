@@ -56,7 +56,7 @@ class Editor extends StatelessWidget {
           obscureText: isPassword ?? false,
           decoration: InputDecoration(
             labelStyle: TextStyle(color: AppColors.textColor),
-            prefix: prefix,
+            prefixIcon: prefix,
             suffix: sufix,
             fillColor: AppColors.primary,
             border: UnderlineInputBorder(),
