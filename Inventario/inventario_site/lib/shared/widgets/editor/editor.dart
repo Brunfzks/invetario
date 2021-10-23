@@ -35,7 +35,7 @@ class Editor extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: width ?? double.infinity,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -59,7 +59,7 @@ class Editor extends StatelessWidget {
             prefixIcon: prefix,
             suffix: sufix,
             fillColor: AppColors.primary,
-            border: UnderlineInputBorder(),
+            border: const UnderlineInputBorder(),
             labelText: label,
             hintText: hint ?? '',
           ),

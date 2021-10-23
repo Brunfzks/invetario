@@ -31,7 +31,7 @@ class Home extends StatelessWidget {
       body: SafeArea(
         child: Row(
           children: [
-            Container(
+            SizedBox(
               width: deviceInfo.size.width * 0.2,
               child: SideMenu(
                 onTap1: () {

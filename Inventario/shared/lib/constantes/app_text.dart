@@ -32,10 +32,12 @@ class AppText {
   );
 
   static var labelText = GoogleFonts.workSans(
-      fontSize: 16,
-      letterSpacing: 0.41,
-      fontWeight: FontWeight.normal,
-      color: AppColors.secondary);
+    fontSize: 16,
+    letterSpacing: 0.41,
+    fontWeight: FontWeight.normal,
+    color: AppColors.primary,
+    
+  );
 
   static var labelSelected = GoogleFonts.workSans(
       fontSize: 16,
@@ -52,7 +54,7 @@ class AppText {
     height: 0.9,
     color: AppTheme.grey,
   );
-  
+
   static var errorTextMobile = GoogleFonts.workSans(
     fontSize: 12,
     letterSpacing: 0.41,
@@ -74,7 +76,7 @@ class AppText {
     color: AppColors.textColorWhite,
   );
 
-  static var  textSecondCardNotificacaoHome = GoogleFonts.workSans(
+  static var textSecondCardNotificacaoHome = GoogleFonts.workSans(
     fontWeight: FontWeight.w300,
     fontSize: 12,
     letterSpacing: 0.27,
@@ -95,13 +97,12 @@ class AppText {
     color: AppColors.grey,
   );
 
-  static  var textTitleHome =GoogleFonts.workSans(
-    fontWeight: FontWeight.bold,
-    fontSize: 20,
-    letterSpacing: 0.4,
-    height: 0.9,
-    color: AppColors.primary
-  );
+  static var textTitleHome = GoogleFonts.workSans(
+      fontWeight: FontWeight.bold,
+      fontSize: 20,
+      letterSpacing: 0.4,
+      height: 0.9,
+      color: AppColors.primary);
 
   static var textSubTitleHome = GoogleFonts.workSans(
     fontWeight: FontWeight.bold,
@@ -111,7 +112,7 @@ class AppText {
     color: AppColors.textColor,
   );
 
-  static var  textSecondTitleHome = GoogleFonts.workSans(
+  static var textSecondTitleHome = GoogleFonts.workSans(
     fontWeight: FontWeight.bold,
     fontSize: 20,
     letterSpacing: 0.4,

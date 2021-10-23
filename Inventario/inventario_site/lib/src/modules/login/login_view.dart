@@ -18,7 +18,7 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         body: Stack(
       children: [
-        Container(
+        SizedBox(
           width: deviceInfo.size.width * 0.4,
           child: ClipPath(
             clipper: CustomClipperLogin(),
