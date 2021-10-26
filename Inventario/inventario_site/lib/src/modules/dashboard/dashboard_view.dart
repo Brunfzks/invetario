@@ -16,7 +16,7 @@ class DashboardPage extends StatelessWidget {
       children: [
         Obx(
           () => SizedBox(
-            height: MediaQuery.of(context).size.height * 0.17,
+            height: MediaQuery.of(context).size.height * 0.25,
             width: double.infinity,
             child: ListView.builder(
               shrinkWrap: true,

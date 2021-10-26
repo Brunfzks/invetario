@@ -39,6 +39,14 @@ class AppText {
     
   );
 
+  static var labelTextWhite = GoogleFonts.workSans(
+    fontSize: 16,
+    letterSpacing: 0.41,
+    fontWeight: FontWeight.normal,
+    color: AppColors.secondary,
+    
+  );
+
   static var labelSelected = GoogleFonts.workSans(
       fontSize: 16,
       letterSpacing: 0.41,

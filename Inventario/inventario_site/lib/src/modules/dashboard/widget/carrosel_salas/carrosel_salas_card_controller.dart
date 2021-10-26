@@ -9,7 +9,11 @@ class CarroselSalaCardController extends GetxController {
       required this.local,
     });
   ModelLocal local;
-  late double porcentagemConcluido;
+  late var percentualConcluido = 0.0.obs;
+
+  getPercentual() async {
+    percentualConcluido.value = await ModelLocal.getPercentualConcluido(local.idLocal!);
+  }
   
   @override
   void onInit() {
@@ -21,7 +25,6 @@ class CarroselSalaCardController extends GetxController {
   void onReady() {
     // chamado depois que o widget é renderizado na tela
     super.onReady();
-
   }
 
   @override

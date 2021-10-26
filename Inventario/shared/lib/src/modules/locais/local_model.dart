@@ -43,6 +43,10 @@ class ModelLocal {
     return await LocalRepository().getLocaisAll();
   }
 
+  static Future<double> getPercentualConcluido(int idLocal) async {
+    return await LocalRepository().getPorcentagemConcluida(idLocal);
+  }
+
   static Future<int> cadastraLocais(ModelLocal local) async {
     return await LocalRepository().cadastraLocais(local);
   }

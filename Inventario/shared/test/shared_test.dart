@@ -30,7 +30,7 @@ void main() {
       expect(usuarios, isA<List<ModelUsuario>>());
     });
     test('Get Patrimonio', () async {
-      final patrimonio = await PatrimonioRepository().getPatrimonios();
+      final patrimonio = await PatrimonioRepository().getPatrimonios(Id_local: 1);
       expect(patrimonio, isA<List<ModelPatrimonio>>());
     });
     test('Get Levantamentos', () async {
@@ -46,6 +46,11 @@ void main() {
       final patrimonio =
           await UsuarioRepository().getUsuario(usuario: 'Alan', senha: '12345');
       expect(patrimonio, isA<ModelUsuario>());
+    });
+    test('Get Percentual Local', () async {
+      final patrimonio =
+          await LocalRepository().getPorcentagemConcluida(1);
+      expect(patrimonio, isA<double>());
     });
     test('Existe Usuario', () async {
       final patrimonio = await UsuarioRepository().existeUsuario('3002021');

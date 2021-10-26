@@ -56,6 +56,30 @@ class LocalRepository {
     }
   }
 
+  Future<double> getPorcentagemConcluida(int idLocal) async {
+    String urlApi = Api.url('locais/percentualconcluido/$idLocal');
+
+    try {
+      http.Response response = await http.get(Uri.parse(urlApi), headers: {
+        'Content-Type': 'application/json',
+      });
+
+      if (response.statusCode == 200) {
+        List<dynamic> map = json.decode(Utf8Decoder().convert(response.body.codeUnits));
+          if(map[0]['percentual'] is int){
+          return double.parse(map[0]['percentual'].toString());
+        }
+         return map[0]['percentual'];
+        double result = 0;
+        return result;
+      } else {
+        throw Exception("Failed to load");
+      } 
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
   Future<int> cadastraLocais(
     ModelLocal modelLoca,
   ) async {

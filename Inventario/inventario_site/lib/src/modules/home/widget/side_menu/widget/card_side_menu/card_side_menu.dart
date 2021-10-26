@@ -55,7 +55,7 @@ class CardSideMenu extends StatelessWidget {
                         textLabel,
                         style: homeController.currentPage.value == indexMenu
                             ? AppText.labelSelected
-                            : AppText.labelText,
+                            : AppText.labelTextWhite,
                       ),
                     ],
                   ),

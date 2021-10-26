@@ -80,6 +80,13 @@ server.post('/patrimonios', (req, res, next) => {
             }, next)
         }, next)
 });
+server.get('/locais/percentualconcluido/:idLocal', (req, res, next) => {  
+    const { idLocal } = req.params;
+    knex.raw('EXECUTE sp_PorcentagemConcluida ' + parseInt(idLocal))
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
 
 
 //rota inserir
