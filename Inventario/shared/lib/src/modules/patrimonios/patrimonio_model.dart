@@ -19,26 +19,28 @@ class ModelPatrimonio {
   int empenho;
   String tpIngresso;
   int idLocal;
+  int? encontrado;
 
-  ModelPatrimonio(
-      {this.idBem,
-      required this.dsRotulo,
-      this.dsEd,
-      required this.dsCampus,
-      required this.vlPatrimonio,
-      required this.nmPatrimonio,
-      required this.dsPatrimonio,
-      required this.nmNotaFiscal,
-      required this.dtEntrada,
-      required this.stConservacao,
-      required this.nmSerie,
-      required this.nmFornecedor,
-      this.dtCarga,
-      required this.dsMarca,
-      required this.empenho,
-      required this.tpIngresso,
-      required this.idLocal});
-
+  ModelPatrimonio({
+    this.idBem,
+    required this.dsRotulo,
+    this.dsEd,
+    required this.dsCampus,
+    required this.vlPatrimonio,
+    required this.nmPatrimonio,
+    required this.dsPatrimonio,
+    required this.nmNotaFiscal,
+    required this.dtEntrada,
+    required this.stConservacao,
+    required this.nmSerie,
+    required this.nmFornecedor,
+    this.dtCarga,
+    required this.dsMarca,
+    required this.empenho,
+    required this.tpIngresso,
+    required this.idLocal,
+    this.encontrado,
+  });
   factory ModelPatrimonio.fromJson(Map<String, dynamic> json) {
     return ModelPatrimonio(
       idBem: json['Id_Bem'],
@@ -58,13 +60,13 @@ class ModelPatrimonio {
       empenho: json['Empenho'],
       tpIngresso: json['Tp_ingresso'],
       idLocal: json['Id_local'],
+      encontrado: json['encontrado'] ?? 0,
     );
   }
 
   Map<String, dynamic> toJson() {
     final Map<String, dynamic> data = <String, dynamic>{};
-    if(idBem != null)
-      data['Id_Bem'] = idBem;
+    if (idBem != null) data['Id_Bem'] = idBem;
     data['Ds_rotulo'] = dsRotulo;
     data['Ds_ed'] = dsEd;
     data['Ds_campus'] = dsCampus;
@@ -81,6 +83,7 @@ class ModelPatrimonio {
     data['Empenho'] = empenho;
     data['Tp_ingresso'] = tpIngresso;
     data['Id_local'] = idLocal;
+    data['encontrado'] = encontrado;
     return data;
   }
 
