@@ -152,7 +152,6 @@ class _CardLocalState extends State<CardLocal> {
   }
 
   _row(ModelPatrimonio patrimonio) {
-    bool verificado = true;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
@@ -160,10 +159,11 @@ class _CardLocalState extends State<CardLocal> {
           Expanded(
             flex: 1,
             child: Icon(
-              verificado
+              patrimonio.encontrado!
                   ? Icons.check_circle_rounded
                   : Icons.check_circle_outlined,
-              color: AppColors.primary.withAlpha(verificado ? 150 : 50),
+              color: AppColors.primary
+                  .withAlpha(patrimonio.encontrado! ? 150 : 50),
             ),
           ),
           Expanded(

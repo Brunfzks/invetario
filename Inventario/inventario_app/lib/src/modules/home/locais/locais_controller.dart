@@ -62,18 +62,20 @@ class LocalController extends GetxController {
       if (Nm_Patrimonio != null) {
         print('$Id_Local, $Nm_Patrimonio, $Id_Levantamento, $Id_usuario');
 
+        restart = await _showRatingDialog(context);
+
         String result = await ModelPatrimonio.insertLevantamento(
             Id_Local: Id_Local,
             Nm_Patrimonio: int.parse(Nm_Patrimonio),
             Id_Levantamento: Id_Levantamento,
             Id_usuario: Id_usuario,
-            notificacao: notificacao);
+            notificacao: notificacao,
+            status: classificacaoSelecionada.value);
 
         print(result);
 
         if (result == 'PATRIMONIO NAO CADASTRADO') {
-          restart = await _showRatingDialog(context);
-          //_showScanAlertDialog(context, notificacao: false);
+          restart = await _showScanAlertDialog(context, notificacao: false);
         } else if (result == 'NOTIFICACAO CRIADA!') {
           restart = await _showScanAlertDialog(context, notificacao: true);
           homeController.getNotificacoes();

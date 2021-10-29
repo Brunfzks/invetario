@@ -33,7 +33,9 @@ class LevantamentoRepository {
     required int Nm_Patrimonio,
     required int Id_Levantamento,
     required int Id_usuario,
-    required bool notificacao }) async {
+    required bool notificacao,
+    required String status,
+  }) async {
     String urlApi = Api.url('levantamentos');
 
     Map data = {
@@ -41,7 +43,8 @@ class LevantamentoRepository {
       "Nm_Patrimonio": Nm_Patrimonio,
       "Id_Levantamento": Id_Levantamento,
       "Id_usuario": Id_usuario,
-      "Notificacao": notificacao
+      "Notificacao": notificacao,
+      "Status": status
     };
 
     var body = json.encode(data);

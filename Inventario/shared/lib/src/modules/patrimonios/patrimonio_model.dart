@@ -19,7 +19,7 @@ class ModelPatrimonio {
   int empenho;
   String tpIngresso;
   int idLocal;
-  int? encontrado;
+  bool? encontrado;
 
   ModelPatrimonio({
     this.idBem,
@@ -41,6 +41,7 @@ class ModelPatrimonio {
     required this.idLocal,
     this.encontrado,
   });
+
   factory ModelPatrimonio.fromJson(Map<String, dynamic> json) {
     return ModelPatrimonio(
       idBem: json['Id_Bem'],
@@ -60,7 +61,7 @@ class ModelPatrimonio {
       empenho: json['Empenho'],
       tpIngresso: json['Tp_ingresso'],
       idLocal: json['Id_local'],
-      encontrado: json['encontrado'] ?? 0,
+      encontrado: json['encontrado'] == 'true',
     );
   }
 
@@ -101,12 +102,14 @@ class ModelPatrimonio {
       required int Nm_Patrimonio,
       required int Id_Levantamento,
       required int Id_usuario,
-      required bool notificacao}) async {
+      required bool notificacao,
+      required String status}) async {
     return await LevantamentoRepository().InsertLevantamento(
         Id_Local: Id_Local,
         Nm_Patrimonio: Nm_Patrimonio,
         Id_Levantamento: Id_Levantamento,
         Id_usuario: Id_usuario,
-        notificacao: notificacao);
+        notificacao: notificacao,
+        status: status);
   }
 }

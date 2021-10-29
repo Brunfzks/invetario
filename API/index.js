@@ -59,9 +59,10 @@ server.get('/notificacoes/:id', (req, res, next) => {
 
 server.get('/patrimonios/:id', (req, res, next) => {
     const { id } = req.params;
-    knex('Tb_Patrimonio').where('Id_local', id).then((dados) => {
-        res.send(dados);
-    }, next)
+    knex.raw('EXECUTE sp_BuscaPatrimonio ' + id)
+        .then((dados) => {
+            res.send(dados);
+        }, next)
 });
 
 server.get('/usuarios', (req, res, next) => {
@@ -95,7 +96,8 @@ server.post('/levantamentos', (req, res, next) => {
     + ',' + req.body['Nm_Patrimonio'] 
     + ',' + req.body['Id_Levantamento']
     + ',' + req.body['Id_usuario']
-    + ',' + req.body['Notificacao'])
+    + ',' + req.body['Notificacao']
+    + ',' + req.body['Status'])
         .then((dados) => {
             res.send(dados);
         }, next)
