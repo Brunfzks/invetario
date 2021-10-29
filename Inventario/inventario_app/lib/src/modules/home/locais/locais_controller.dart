@@ -8,6 +8,7 @@ import 'package:shared/constantes/app_text.dart';
 import 'package:shared/shared.dart';
 
 import '../home_controller.dart';
+import 'widgets/classificacao_dialog.dart';
 
 class LocalController extends GetxController {
   LocalController();
@@ -16,6 +17,8 @@ class LocalController extends GetxController {
   late List<ModelPatrimonio> patrimonios = <ModelPatrimonio>[].obs;
   RxInt selectedItem = RxInt(9999);
   final HomeController homeController = Get.find();
+  RxString classificacaoSelecionada = RxString('ativo');
+
   @override
   Future<void> onInit() async {
     super.onInit();
@@ -36,7 +39,7 @@ class LocalController extends GetxController {
     patrimonios = [];
 
     patrimonios = await ModelPatrimonio.getPatrimonios(Id_local: Id_local);
-    Future.delayed(const Duration(seconds: 2))
+    Future.delayed(const Duration(seconds: 1))
         .then((value) => loading.value = false);
 
     return patrimonios;
@@ -69,9 +72,10 @@ class LocalController extends GetxController {
         print(result);
 
         if (result == 'PATRIMONIO NAO CADASTRADO') {
-          restart = await _showDialogScan(context, notificacao: false);
+          restart = await _showRatingDialog(context);
+          //_showScanAlertDialog(context, notificacao: false);
         } else if (result == 'NOTIFICACAO CRIADA!') {
-          restart = await _showDialogScan(context, notificacao: true);
+          restart = await _showScanAlertDialog(context, notificacao: true);
           homeController.getNotificacoes();
         } else if (result == 'INSERIDO COM SUCESSO!') {
           _snack(
@@ -83,7 +87,7 @@ class LocalController extends GetxController {
       }
     } catch (e) {
       print("erro na leitura codigo QR");
-      restart = await _showDialogScan(context, notificacao: false);
+      restart = await _showScanAlertDialog(context, notificacao: false);
     }
 
     if (restart && !notificacao) {
@@ -117,7 +121,7 @@ class LocalController extends GetxController {
       case 1:
         return await scanner.scan();
       case 2:
-        return _showDialog(context);
+        return _showCameraPermissionDialog(context);
       default:
         return '';
     }
@@ -136,7 +140,7 @@ class LocalController extends GetxController {
     return ePermitido;
   }
 
-  Future<bool> _showDialogScan(BuildContext context,
+  Future<bool> _showScanAlertDialog(BuildContext context,
       {required bool notificacao}) {
     bool restart = false;
     return showDialog(
@@ -203,7 +207,57 @@ class LocalController extends GetxController {
         }).then((value) => restart);
   }
 
-  Future<String?> _showDialog(BuildContext context) {
+  Future<bool> _showRatingDialog(BuildContext context) {
+    bool restart = false;
+    return showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          return Dialog(
+              insetPadding: const EdgeInsets.all(10),
+              child: SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: MediaQuery.of(context).size.height / 1.4,
+                child: Padding(
+                  padding: const EdgeInsets.all(12.0),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      ClassificacaoDialog(),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          RaisedButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            child: const Text(
+                              "Sair",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            color: Colors.red,
+                          ),
+                          RaisedButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                              restart = true;
+                            },
+                            child: const Text(
+                              "Continuar",
+                              style: TextStyle(color: Colors.white),
+                            ),
+                            color: Colors.green,
+                          ),
+                        ],
+                      )
+                    ],
+                  ),
+                ),
+              ));
+        }).then((value) => restart);
+  }
+
+  Future<String?> _showCameraPermissionDialog(BuildContext context) {
     return showDialog(
         context: context,
         builder: (BuildContext context) {

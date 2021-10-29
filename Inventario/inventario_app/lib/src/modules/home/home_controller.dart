@@ -11,7 +11,9 @@ class HomeController extends GetxController {
   final ModelUsuario usuario;
   var notificacao = <ModelNotificacao>[].obs;
   var locais = <ModelLocal>[].obs;
+  var showNotifications = true.obs;
   GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
+
   @override
   Future<void> onInit() async {
     super.onInit();
@@ -48,5 +50,9 @@ class HomeController extends GetxController {
     } catch (e) {
       return data;
     }
+  }
+
+  showHideNotifications() {
+    showNotifications.value = !showNotifications.value;
   }
 }

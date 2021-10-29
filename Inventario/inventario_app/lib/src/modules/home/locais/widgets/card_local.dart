@@ -152,24 +152,33 @@ class _CardLocalState extends State<CardLocal> {
   }
 
   _row(ModelPatrimonio patrimonio) {
+    bool verificado = true;
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
         children: [
           Expanded(
+            flex: 1,
+            child: Icon(
+              verificado
+                  ? Icons.check_circle_rounded
+                  : Icons.check_circle_outlined,
+              color: AppColors.primary.withAlpha(verificado ? 150 : 50),
+            ),
+          ),
+          Expanded(
             flex: 2,
-            child: Text(patrimonio.nmPatrimonio.toString(),
+            child: Text(" " + patrimonio.nmPatrimonio.toString(),
                 style: AppText.textPrimaryCardNotificacaoHome),
           ),
           Expanded(
-            flex: 9,
-            child: Text(
-              patrimonio.dsPatrimonio,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: AppText.textPrimaryCardNotificacaoHome,
-            ),
-          ),
+              flex: 9,
+              child: Text(
+                patrimonio.dsPatrimonio,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppText.textPrimaryCardNotificacaoHome,
+              )),
         ],
       ),
     );

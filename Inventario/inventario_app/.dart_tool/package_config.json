@@ -9,7 +9,7 @@
     },
     {
       "name": "async",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.7.0",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/async-2.8.1",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -363,7 +363,7 @@
     },
     {
       "name": "test_api",
-      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.1",
+      "rootUri": "file:///C:/flutter/flutter/.pub-cache/hosted/pub.dartlang.org/test_api-0.4.2",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -404,7 +404,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-16T18:17:56.030393Z",
+  "generated": "2021-10-29T16:48:55.409204Z",
   "generator": "pub",
-  "generatorVersion": "2.14.0-301.2.beta"
+  "generatorVersion": "2.14.4"
 }
