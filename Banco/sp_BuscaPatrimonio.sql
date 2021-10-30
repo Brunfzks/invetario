@@ -1,3 +1,5 @@
+Use Inventario;
+
 DROP PROCEDURE IF EXISTS sp_BuscaPatrimonio 
 GO
 

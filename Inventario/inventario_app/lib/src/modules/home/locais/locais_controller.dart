@@ -85,6 +85,7 @@ class LocalController extends GetxController {
             color: AppColors.primary,
             scaffoldKey: scaffoldKey,
           );
+          if (!restart) getPatrimonios(Id_local: Id_Local);
         }
       }
     } catch (e) {

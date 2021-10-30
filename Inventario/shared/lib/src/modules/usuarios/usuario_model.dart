@@ -2,6 +2,7 @@ import 'package:shared/src/modules/usuarios/usuario_repository.dart';
 
 class ModelUsuario {
   int? idUsuario;
+  int? idLevantamento;
   String snUsuario;
   String cpOrigem;
   String dsSetor;
@@ -10,6 +11,7 @@ class ModelUsuario {
 
   ModelUsuario(
       {this.idUsuario,
+        this.idLevantamento,
       required this.snUsuario,
       required this.cpOrigem,
       required this.dsSetor,
@@ -17,6 +19,7 @@ class ModelUsuario {
       required this.nmUsuario});
 
   factory ModelUsuario.fromJson(Map<String, dynamic> json) {
+    print(json);
     return ModelUsuario(
       idUsuario: json['Id_usuario'],
       snUsuario: json['Sn_usuario'],
@@ -24,6 +27,7 @@ class ModelUsuario {
       dsSetor: json['Ds_setor'],
       ptUsuario: json['Pt_Usuario'],
       nmUsuario: json['Nm_usuario'],
+      idLevantamento: json['Id_levantamento'],
     );
   }
 

@@ -12,11 +12,12 @@ class LoginScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        key: controller.scaffoldKey,
         body: SafeArea(
-      child: SizedBox(
-        height: MediaQuery.of(context).size.height,
-        child: LoginForm(),
-      ),
-    ));
+          child: SizedBox(
+            height: MediaQuery.of(context).size.height,
+            child: LoginForm(),
+          ),
+        ));
   }
 }

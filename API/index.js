@@ -137,12 +137,8 @@ server.post('/usuarios', (req, res, next) => {
 server.post('/usuario', (req, res, next) => {
     const { prontuario } = req.body;
     const { senha } = req.body;
-    knex('Tb_Usuario')
-        .where({
-            'Pt_Usuario': prontuario,
-            'Sn_usuario': senha
-        })
-        .first()
+    knex.raw('Select *, (Select Id_levantamento from Tb_cab_levantamentos where Encerrado = 0) as Id_levantamento from Tb_Usuario '+
+    "where Pt_Usuario = '"+prontuario+"' and Sn_usuario = '"+senha+"'")       
         .then((dados) => {
             if (!dados) return res.send(new errs.BadRequestError('Nada Encontrado'))
             res.send(dados);

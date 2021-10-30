@@ -84,9 +84,10 @@ class UsuarioRepository {
         headers: {'Content-Type': 'application/json'}, body: body);
 
     if (response.statusCode == 200) {
-      Map<String, dynamic> map = json.decode(Utf8Decoder().convert(response.body.codeUnits));
 
-      return ModelUsuario.fromJson(map);
+      List<dynamic> listMap = json.decode(Utf8Decoder().convert(response.body.codeUnits));
+
+      return ModelUsuario.fromJson(listMap[0]);
     } else {
       throw Exception("Failed to load");
     }

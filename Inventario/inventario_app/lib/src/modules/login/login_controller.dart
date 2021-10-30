@@ -10,6 +10,7 @@ class LoginController extends GetxController {
   String ptUsuario = "";
   String snUsuario = "";
   var userSave = false.obs;
+  GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
 
   TextEditingController userLoginTextController = TextEditingController();
   TextEditingController userSenhaTextController = TextEditingController();
@@ -47,17 +48,38 @@ class LoginController extends GetxController {
 
       ModelUsuario usuario = await ModelUsuario.getUsuario(user, senha);
 
-      SharedPreferences prefs = await SharedPreferences.getInstance();
+      if (usuario.idLevantamento != null) {
+        SharedPreferences prefs = await SharedPreferences.getInstance();
 
-      await prefs.setString('ptUsuario', usuario.ptUsuario);
-      await prefs.setString('snUsuario', usuario.snUsuario);
+        await prefs.setString('ptUsuario', usuario.ptUsuario);
+        await prefs.setString('snUsuario', usuario.snUsuario);
 
-      final HomeController homeController =
-          Get.put(HomeController(usuario: usuario));
-      Get.to(() => HomePage());
+        final HomeController homeController =
+            Get.put(HomeController(usuario: usuario));
+        Get.to(() => HomePage());
+      } else {
+        print('AQUII');
+        _snack(
+            text:
+                "Não foi possivel realizar o login pois não existe um processo "
+                "de auditoria iniciado. Contate o administrador do sistema.",
+            color: Colors.red);
+      }
     } catch (e) {
       rethrow;
     }
+  }
+
+  _snack({text, color}) {
+    scaffoldKey.currentState!.removeCurrentSnackBar();
+    return scaffoldKey.currentState!.showSnackBar(SnackBar(
+      content: Text(
+        text,
+        style: const TextStyle(color: Colors.white),
+      ),
+      duration: const Duration(seconds: 10),
+      backgroundColor: color,
+    ));
   }
 
   Future<void> login({
@@ -67,7 +89,10 @@ class LoginController extends GetxController {
     if (userSave.value) {
       authenticateWithBiometrics();
     } else {
-      _autenticar(user: user, senha: senha);
+      _autenticar(
+        user: user,
+        senha: senha,
+      );
     }
   }
 
