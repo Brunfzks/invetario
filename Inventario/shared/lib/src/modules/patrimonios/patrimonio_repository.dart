@@ -30,6 +30,34 @@ class PatrimonioRepository {
     }
   }
 
+  Future<List<ModelPatrimonio>> relatorioNaoEncontrado() async {
+    String urlApi = Api.url('relatorionaolocalizado');
+
+    List<ModelPatrimonio> lista = [];
+
+    try {
+      http.Response response = await http.get(Uri.parse(urlApi), headers: {
+        'Content-Type': 'application/json',
+      });
+
+      if (response.statusCode == 200) {
+        final List parsedList = json.decode(const Utf8Decoder().convert(response.body.codeUnits));
+
+        parsedList.map((val) {
+          ModelPatrimonio model =  ModelPatrimonio.fromJson(val);
+          if(model.encontrado != true){
+            lista.add(model);
+          }
+        }).toList();
+        return lista;
+      } else {
+        throw Exception("Failed to load");
+      }
+    } catch (e) {
+      throw Exception(e);
+    }
+  }
+
   Future<int> cadastraPatrimonios(
     ModelPatrimonio modelPatrimonio,
   ) async {

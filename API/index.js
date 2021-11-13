@@ -10,7 +10,7 @@ const server = restify.createServer({
 var knex = require('knex')({
     client: 'mssql',
     connection: {
-        server: '192.168.1.108\\sqlexpress',
+        server: '192.168.0.110\\sqlexpress',
         user: 'sa',
         password: 'abdr',
         database: 'Inventario',
@@ -133,6 +133,18 @@ server.post('/usuarios', (req, res, next) => {
         }, next)
 });
 
+server.post('/start', (req, res, next) => {
+    knex('Tb_')
+        .insert(req.body)
+        .then((dados) => {
+            knex('Tb_Usuario').max('Id_usuario').then((dados) => {
+                knex('Tb_Usuario').max('Id_usuario').then((dados) => {
+                    res.send(dados);
+                }, next)
+            }, next)
+        }, next)
+});
+
 //rota listar unico
 server.post('/usuario', (req, res, next) => {
     const { prontuario } = req.body;
@@ -161,6 +173,14 @@ server.get('/existeusuario/:prontuario', (req, res, next) => {
             res.send(dados);
         }, next)
 },);
+
+//RELATORIOS
+server.get('/relatorionaolocalizado', (req, res, next) => {  
+    knex.raw('EXECUTE sp_RelatorioNaoLocalizado')
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
 
 
 //rota listar unico

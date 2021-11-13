@@ -93,6 +93,10 @@ class ModelPatrimonio {
     return await PatrimonioRepository().getPatrimonios(Id_local: Id_local);
   }
 
+  static Future<List<ModelPatrimonio>> relatorioNaoEncontrado() async {
+    return await PatrimonioRepository().relatorioNaoEncontrado();
+  }
+
   static Future<int> cadastraPatrimonio(ModelPatrimonio patrimonio) async {
     return await PatrimonioRepository().cadastraPatrimonios(patrimonio);
   }

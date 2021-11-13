@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/local/local_controller.dart';
+import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
 import 'package:inventario_site/src/modules/usuario/usuario_controller.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/shared.dart';
@@ -66,6 +67,7 @@ class HomeController extends GetxController {
     //controller
     UsuarioController usuarioController = Get.find();
     LocalController localController = Get.find();
+    RelatorioController relatorioController = Get.find();
     localController.getLocaisAll();
     usuarioController.getUsuarios();
 

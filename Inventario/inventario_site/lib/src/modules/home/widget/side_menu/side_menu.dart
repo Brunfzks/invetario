@@ -66,6 +66,20 @@ class SideMenu extends StatelessWidget {
                         onTap: onTap2,
                         indexMenu: 1,
                       ),
+                      
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(
+                        top: 5.0,
+                        left: 20.0,
+                      ),
+                      child: CardSideMenu(
+                        icon: Icons.find_in_page,
+                        textLabel: 'Relatorios',
+                        onTap: onTap3,
+                        indexMenu: 2,
+                      ),
+                      
                     ),
                   ],
                 ),

@@ -8,6 +8,8 @@ import 'package:inventario_site/src/modules/dashboard/dashboard_view.dart';
 import 'package:inventario_site/src/modules/home/widget/side_menu/side_menu.dart';
 import 'package:inventario_site/src/modules/local/local_controller.dart';
 import 'package:inventario_site/src/modules/patrimonio/patrimonio_controller.dart';
+import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
+import 'package:inventario_site/src/modules/relatorios/relatorio_view.dart';
 import 'package:inventario_site/src/modules/usuario/usuario_controller.dart';
 import 'home_controller.dart';
 
@@ -17,10 +19,12 @@ class Home extends StatelessWidget {
   UsuarioController usuarioController = Get.put(UsuarioController());
   LocalController localController = Get.put(LocalController());
   PatrimonioController patrimonioController = Get.put(PatrimonioController());
+  RelatorioController relatorioController = Get.put(RelatorioController());
 
   final pages = [
     DashboardPage(),
     CadastroPage(),
+    RelatorioView(),
   ];
 
   @override
@@ -39,6 +43,9 @@ class Home extends StatelessWidget {
                 },
                 onTap2: () {
                   homeController.currentPage.value = 1;
+                },
+                onTap3: () {
+                  homeController.currentPage.value = 2;
                 },
               ),
             ),

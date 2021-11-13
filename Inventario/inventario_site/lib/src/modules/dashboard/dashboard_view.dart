@@ -18,17 +18,15 @@ class DashboardPage extends StatelessWidget {
           () => SizedBox(
             height: MediaQuery.of(context).size.height * 0.25,
             width: double.infinity,
-            child: ListView.builder(
-              shrinkWrap: true,
-              scrollDirection: Axis.horizontal,
-              itemCount: homeController.listLocal.length,
-              itemBuilder: (context, index) {
+            child: GridView.count(
+              crossAxisCount: 6,
+              children: List.generate(homeController.listLocal.length, (index) {
                 return CarroselSalaCard(
                   controller: CarroselSalaCardController(
                     local: homeController.listLocal[index],
                   ),
                 );
-              },
+              }),
             ),
           ),
         )

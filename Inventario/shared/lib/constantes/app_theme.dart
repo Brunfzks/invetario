@@ -66,6 +66,24 @@ class AppTheme {
     color: white,
   );
 
+  static const TextStyle headlineSmallPrimary = TextStyle(
+    // h5 -> headline
+    fontFamily: fontName,
+    fontWeight: FontWeight.bold,
+    fontSize: 14,
+    letterSpacing: 0.27,
+    color: primary,
+  );
+
+  static const TextStyle headlineSmallSecondary = TextStyle(
+    // h5 -> headline
+    fontFamily: fontName,
+    fontWeight: FontWeight.bold,
+    fontSize: 14,
+    letterSpacing: 0.27,
+    color: white,
+  );
+
   static const TextStyle title = TextStyle(
     // h6 -> title
     fontFamily: fontName,
