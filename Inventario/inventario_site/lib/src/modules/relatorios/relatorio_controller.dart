@@ -70,6 +70,38 @@ class RelatorioController extends GetxController {
     OpenFile.open(file.path);
   }
 
+  creatPdfLocal(List<ModelLocal> listLocal, String titulo) async {
+    final pdf = pw.Document();
+
+    pdf.addPage(pw.MultiPage(
+        build: (context) => [
+              pw.Center(
+                child: pw.Text(titulo),
+              ),
+              pw.Table.fromTextArray(data: <List<String>>[
+                <String>[
+                  'Setor',
+                  'Nome Completo do responsável',
+                ],
+                ...listLocal.map((local) => [
+                      local.dsLocal.toString(),
+                      homeController.listUsuario
+                          .firstWhere(
+                              (usuario) => local.idUsuario == usuario.idUsuario)
+                          .nmUsuario
+                          .toString(),
+                    ])
+              ])
+            ]));
+
+    final String dir = (await getApplicationDocumentsDirectory()).path;
+
+    final String path = '$dir/relatorioNaoEncontrados.pdf';
+    final File file = File(path);
+    file.writeAsBytesSync(await pdf.save());
+    OpenFile.open(file.path);
+  }
+
   @override
   void onInit() {
     // chamado imediatamente após o widget ser alocado em memória

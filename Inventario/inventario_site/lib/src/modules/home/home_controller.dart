@@ -2,7 +2,9 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:inventario_site/src/modules/levantamentos/levantamento_controller.dart';
 import 'package:inventario_site/src/modules/local/local_controller.dart';
+import 'package:inventario_site/src/modules/patrimonio/patrimonio_controller.dart';
 import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
 import 'package:inventario_site/src/modules/usuario/usuario_controller.dart';
 import 'package:shared/constantes/app_color.dart';
@@ -22,6 +24,10 @@ class HomeController extends GetxController {
   //patrimonio
   var listPatrimonio = <ModelPatrimonio>[].obs;
   //patrimonio end
+
+  //levantamento
+  var listLevantamento = <LevantamentoModel>[].obs;
+  //levantamento end
 
   //alert
   var isShowAlert = false.obs;
@@ -68,6 +74,10 @@ class HomeController extends GetxController {
     UsuarioController usuarioController = Get.find();
     LocalController localController = Get.find();
     RelatorioController relatorioController = Get.find();
+    LevantamentoController levantamentoController = Get.find();
+    PatrimonioController patrimonioController = Get.find();
+    patrimonioController.getAllPatrimonio();
+    levantamentoController.getLevantamento();
     localController.getLocaisAll();
     usuarioController.getUsuarios();
 

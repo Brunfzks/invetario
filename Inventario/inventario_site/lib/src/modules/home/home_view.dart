@@ -6,6 +6,7 @@ import 'package:inventario_site/shared/widgets/alert/alert.dart';
 import 'package:inventario_site/src/modules/cadastros/cadastro_view.dart';
 import 'package:inventario_site/src/modules/dashboard/dashboard_view.dart';
 import 'package:inventario_site/src/modules/home/widget/side_menu/side_menu.dart';
+import 'package:inventario_site/src/modules/levantamentos/levantamento_controller.dart';
 import 'package:inventario_site/src/modules/local/local_controller.dart';
 import 'package:inventario_site/src/modules/patrimonio/patrimonio_controller.dart';
 import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
@@ -20,7 +21,7 @@ class Home extends StatelessWidget {
   LocalController localController = Get.put(LocalController());
   PatrimonioController patrimonioController = Get.put(PatrimonioController());
   RelatorioController relatorioController = Get.put(RelatorioController());
-
+  LevantamentoController levantamentoController = Get.put(LevantamentoController());
   final pages = [
     DashboardPage(),
     CadastroPage(),

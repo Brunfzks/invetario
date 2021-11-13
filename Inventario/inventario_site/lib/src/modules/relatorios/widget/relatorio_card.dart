@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:inventario_site/src/modules/cadastros/cadastro_controller.dart';
 import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_theme.dart';
@@ -8,13 +7,11 @@ import 'package:shared/constantes/app_theme.dart';
 class CardRelatorioMenu extends StatelessWidget {
   CardRelatorioMenu({
     Key? key,
-    required this.icon,
     required this.label,
     required this.onTap,
     required this.indexMenu,
   }) : super(key: key);
 
-  final IconData icon;
   final String label;
   final VoidCallback onTap;
   final RelatorioController cadastroController = Get.find();
@@ -29,7 +26,7 @@ class CardRelatorioMenu extends StatelessWidget {
                 topLeft: Radius.circular(15),
                 bottomLeft: Radius.circular(15),
               )
-            : indexMenu == 2
+            : indexMenu == 3
                 ? const BorderRadius.only(
                     topRight: Radius.circular(15),
                     bottomRight: Radius.circular(15),
@@ -49,7 +46,7 @@ class CardRelatorioMenu extends StatelessWidget {
                         topLeft: Radius.circular(15),
                         bottomLeft: Radius.circular(15),
                       )
-                    : indexMenu == 2
+                    : indexMenu == 3
                         ? const BorderRadius.only(
                             topRight: Radius.circular(15),
                             bottomRight: Radius.circular(15),
@@ -58,13 +55,6 @@ class CardRelatorioMenu extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                Icon(
-                  icon,
-                  size: 20,
-                  color: cadastroController.currentPage.value != indexMenu
-                      ? AppColors.primary
-                      : AppColors.secondary,
-                ),
                 Text(
                   label,
                   style: cadastroController.currentPage.value != indexMenu

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/shared/widgets/editor/editor.dart';
+import 'package:inventario_site/src/modules/home/home_controller.dart';
 import 'package:inventario_site/src/modules/patrimonio/patrimonio_controller.dart';
 import 'package:shared/constantes/app_color.dart';
 import 'package:shared/constantes/app_theme.dart';
@@ -13,6 +14,7 @@ class CadastroPatrimonioForm extends StatelessWidget {
   CadastroPatrimonioForm({Key? key}) : super(key: key);
   final _formKey = GlobalKey<FormState>();
   PatrimonioController patrimonioController = Get.find();
+  HomeController homeController = Get.find();
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -23,25 +25,28 @@ class CadastroPatrimonioForm extends StatelessWidget {
           child: Column(
             children: [
               Row(
-                children: [Expanded(
-                child: Editor(
-                  label: 'Ed',
-                  controller: patrimonioController.dsEdTextController,
-                  isNumber: true,
-                  validator: RequiredValidator(
-                    errorText: "Por favor, informe o Ed",
+                children: [
+                  Expanded(
+                    child: Editor(
+                      label: 'Ed',
+                      controller: patrimonioController.dsEdTextController,
+                      isNumber: true,
+                      validator: RequiredValidator(
+                        errorText: "Por favor, informe o Ed",
+                      ),
+                    ),
                   ),
-                ),
+                  Expanded(
+                    child: Editor(
+                      label: 'Rótulo',
+                      controller: patrimonioController.dsRotuloTextController,
+                      validator: RequiredValidator(
+                        errorText: "Por favor, informe o Rótulo",
+                      ),
+                    ),
+                  ),
+                ],
               ),
-              Expanded(
-                child: Editor(
-                  label: 'Rótulo',
-                  controller: patrimonioController.dsRotuloTextController,
-                  validator: RequiredValidator(
-                    errorText: "Por favor, informe o Rótulo",
-                  ),
-                ),
-              ),],),             
               Row(
                 children: [
                   Expanded(
@@ -156,12 +161,17 @@ class CadastroPatrimonioForm extends StatelessWidget {
                       ),
                     ),
                   ),
+                ],
+              ),
+              Row(
+                children: [
                   Expanded(
                     flex: 4,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 17),
                       child: Obx(
                         () => DropdownButton<ModelLocal>(
+                          isExpanded: true,
                           value: patrimonioController.homeController.listLocal[
                               patrimonioController.selectedLocal.value],
                           items: patrimonioController.homeController.listLocal
@@ -175,6 +185,31 @@ class CadastroPatrimonioForm extends StatelessWidget {
                             patrimonioController.selectedLocal.value =
                                 patrimonioController.homeController.listLocal
                                     .indexOf(local);
+                          },
+                        ),
+                      ),
+                    ),
+                  ),
+                  Expanded(
+                    flex: 4,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 17),
+                      child: Obx(
+                        () => DropdownButton<ModelUsuario>(
+                          isExpanded: true,
+                          value: homeController.listUsuario[
+                              patrimonioController.selectedUsuario.value],
+                          items: homeController.listUsuario
+                              .map((ModelUsuario usuario) {
+                            return DropdownMenuItem<ModelUsuario>(
+                              value: usuario,
+                              child: Text(usuario.nmUsuario),
+                            );
+                          }).toList(),
+                          onChanged: (usuario) {
+                            patrimonioController.selectedUsuario.value =
+                                homeController.listUsuario
+                                    .indexOf(usuario);
                           },
                         ),
                       ),

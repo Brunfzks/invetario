@@ -170,6 +170,12 @@ server.get('/existeusuario/:prontuario', (req, res, next) => {
         }, next)
 },);
 
+server.get('/todospatrimonios', (req, res, next) => {
+    knex('Tb_Patrimonio').then((dados) => {
+        res.send(dados);
+    }, next)
+},);
+
 //RELATORIOS
 server.get('/relatorionaolocalizado', (req, res, next) => {  
     knex.raw('EXECUTE sp_RelatorioNaoLocalizado')

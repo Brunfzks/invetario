@@ -20,8 +20,10 @@ class ModelPatrimonio {
   String tpIngresso;
   int idLocal;
   bool? encontrado;
+  int idUsuario;
 
   ModelPatrimonio({
+    required this.idUsuario,
     this.idBem,
     required this.dsRotulo,
     this.dsEd,
@@ -44,6 +46,7 @@ class ModelPatrimonio {
 
   factory ModelPatrimonio.fromJson(Map<String, dynamic> json) {
     return ModelPatrimonio(
+      idUsuario: json['Id_Usuario'],
       idBem: json['Id_Bem'],
       dsRotulo: json['Ds_rotulo'],
       dsEd: json['Ds_ed'],
@@ -84,13 +87,18 @@ class ModelPatrimonio {
     data['Empenho'] = empenho;
     data['Tp_ingresso'] = tpIngresso;
     data['Id_local'] = idLocal;
-    data['encontrado'] = encontrado;
+    data['Id_Usuario'] = idUsuario;
     return data;
   }
 
   static Future<List<ModelPatrimonio>> getPatrimonios(
       {required int Id_local}) async {
     return await PatrimonioRepository().getPatrimonios(Id_local: Id_local);
+  }
+
+  static Future<List<ModelPatrimonio>> getAllPatrimonios(
+      ) async {
+    return await PatrimonioRepository().getAllPatrimonios();
   }
 
   static Future<List<ModelPatrimonio>> relatorioNaoEncontrado() async {

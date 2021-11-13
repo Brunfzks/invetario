@@ -10,6 +10,7 @@ class RelatorioMenu extends StatelessWidget {
     required this.onTap1,
     required this.onTap2,
     required this.onTap3,
+    required this.onTap4,
   }) : super(key: key);
 
   final RelatorioController cadastroController = Get.find();
@@ -17,6 +18,7 @@ class RelatorioMenu extends StatelessWidget {
   final VoidCallback onTap1;
   final VoidCallback onTap2;
   final VoidCallback onTap3;
+  final VoidCallback onTap4;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +30,6 @@ class RelatorioMenu extends StatelessWidget {
           Expanded(
             child: CardRelatorioMenu(
               indexMenu: 0,
-              icon: Icons.person,
               label: 'Não Localizados',
               onTap: onTap1,
             ),
@@ -36,19 +37,25 @@ class RelatorioMenu extends StatelessWidget {
           Expanded(
             child: CardRelatorioMenu(
               indexMenu: 1,
-              icon: Icons.home,
-              label: 'Local',
+              label: 'Identificação Local',
               onTap: onTap2,
             ),
           ),
           Expanded(
             child: CardRelatorioMenu(
               indexMenu: 2,
-              icon: Icons.chair,
-              label: 'Patrimonio',
+              label: 'Ociosos',
               onTap: onTap3,
             ),
           ),
+          Expanded(
+            child: CardRelatorioMenu(
+              indexMenu: 3,
+              label: 'Inserviveis',
+              onTap: onTap4,
+            ),
+          ),
+          
         ],
       ),
     );

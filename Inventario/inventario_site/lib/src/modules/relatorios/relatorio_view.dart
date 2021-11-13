@@ -4,6 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/relatorios/relatorio_controller.dart';
 import 'package:inventario_site/src/modules/relatorios/tipo_relatorios/nao_localizados.dart';
+import 'package:inventario_site/src/modules/relatorios/tipo_relatorios/relatorio_identificacao_local.dart';
+import 'package:inventario_site/src/modules/relatorios/tipo_relatorios/relatorio_inseriveis.dart';
+import 'package:inventario_site/src/modules/relatorios/tipo_relatorios/relatorio_ociosos.dart';
 import 'package:inventario_site/src/modules/relatorios/widget/relatorio_menu_widget.dart';
 
 class RelatorioView extends StatelessWidget {
@@ -13,8 +16,10 @@ class RelatorioView extends StatelessWidget {
 
   final pages = [
     RelatorioNaoLocalizados(),
-    Container(color: Colors.blue,),
-    Container(color: Colors.green,),
+    RelatorioIdentificacaoLocal(),
+    RelatorioOciosos(),
+    RelatorioInseriveis(),
+    
   ];
 
   @override
@@ -33,6 +38,9 @@ class RelatorioView extends StatelessWidget {
             },
             onTap3: () {
               relatorioController.currentPage.value = 2;
+            },
+            onTap4: () {
+              relatorioController.currentPage.value = 3;
             },
           ),
         ),

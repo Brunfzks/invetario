@@ -21,6 +21,7 @@ class PatrimonioController extends GetxController {
   HomeController homeController = Get.find();
 
   var selectedLocal = 0.obs;
+  var selectedUsuario = 0.obs;
   var isLoading = false.obs;
 
   limpaControllers() {
@@ -57,6 +58,8 @@ class PatrimonioController extends GetxController {
       tpIngresso: tpIngressoTextController.text,
       vlPatrimonio: double.parse(vlPatrimonioTextController.text),
       dsEd: int.parse(dsEdTextController.text),
+      idUsuario: homeController.listUsuario[selectedUsuario.value].idUsuario!,
+      
     );
     try {
       patrimonio.idBem = await ModelPatrimonio.cadastraPatrimonio(patrimonio);
@@ -67,6 +70,11 @@ class PatrimonioController extends GetxController {
       isLoading.value = false;
       rethrow;
     }
+  }
+
+  getAllPatrimonio() async{
+    List<ModelPatrimonio> list = await ModelPatrimonio.getAllPatrimonios();
+    homeController.listPatrimonio.value = list;
   }
 
   @override
