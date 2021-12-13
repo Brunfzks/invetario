@@ -44,7 +44,7 @@ class _RelatorioIdentificacaoLocalState extends State<RelatorioIdentificacaoLoca
                       flex: 1,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(
+                        child: InkWell(
                           onTap: () async {
                             relatorioController.creatPdfLocal(homeController.listLocal, 'Identificação do setor e responsável');
                           },

@@ -20,44 +20,47 @@ class CarroselSalaCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(10),
       child: Container(
-          padding: const EdgeInsets.all(10),
-          width: 200,
-          decoration: BoxDecoration(
-            border: Border.all(color: AppColors.primaryLight),
-            borderRadius: const BorderRadius.all(
-              Radius.circular(20),
-            ),
+        padding: const EdgeInsets.all(10),
+        width: 200,
+        decoration: BoxDecoration(
+          border: Border.all(color: AppColors.primaryLight),
+          borderRadius: const BorderRadius.all(
+            Radius.circular(20),
           ),
-          child: Obx(
-            () => Column(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Expanded(
-                  child: CustomPaint(
-                    painter: CircularCustomPainter(porcentagem: controller.percentualConcluido.value),
-                    child: Center(
-                      child: Padding(
-                        padding: const EdgeInsets.only(top: 15.0, left: 5),
-                        child: Text(
-                          '${controller.percentualConcluido.value.toInt()}%',style: AppText.labelText,
-                        ),
+        ),
+        child: Obx(
+          () => Column(
+            mainAxisAlignment: MainAxisAlignment.end,
+            children: [
+              Expanded(
+                child: CustomPaint(
+                  painter: CircularCustomPainter(
+                      porcentagem: controller.percentualConcluido.value),
+                  child: Center(
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 15.0, left: 5),
+                      child: Text(
+                        '${controller.percentualConcluido.value.toInt()}%',
+                        style: AppText.labelText,
                       ),
                     ),
                   ),
                 ),
-                Expanded(
-                  child: Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Text(
-                      controller.local.dsLocal,
-                      style: AppText.labelText,
-                      textAlign: TextAlign.center,
-                    ),
+              ),
+              Expanded(
+                child: Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    controller.local.dsLocal,
+                    style: AppText.labelText,
+                    textAlign: TextAlign.center,
                   ),
                 ),
-              ],
-            ),
-          )),
+              ),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }

@@ -3,7 +3,6 @@
 import 'dart:io';
 import 'package:get/get.dart';
 import 'package:inventario_site/src/modules/home/home_controller.dart';
-import 'package:shared/constantes/app_text.dart';
 import 'package:shared/shared.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;

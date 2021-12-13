@@ -17,13 +17,19 @@ class CardRelatorioIdentificacaoLocal extends StatelessWidget {
       child: Container(
         height: 60,
         decoration: BoxDecoration(border: Border.all()),
-        child: Column(
+        child: Row(
           children: [
-            Text(
-              modelLocal.idLocal.toString(),
+            SizedBox(
+              width: 300,
+              child: Text(
+                modelLocal.idLocal.toString(),
+              ),
             ),
-            Text(
-              modelLocal.dsLocal,
+            SizedBox(
+              width: 300,
+              child: Text(
+                modelLocal.dsLocal,
+              ),
             ),
             Text(
                   homeController.listUsuario

@@ -17,28 +17,36 @@ class CardRelatorioNaoEncontrado extends StatelessWidget {
       child: Container(
         height: 60,
         decoration: BoxDecoration(border: Border.all()),
-        child: Column(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            Text(
-              modelPatrimonio.nmPatrimonio.toString(),
+            SizedBox(
+              width: 50,
+              child: Text(
+                modelPatrimonio.nmPatrimonio.toString(),
+              ),
             ),
-            Text(
-              modelPatrimonio.dsPatrimonio,
+            const SizedBox(width: 10,),
+            SizedBox(
+              width: 600,
+              child: Text(
+                modelPatrimonio.dsPatrimonio,
+              ),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  homeController.listLocal
-                      .firstWhere(
-                          (local) => local.idLocal == modelPatrimonio.idLocal)
-                      .dsLocal
-                      .toString(),
-                ),
-                Text(
-                  modelPatrimonio.vlPatrimonio.toString()
-                ),
-              ],
+            const SizedBox(width: 10,),
+            SizedBox(
+              width: 200,
+              child: Text(
+                homeController.listLocal
+                    .firstWhere(
+                        (local) => local.idLocal == modelPatrimonio.idLocal)
+                    .dsLocal
+                    .toString(),
+              ),
+            ),
+            const SizedBox(width: 10,),
+            Text(
+              modelPatrimonio.vlPatrimonio.toString()
             )
           ],
         ),

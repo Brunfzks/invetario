@@ -46,7 +46,7 @@ class _RelatorioInseriveisState extends State<RelatorioInseriveis> {
                       flex: 1,
                       child: Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: GestureDetector(
+                        child: InkWell(
                           onTap: () async {
                             await relatorioInserviveis();
                             relatorioController.creatPdf(

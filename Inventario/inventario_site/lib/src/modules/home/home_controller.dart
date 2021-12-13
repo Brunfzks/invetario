@@ -35,6 +35,7 @@ class HomeController extends GetxController {
   var colorAlert = AppColors.errorColor.obs;
   var iconAlert = Icons.error.obs;
   var positionAlert = 0.0.obs;
+  var isLevantamentoOpen = false.obs;
   void showAlert({
     required String textAlert,
     required var colors,
@@ -52,6 +53,17 @@ class HomeController extends GetxController {
         isShowAlert.value = false;
       },
     );
+  }
+
+  getCablevantamento() async {
+    try {
+      CabLevantamentoModel cabLentamento =
+          await CabLevantamentoModel.getLevantamentos();
+          isLevantamentoOpen.value = true;
+      
+    } catch (e) {
+      isLevantamentoOpen.value = false;
+    }
   }
 
   //alert end

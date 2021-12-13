@@ -66,7 +66,6 @@ server.get('/patrimonios/:id', (req, res, next) => {
 });
 
 server.get('/usuarios', (req, res, next) => {
-
     knex('Tb_Usuario').then((dados) => {
         res.send(dados);
     }, next)
@@ -81,6 +80,13 @@ server.post('/patrimonios', (req, res, next) => {
             }, next)
         }, next)
 });
+
+server.get('/buscaLevantamento', (req, res, next) => {
+    knex('Tb_Local').where('Encerrado', 0).then((dados) => {
+        res.send(dados);
+    }, next)
+});
+
 server.get('/locais/percentualconcluido/:idLocal', (req, res, next) => {  
     const { idLocal } = req.params;
     knex.raw('EXECUTE sp_PorcentagemConcluida ' + parseInt(idLocal))
@@ -91,6 +97,19 @@ server.get('/locais/percentualconcluido/:idLocal', (req, res, next) => {
 
 
 //rota inserir
+server.get('/atualizaLevantamento/:idUsuario/:excluir/:encerrar', (req, res, next) => {
+    const { idUsuario } = req.params;
+    const { excluir } = req.params;
+    const { encerrar } = req.params;
+    knex.raw('EXECUTE sp_atualizaLevantamento ' + idUsuario + 
+    ',' + excluir +
+    ',' + encerrar,
+    )
+        .then((dados) => {
+            res.send(dados);
+        }, next)
+});
+
 server.post('/levantamentos', (req, res, next) => {  
     knex.raw('EXECUTE sp_InsertLevantamento ' + req.body['Id_Local'] 
     + ',' + req.body['Nm_Patrimonio'] 
